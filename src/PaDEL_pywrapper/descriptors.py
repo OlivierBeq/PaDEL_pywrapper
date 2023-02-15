@@ -11,9 +11,9 @@ from typing import Dict, List, Union
 import pandas as pd
 from rdkit import Chem
 from rdkit.Chem import AllChem
-from jpype import isJVMStarted, startJVM, getDefaultJVMPath, JPackage, types as jtypes
+from jpype import isJVMStarted, startJVM, JPackage, types as jtypes
 
-from .utils import parse_numeric, parse_numeric_to_null
+from .utils import parse_numeric, parse_numeric_to_null, install_jre
 
 
 class Descriptor(ABC):
@@ -42,7 +42,7 @@ class Descriptor(ABC):
             # Platform dependent java classpath separator
             separator = ':' if sys.platform == 'linux' else ';'
             # Start JVM
-            startJVM(getDefaultJVMPath(), "-ea", f"-Djava.class.path={padel_path}{separator}{epadel_path}")
+            startJVM(install_jre(), "-ea", f"-Djava.class.path={padel_path}{separator}{epadel_path}")
         # Java modules to be accessed
         self.padel = JPackage('libpadeldescriptor')
         self.epadel = JPackage('extendedlibpadeldescriptor')
