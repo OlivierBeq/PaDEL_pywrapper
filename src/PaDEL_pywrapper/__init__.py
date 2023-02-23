@@ -3,6 +3,6 @@
 """Wrapper for PaDEL descriptors"""
 
 from .padel_wrapper import PaDEL
-from .descriptors import descriptors
+from .descriptor import descriptors
 
-__version__ = "1.0.0"
+__version__ = "1.0.0-post2"

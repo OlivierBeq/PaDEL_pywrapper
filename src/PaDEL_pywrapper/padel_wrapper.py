@@ -16,8 +16,8 @@ from bounded_pool_executor import BoundedProcessPoolExecutor
 from rdkit import Chem
 from rdkit.Chem import AllChem
 
-from . import descriptors as descriptor_types
-from .descriptors import Descriptor, Fingerprint
+from . import descriptor as descriptor_types
+from .descriptor import Descriptor, Fingerprint
 from .utils import install_java, mktempfile, needsHs
 
 

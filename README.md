@@ -34,7 +34,7 @@ Descriptors of the module `PaDEL_pywrapper.descriptors` can be computed as follo
 
 ```python
 from PaDEL_pywrapper import PaDEL
-from PaDEL_pywrapper.descriptors import ALOGP, Crippen, FMF
+from PaDEL_pywrapper.descriptor import ALOGP, Crippen, FMF
 from rdkit import Chem
 
 smiles_list = [
@@ -105,7 +105,7 @@ print(padel.calculate([mol]))
 Fingerprints of the module `PaDEL_pywrapper.descriptors can be computed as follows:
 
 ```python
-from PaDEL_pywrapper.descriptors import GraphOnlyFP
+from PaDEL_pywrapper.descriptor import GraphOnlyFP
 
 fp = GraphOnlyFP
 
