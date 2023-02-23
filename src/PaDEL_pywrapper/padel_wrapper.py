@@ -229,4 +229,4 @@ J. Comput. Chem., 32: 1466-1474. https://doi.org/10.1002/jcc.21707
     def details(self):
         """Path to the file detailing descriptors."""
         return ("Full details about the PaDEL descriptors can be found in the file located at:\n"
-                f"{os.path.join(__file__, os.pardir, 'PaDEL-Descriptor', 'Descriptors.xls')}")
+                f"{os.path.abspath(os.path.join(__file__, os.pardir, 'PaDEL-Descriptor', 'Descriptors.xls'))}")
