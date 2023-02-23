@@ -69,7 +69,7 @@ def get_jre_in_dir(dir: str):
 def install_java(version: int = 11):
     """Install a Java Runtime Environment."""
     path = get_java_in_dir(_JRE_DIR)
-    if len(path) == 0:
+    if path is None:
         # Could not find JRE, install it
         _ = _jre_install(version, jre=True)
         path = get_java_in_dir(_JRE_DIR)
