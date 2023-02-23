@@ -1,0 +1,13 @@
+fingerprint	name	description	fixed size
+CDK fingerprint	FP	Fingerprint of length 1024 and search depth of 8	-
+CDK extended fingerprint	ExtFP	Extends the Fingerprinter with additional bits describing ring features	1024
+Estate fingerprint	EStateFP	E-State fragments	79
+CDK graph only fingerprint	GraphFP	Specialized version of the Fingerprinter which does not take bond orders into account	-
+MACCS fingerprint	MACCSFP	MACCS keys	166
+Pubchem fingerprint	PubchemFP	Pubchem fingerprint	881
+Substructure fingerprint	SubFP	Presence of SMARTS Patterns for Functional Group Classification by Christian Laggner	307
+Substructure fingerprint count	SubFPC	Count of SMARTS Patterns for Functional Group Classification by Christian Laggner	307
+Klekota-Roth fingerprint	KRFP	Presence of chemical substructures	4860
+Klekota-Roth fingerprint count	KRFPC	Count of chemical substructures	4860
+2D atom pairs fingerprint	AP2DFP	Presence of atom pairs at various topological distances	780
+2D atom pairs fingerprint count	AP2DFPC	Count of atom pairs at various topological distances	780

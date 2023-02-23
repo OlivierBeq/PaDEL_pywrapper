@@ -1,22 +1,7 @@
 
-This folder contains additional files required to get access to fingerprints' values.
+This folder contains the sources of the two additional Java projects required for the `PaDEL_pywrapper`:
 
-## Compile
+- the `elibPaDEL-Descriptor.jar` library the second relies on,
+- the `ePaDEL.jar` executable called by `PaDEL_pywrapper`.
 
-The `javac` and `jar` executables are assumed to be in a folder declared in your path environment variable.
-
-Compile the additional files like so (tested with Java Development Kit 1.6.0): 
-
-```cmd
-mkdir build
-
-javac -d build -classpath "../src/PaDEL_pywrapper/PaDEL-Descriptor/lib/libPaDEL-Descriptor.jar" src/extendedlibpadeldescriptor/*.java
-
-jar cvf elibPaDEL-Descriptor.jar -C build .
-```
-
-Then make the compiled library available to the Python wrapper:
-
-```cmd
-cp elibPaDEL-Descriptor.jar ../src/PaDEL_pywrapper/PaDEL-Descriptor/lib/
-```
+Both Java projects were created with IntelliJ IDEA 2022.3.2 (Community Edition).

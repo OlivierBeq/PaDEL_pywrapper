@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Main-Class: epadel.Main
+Class-Path: elibPaDEL-Descriptor.jar commons-cli-1.5.0.jar libPaDEL-Desc
+ riptor.jar cdk-1.4.15.jar
+

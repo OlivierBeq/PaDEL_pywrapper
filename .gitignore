@@ -134,5 +134,7 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# Except PaDEL required libs
+# Except PaDEL & ePaDEL required libs
 !src/PaDEL_pywrapper/PaDEL-Descriptor/lib/
+!java/lib
+!java/src/*/.idea

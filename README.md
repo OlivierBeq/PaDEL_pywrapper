@@ -8,7 +8,10 @@ Python wrapper to ease the calculation of [PaDEL molecular descriptors](https://
 
 Olivier J. M. Béquignon is **neither** the copyright holder of PaDEL **nor** responsible for it.
 
-Only the Python wrapper is the work of Olivier J. M. Béquignon.
+The work carried out here concerns
+- the Python wrapper, 
+- the ePaDEL executable,
+- the extendedlibpadeldescriptor library. 
 
 ## Installation
 
@@ -31,7 +34,7 @@ Descriptors of the module `PaDEL_pywrapper.descriptors` can be computed as follo
 
 ```python
 from PaDEL_pywrapper import PaDEL
-from PaDEL_pywrapper.descriptors import CDK_ALOGPDescriptor, CDK_CrippenDescriptor, CDK_FMFDescriptor
+from PaDEL_pywrapper.descriptors import ALOGP, Crippen, FMF
 from rdkit import Chem
 
 smiles_list = [
@@ -44,7 +47,7 @@ smiles_list = [
 ]
 mols = [Chem.MolFromSmiles(smiles) for smiles in smiles_list]
 
-descriptors = [CDK_ALOGPDescriptor, CDK_CrippenDescriptor, CDK_FMFDescriptor]
+descriptors = [ALOGP, Crippen, FMF]
 
 padel = PaDEL(descriptors)
 print(padel.calculate(mols))
@@ -53,7 +56,7 @@ print(padel.calculate(mols))
 Instances of descriptors can be supplied as well.
 
 ```python
-descriptors = [CDK_ALOGPDescriptor(), CDK_CrippenDescriptor(), CDK_FMFDescriptor()]
+descriptors = [ALOGP(), Crippen(), FMF()]
 
 padel = PaDEL(descriptors)
 print(padel.calculate(mols))
@@ -85,6 +88,7 @@ padel = PaDEL(descriptors, ignore_3D=False)
 print(padel.calculate(mols))
 ```
 
+:warning: A warning is raised if molecules lack hydrogens.<br/>
 :warning: An exception is raised if molecules do not have 3D coordinates.
 
 ```python
@@ -101,9 +105,9 @@ print(padel.calculate([mol]))
 Fingerprints of the module `PaDEL_pywrapper.descriptors can be computed as follows:
 
 ```python
-from PaDEL_pywrapper.descriptors import GraphOnlyFingerprint
+from PaDEL_pywrapper.descriptors import GraphOnlyFP
 
-fp = GraphOnlyFingerprint
+fp = GraphOnlyFP
 
 padel = PaDEL([fp], ignore_3D=False)
 print(padel.calculate(mols))
@@ -112,10 +116,7 @@ print(padel.calculate(mols))
 Custom parameter sets can be provided for some fingerprints:
 
 ```python
-from PaDEL_pywrapper.descriptors import GraphOnlyFingerprint
-
-fp = GraphOnlyFingerprint()
-fp.set_params({'size': 2048, 'searchDepth': 8})
+fp = GraphOnlyFP(size=2048, searchDepth=8)
 
 padel = PaDEL([fp], ignore_3D=False)
 print(padel.calculate(mols))
@@ -142,7 +143,16 @@ class PaDEL:
 
 ### Details about descriptors
 
-The path to the spreadsheet containing all details about the PaDEL descriptors can be found using:
+
+Details about each descriptor and fingerprint can be obtained as follows:
+
+```python
+print(ALOGP.description)
+
+print(GraphOnlyFP.description)
+```
+
+For full details about all descriptors, one can obtain the path to the original Excel file of the PaDEL descriptors with:
 
 ```python
 print(padel.details)

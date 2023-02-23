@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="libPaDEL-Descriptor">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../src/PaDEL_pywrapper/PaDEL-Descriptor/lib/libPaDEL-Descriptor.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

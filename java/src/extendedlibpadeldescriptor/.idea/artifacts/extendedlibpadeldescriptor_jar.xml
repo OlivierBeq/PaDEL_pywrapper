@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="extendedlibpadeldescriptor:jar">
+    <output-path>$PROJECT_DIR$/../../../src/PaDEL_pywrapper/PaDEL-Descriptor/lib</output-path>
+    <root id="archive" name="elibPaDEL-Descriptor.jar">
+      <element id="module-output" name="extendedlibpadeldescriptor" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../src/PaDEL_pywrapper/PaDEL-Descriptor/lib/cdk-1.4.15.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../src/PaDEL_pywrapper/PaDEL-Descriptor/lib/libPaDEL-Descriptor.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

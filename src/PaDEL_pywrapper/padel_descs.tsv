@@ -1,0 +1,1876 @@
+descriptor	name	description	type
+AcidicGroupCount	nAcid	"Number of acidic groups. The list of acidic groups is defined by these SMARTS ""$([O	H1]-[C,S,P]=O)"", ""$([*	-	!$(*~[*	+])])"", ""$([NH](S(=O)=O)C(F)(F)F)"", and ""$(n1nnnc1)"" originally presented in JOELib"	2D
+ALOGP	ALogP	Ghose-Crippen LogKow	2D
+ALOGP	ALogp2	Square of ALogP	2D
+ALOGP	AMR	Molar refractivity	2D
+APol	apol	Sum of the atomic polarizabilities (including implicit hydrogens)	2D
+AromaticAtomsCount	naAromAtom	Number of aromatic atoms	2D
+AromaticBondsCount	nAromBond	Number of aromatic bonds	2D
+AtomCount	nAtom	Number of atoms	2D
+AtomCount	nHeavyAtom	Number of heavy atoms (i.e. not hydrogen)	2D
+AtomCount	nH	Number of hydrogen atoms	2D
+AtomCount	nB	Number of boron atoms	2D
+AtomCount	nC	Number of carbon atoms	2D
+AtomCount	nN	Number of nitrogen atoms	2D
+AtomCount	nO	Number of oxygen atoms	2D
+AtomCount	nS	Number of sulphur atoms	2D
+AtomCount	nP	Number of phosphorus atoms	2D
+AtomCount	nF	Number of fluorine atoms	2D
+AtomCount	nCl	Number of chlorine atoms	2D
+AtomCount	nBr	Number of bromine atoms	2D
+AtomCount	nI	Number of iodine atoms	2D
+AtomCount	nX	Number of halogen atoms (F, Cl, Br, I, At, Uus)	2D
+Autocorrelation	ATS0m	Broto-Moreau autocorrelation - lag 0 / weighted by mass	2D
+Autocorrelation	ATS1m	Broto-Moreau autocorrelation - lag 1 / weighted by mass	2D
+Autocorrelation	ATS2m	Broto-Moreau autocorrelation - lag 2 / weighted by mass	2D
+Autocorrelation	ATS3m	Broto-Moreau autocorrelation - lag 3 / weighted by mass	2D
+Autocorrelation	ATS4m	Broto-Moreau autocorrelation - lag 4 / weighted by mass	2D
+Autocorrelation	ATS5m	Broto-Moreau autocorrelation - lag 5 / weighted by mass	2D
+Autocorrelation	ATS6m	Broto-Moreau autocorrelation - lag 6 / weighted by mass	2D
+Autocorrelation	ATS7m	Broto-Moreau autocorrelation - lag 7 / weighted by mass	2D
+Autocorrelation	ATS8m	Broto-Moreau autocorrelation - lag 8 / weighted by mass	2D
+Autocorrelation	ATS0v	Broto-Moreau autocorrelation - lag 0 / weighted by van der Waals volumes	2D
+Autocorrelation	ATS1v	Broto-Moreau autocorrelation - lag 1 / weighted by van der Waals volumes	2D
+Autocorrelation	ATS2v	Broto-Moreau autocorrelation - lag 2 / weighted by van der Waals volumes	2D
+Autocorrelation	ATS3v	Broto-Moreau autocorrelation - lag 3 / weighted by van der Waals volumes	2D
+Autocorrelation	ATS4v	Broto-Moreau autocorrelation - lag 4 / weighted by van der Waals volumes	2D
+Autocorrelation	ATS5v	Broto-Moreau autocorrelation - lag 5 / weighted by van der Waals volumes	2D
+Autocorrelation	ATS6v	Broto-Moreau autocorrelation - lag 6 / weighted by van der Waals volumes	2D
+Autocorrelation	ATS7v	Broto-Moreau autocorrelation - lag 7 / weighted by van der Waals volumes	2D
+Autocorrelation	ATS8v	Broto-Moreau autocorrelation - lag 8 / weighted by van der Waals volumes	2D
+Autocorrelation	ATS0e	Broto-Moreau autocorrelation - lag 0 / weighted by Sanderson electronegativities	2D
+Autocorrelation	ATS1e	Broto-Moreau autocorrelation - lag 1 / weighted by Sanderson electronegativities	2D
+Autocorrelation	ATS2e	Broto-Moreau autocorrelation - lag 2 / weighted by Sanderson electronegativities	2D
+Autocorrelation	ATS3e	Broto-Moreau autocorrelation - lag 3 / weighted by Sanderson electronegativities	2D
+Autocorrelation	ATS4e	Broto-Moreau autocorrelation - lag 4 / weighted by Sanderson electronegativities	2D
+Autocorrelation	ATS5e	Broto-Moreau autocorrelation - lag 5 / weighted by Sanderson electronegativities	2D
+Autocorrelation	ATS6e	Broto-Moreau autocorrelation - lag 6 / weighted by Sanderson electronegativities	2D
+Autocorrelation	ATS7e	Broto-Moreau autocorrelation - lag 7 / weighted by Sanderson electronegativities	2D
+Autocorrelation	ATS8e	Broto-Moreau autocorrelation - lag 8 / weighted by Sanderson electronegativities	2D
+Autocorrelation	ATS0p	Broto-Moreau autocorrelation - lag 0 / weighted by polarizabilities	2D
+Autocorrelation	ATS1p	Broto-Moreau autocorrelation - lag 1 / weighted by polarizabilities	2D
+Autocorrelation	ATS2p	Broto-Moreau autocorrelation - lag 2 / weighted by polarizabilities	2D
+Autocorrelation	ATS3p	Broto-Moreau autocorrelation - lag 3 / weighted by polarizabilities	2D
+Autocorrelation	ATS4p	Broto-Moreau autocorrelation - lag 4 / weighted by polarizabilities	2D
+Autocorrelation	ATS5p	Broto-Moreau autocorrelation - lag 5 / weighted by polarizabilities	2D
+Autocorrelation	ATS6p	Broto-Moreau autocorrelation - lag 6 / weighted by polarizabilities	2D
+Autocorrelation	ATS7p	Broto-Moreau autocorrelation - lag 7 / weighted by polarizabilities	2D
+Autocorrelation	ATS8p	Broto-Moreau autocorrelation - lag 8 / weighted by polarizabilities	2D
+Autocorrelation	ATS0i	Broto-Moreau autocorrelation - lag 0 / weighted by first ionization potential	2D
+Autocorrelation	ATS1i	Broto-Moreau autocorrelation - lag 1 / weighted by first ionization potential	2D
+Autocorrelation	ATS2i	Broto-Moreau autocorrelation - lag 2 / weighted by first ionization potential	2D
+Autocorrelation	ATS3i	Broto-Moreau autocorrelation - lag 3 / weighted by first ionization potential	2D
+Autocorrelation	ATS4i	Broto-Moreau autocorrelation - lag 4 / weighted by first ionization potential	2D
+Autocorrelation	ATS5i	Broto-Moreau autocorrelation - lag 5 / weighted by first ionization potential	2D
+Autocorrelation	ATS6i	Broto-Moreau autocorrelation - lag 6 / weighted by first ionization potential	2D
+Autocorrelation	ATS7i	Broto-Moreau autocorrelation - lag 7 / weighted by first ionization potential	2D
+Autocorrelation	ATS8i	Broto-Moreau autocorrelation - lag 8 / weighted by first ionization potential	2D
+Autocorrelation	ATS0s	Broto-Moreau autocorrelation - lag 0 / weighted by I-state	2D
+Autocorrelation	ATS1s	Broto-Moreau autocorrelation - lag 1 / weighted by I-state	2D
+Autocorrelation	ATS2s	Broto-Moreau autocorrelation - lag 2 / weighted by I-state	2D
+Autocorrelation	ATS3s	Broto-Moreau autocorrelation - lag 3 / weighted by I-state	2D
+Autocorrelation	ATS4s	Broto-Moreau autocorrelation - lag 4 / weighted by I-state	2D
+Autocorrelation	ATS5s	Broto-Moreau autocorrelation - lag 5 / weighted by I-state	2D
+Autocorrelation	ATS6s	Broto-Moreau autocorrelation - lag 6 / weighted by I-state	2D
+Autocorrelation	ATS7s	Broto-Moreau autocorrelation - lag 7 / weighted by I-state	2D
+Autocorrelation	ATS8s	Broto-Moreau autocorrelation - lag 8 / weighted by I-state	2D
+Autocorrelation	AATS0m	Average Broto-Moreau autocorrelation - lag 0 / weighted by mass	2D
+Autocorrelation	AATS1m	Average Broto-Moreau autocorrelation - lag 1 / weighted by mass	2D
+Autocorrelation	AATS2m	Average Broto-Moreau autocorrelation - lag 2 / weighted by mass	2D
+Autocorrelation	AATS3m	Average Broto-Moreau autocorrelation - lag 3 / weighted by mass	2D
+Autocorrelation	AATS4m	Average Broto-Moreau autocorrelation - lag 4 / weighted by mass	2D
+Autocorrelation	AATS5m	Average Broto-Moreau autocorrelation - lag 5 / weighted by mass	2D
+Autocorrelation	AATS6m	Average Broto-Moreau autocorrelation - lag 6 / weighted by mass	2D
+Autocorrelation	AATS7m	Average Broto-Moreau autocorrelation - lag 7 / weighted by mass	2D
+Autocorrelation	AATS8m	Average Broto-Moreau autocorrelation - lag 8 / weighted by mass	2D
+Autocorrelation	AATS0v	Average Broto-Moreau autocorrelation - lag 0 / weighted by van der Waals volumes	2D
+Autocorrelation	AATS1v	Average Broto-Moreau autocorrelation - lag 1 / weighted by van der Waals volumes	2D
+Autocorrelation	AATS2v	Average Broto-Moreau autocorrelation - lag 2 / weighted by van der Waals volumes	2D
+Autocorrelation	AATS3v	Average Broto-Moreau autocorrelation - lag 3 / weighted by van der Waals volumes	2D
+Autocorrelation	AATS4v	Average Broto-Moreau autocorrelation - lag 4 / weighted by van der Waals volumes	2D
+Autocorrelation	AATS5v	Average Broto-Moreau autocorrelation - lag 5 / weighted by van der Waals volumes	2D
+Autocorrelation	AATS6v	Average Broto-Moreau autocorrelation - lag 6 / weighted by van der Waals volumes	2D
+Autocorrelation	AATS7v	Average Broto-Moreau autocorrelation - lag 7 / weighted by van der Waals volumes	2D
+Autocorrelation	AATS8v	Average Broto-Moreau autocorrelation - lag 8 / weighted by van der Waals volumes	2D
+Autocorrelation	AATS0e	Average Broto-Moreau autocorrelation - lag 0 / weighted by Sanderson electronegativities	2D
+Autocorrelation	AATS1e	Average Broto-Moreau autocorrelation - lag 1 / weighted by Sanderson electronegativities	2D
+Autocorrelation	AATS2e	Average Broto-Moreau autocorrelation - lag 2 / weighted by Sanderson electronegativities	2D
+Autocorrelation	AATS3e	Average Broto-Moreau autocorrelation - lag 3 / weighted by Sanderson electronegativities	2D
+Autocorrelation	AATS4e	Average Broto-Moreau autocorrelation - lag 4 / weighted by Sanderson electronegativities	2D
+Autocorrelation	AATS5e	Average Broto-Moreau autocorrelation - lag 5 / weighted by Sanderson electronegativities	2D
+Autocorrelation	AATS6e	Average Broto-Moreau autocorrelation - lag 6 / weighted by Sanderson electronegativities	2D
+Autocorrelation	AATS7e	Average Broto-Moreau autocorrelation - lag 7 / weighted by Sanderson electronegativities	2D
+Autocorrelation	AATS8e	Average Broto-Moreau autocorrelation - lag 8 / weighted by Sanderson electronegativities	2D
+Autocorrelation	AATS0p	Average Broto-Moreau autocorrelation - lag 0 / weighted by polarizabilities	2D
+Autocorrelation	AATS1p	Average Broto-Moreau autocorrelation - lag 1 / weighted by polarizabilities	2D
+Autocorrelation	AATS2p	Average Broto-Moreau autocorrelation - lag 2 / weighted by polarizabilities	2D
+Autocorrelation	AATS3p	Average Broto-Moreau autocorrelation - lag 3 / weighted by polarizabilities	2D
+Autocorrelation	AATS4p	Average Broto-Moreau autocorrelation - lag 4 / weighted by polarizabilities	2D
+Autocorrelation	AATS5p	Average Broto-Moreau autocorrelation - lag 5 / weighted by polarizabilities	2D
+Autocorrelation	AATS6p	Average Broto-Moreau autocorrelation - lag 6 / weighted by polarizabilities	2D
+Autocorrelation	AATS7p	Average Broto-Moreau autocorrelation - lag 7 / weighted by polarizabilities	2D
+Autocorrelation	AATS8p	Average Broto-Moreau autocorrelation - lag 8 / weighted by polarizabilities	2D
+Autocorrelation	AATS0i	Average Broto-Moreau autocorrelation - lag 0 / weighted by first ionization potential	2D
+Autocorrelation	AATS1i	Average Broto-Moreau autocorrelation - lag 1 / weighted by first ionization potential	2D
+Autocorrelation	AATS2i	Average Broto-Moreau autocorrelation - lag 2 / weighted by first ionization potential	2D
+Autocorrelation	AATS3i	Average Broto-Moreau autocorrelation - lag 3 / weighted by first ionization potential	2D
+Autocorrelation	AATS4i	Average Broto-Moreau autocorrelation - lag 4 / weighted by first ionization potential	2D
+Autocorrelation	AATS5i	Average Broto-Moreau autocorrelation - lag 5 / weighted by first ionization potential	2D
+Autocorrelation	AATS6i	Average Broto-Moreau autocorrelation - lag 6 / weighted by first ionization potential	2D
+Autocorrelation	AATS7i	Average Broto-Moreau autocorrelation - lag 7 / weighted by first ionization potential	2D
+Autocorrelation	AATS8i	Average Broto-Moreau autocorrelation - lag 8 / weighted by first ionization potential	2D
+Autocorrelation	AATS0s	Average Broto-Moreau autocorrelation - lag 0 / weighted by I-state	2D
+Autocorrelation	AATS1s	Average Broto-Moreau autocorrelation - lag 1 / weighted by I-state	2D
+Autocorrelation	AATS2s	Average Broto-Moreau autocorrelation - lag 2 / weighted by I-state	2D
+Autocorrelation	AATS3s	Average Broto-Moreau autocorrelation - lag 3 / weighted by I-state	2D
+Autocorrelation	AATS4s	Average Broto-Moreau autocorrelation - lag 4 / weighted by I-state	2D
+Autocorrelation	AATS5s	Average Broto-Moreau autocorrelation - lag 5 / weighted by I-state	2D
+Autocorrelation	AATS6s	Average Broto-Moreau autocorrelation - lag 6 / weighted by I-state	2D
+Autocorrelation	AATS7s	Average Broto-Moreau autocorrelation - lag 7 / weighted by I-state	2D
+Autocorrelation	AATS8s	Average Broto-Moreau autocorrelation - lag 8 / weighted by I-state	2D
+Autocorrelation	ATSC0c	Centered Broto-Moreau autocorrelation - lag 0 / weighted by charges	2D
+Autocorrelation	ATSC1c	Centered Broto-Moreau autocorrelation - lag 1 / weighted by charges	2D
+Autocorrelation	ATSC2c	Centered Broto-Moreau autocorrelation - lag 2 / weighted by charges	2D
+Autocorrelation	ATSC3c	Centered Broto-Moreau autocorrelation - lag 3 / weighted by charges	2D
+Autocorrelation	ATSC4c	Centered Broto-Moreau autocorrelation - lag 4 / weighted by charges	2D
+Autocorrelation	ATSC5c	Centered Broto-Moreau autocorrelation - lag 5 / weighted by charges	2D
+Autocorrelation	ATSC6c	Centered Broto-Moreau autocorrelation - lag 6 / weighted by charges	2D
+Autocorrelation	ATSC7c	Centered Broto-Moreau autocorrelation - lag 7 / weighted by charges	2D
+Autocorrelation	ATSC8c	Centered Broto-Moreau autocorrelation - lag 8 / weighted by charges	2D
+Autocorrelation	ATSC0m	Centered Broto-Moreau autocorrelation - lag 0 / weighted by mass	2D
+Autocorrelation	ATSC1m	Centered Broto-Moreau autocorrelation - lag 1 / weighted by mass	2D
+Autocorrelation	ATSC2m	Centered Broto-Moreau autocorrelation - lag 2 / weighted by mass	2D
+Autocorrelation	ATSC3m	Centered Broto-Moreau autocorrelation - lag 3 / weighted by mass	2D
+Autocorrelation	ATSC4m	Centered Broto-Moreau autocorrelation - lag 4 / weighted by mass	2D
+Autocorrelation	ATSC5m	Centered Broto-Moreau autocorrelation - lag 5 / weighted by mass	2D
+Autocorrelation	ATSC6m	Centered Broto-Moreau autocorrelation - lag 6 / weighted by mass	2D
+Autocorrelation	ATSC7m	Centered Broto-Moreau autocorrelation - lag 7 / weighted by mass	2D
+Autocorrelation	ATSC8m	Centered Broto-Moreau autocorrelation - lag 8 / weighted by mass	2D
+Autocorrelation	ATSC0v	Centered Broto-Moreau autocorrelation - lag 0 / weighted by van der Waals volumes	2D
+Autocorrelation	ATSC1v	Centered Broto-Moreau autocorrelation - lag 1 / weighted by van der Waals volumes	2D
+Autocorrelation	ATSC2v	Centered Broto-Moreau autocorrelation - lag 2 / weighted by van der Waals volumes	2D
+Autocorrelation	ATSC3v	Centered Broto-Moreau autocorrelation - lag 3 / weighted by van der Waals volumes	2D
+Autocorrelation	ATSC4v	Centered Broto-Moreau autocorrelation - lag 4 / weighted by van der Waals volumes	2D
+Autocorrelation	ATSC5v	Centered Broto-Moreau autocorrelation - lag 5 / weighted by van der Waals volumes	2D
+Autocorrelation	ATSC6v	Centered Broto-Moreau autocorrelation - lag 6 / weighted by van der Waals volumes	2D
+Autocorrelation	ATSC7v	Centered Broto-Moreau autocorrelation - lag 7 / weighted by van der Waals volumes	2D
+Autocorrelation	ATSC8v	Centered Broto-Moreau autocorrelation - lag 8 / weighted by van der Waals volumes	2D
+Autocorrelation	ATSC0e	Centered Broto-Moreau autocorrelation - lag 0 / weighted by Sanderson electronegativities	2D
+Autocorrelation	ATSC1e	Centered Broto-Moreau autocorrelation - lag 1 / weighted by Sanderson electronegativities	2D
+Autocorrelation	ATSC2e	Centered Broto-Moreau autocorrelation - lag 2 / weighted by Sanderson electronegativities	2D
+Autocorrelation	ATSC3e	Centered Broto-Moreau autocorrelation - lag 3 / weighted by Sanderson electronegativities	2D
+Autocorrelation	ATSC4e	Centered Broto-Moreau autocorrelation - lag 4 / weighted by Sanderson electronegativities	2D
+Autocorrelation	ATSC5e	Centered Broto-Moreau autocorrelation - lag 5 / weighted by Sanderson electronegativities	2D
+Autocorrelation	ATSC6e	Centered Broto-Moreau autocorrelation - lag 6 / weighted by Sanderson electronegativities	2D
+Autocorrelation	ATSC7e	Centered Broto-Moreau autocorrelation - lag 7 / weighted by Sanderson electronegativities	2D
+Autocorrelation	ATSC8e	Centered Broto-Moreau autocorrelation - lag 8 / weighted by Sanderson electronegativities	2D
+Autocorrelation	ATSC0p	Centered Broto-Moreau autocorrelation - lag 0 / weighted by polarizabilities	2D
+Autocorrelation	ATSC1p	Centered Broto-Moreau autocorrelation - lag 1 / weighted by polarizabilities	2D
+Autocorrelation	ATSC2p	Centered Broto-Moreau autocorrelation - lag 2 / weighted by polarizabilities	2D
+Autocorrelation	ATSC3p	Centered Broto-Moreau autocorrelation - lag 3 / weighted by polarizabilities	2D
+Autocorrelation	ATSC4p	Centered Broto-Moreau autocorrelation - lag 4 / weighted by polarizabilities	2D
+Autocorrelation	ATSC5p	Centered Broto-Moreau autocorrelation - lag 5 / weighted by polarizabilities	2D
+Autocorrelation	ATSC6p	Centered Broto-Moreau autocorrelation - lag 6 / weighted by polarizabilities	2D
+Autocorrelation	ATSC7p	Centered Broto-Moreau autocorrelation - lag 7 / weighted by polarizabilities	2D
+Autocorrelation	ATSC8p	Centered Broto-Moreau autocorrelation - lag 8 / weighted by polarizabilities	2D
+Autocorrelation	ATSC0i	Centered Broto-Moreau autocorrelation - lag 0 / weighted by first ionization potential	2D
+Autocorrelation	ATSC1i	Centered Broto-Moreau autocorrelation - lag 1 / weighted by first ionization potential	2D
+Autocorrelation	ATSC2i	Centered Broto-Moreau autocorrelation - lag 2 / weighted by first ionization potential	2D
+Autocorrelation	ATSC3i	Centered Broto-Moreau autocorrelation - lag 3 / weighted by first ionization potential	2D
+Autocorrelation	ATSC4i	Centered Broto-Moreau autocorrelation - lag 4 / weighted by first ionization potential	2D
+Autocorrelation	ATSC5i	Centered Broto-Moreau autocorrelation - lag 5 / weighted by first ionization potential	2D
+Autocorrelation	ATSC6i	Centered Broto-Moreau autocorrelation - lag 6 / weighted by first ionization potential	2D
+Autocorrelation	ATSC7i	Centered Broto-Moreau autocorrelation - lag 7 / weighted by first ionization potential	2D
+Autocorrelation	ATSC8i	Centered Broto-Moreau autocorrelation - lag 8 / weighted by first ionization potential	2D
+Autocorrelation	ATSC0s	Centered Broto-Moreau autocorrelation - lag 0 / weighted by I-state	2D
+Autocorrelation	ATSC1s	Centered Broto-Moreau autocorrelation - lag 1 / weighted by I-state	2D
+Autocorrelation	ATSC2s	Centered Broto-Moreau autocorrelation - lag 2 / weighted by I-state	2D
+Autocorrelation	ATSC3s	Centered Broto-Moreau autocorrelation - lag 3 / weighted by I-state	2D
+Autocorrelation	ATSC4s	Centered Broto-Moreau autocorrelation - lag 4 / weighted by I-state	2D
+Autocorrelation	ATSC5s	Centered Broto-Moreau autocorrelation - lag 5 / weighted by I-state	2D
+Autocorrelation	ATSC6s	Centered Broto-Moreau autocorrelation - lag 6 / weighted by I-state	2D
+Autocorrelation	ATSC7s	Centered Broto-Moreau autocorrelation - lag 7 / weighted by I-state	2D
+Autocorrelation	ATSC8s	Centered Broto-Moreau autocorrelation - lag 8 / weighted by I-state	2D
+Autocorrelation	AATSC0c	Average centered Broto-Moreau autocorrelation - lag 0 / weighted by charges	2D
+Autocorrelation	AATSC1c	Average centered Broto-Moreau autocorrelation - lag 1 / weighted by charges	2D
+Autocorrelation	AATSC2c	Average centered Broto-Moreau autocorrelation - lag 2 / weighted by charges	2D
+Autocorrelation	AATSC3c	Average centered Broto-Moreau autocorrelation - lag 3 / weighted by charges	2D
+Autocorrelation	AATSC4c	Average centered Broto-Moreau autocorrelation - lag 4 / weighted by charges	2D
+Autocorrelation	AATSC5c	Average centered Broto-Moreau autocorrelation - lag 5 / weighted by charges	2D
+Autocorrelation	AATSC6c	Average centered Broto-Moreau autocorrelation - lag 6 / weighted by charges	2D
+Autocorrelation	AATSC7c	Average centered Broto-Moreau autocorrelation - lag 7 / weighted by charges	2D
+Autocorrelation	AATSC8c	Average centered Broto-Moreau autocorrelation - lag 8 / weighted by charges	2D
+Autocorrelation	AATSC0m	Average centered Broto-Moreau autocorrelation - lag 0 / weighted by mass	2D
+Autocorrelation	AATSC1m	Average centered Broto-Moreau autocorrelation - lag 1 / weighted by mass	2D
+Autocorrelation	AATSC2m	Average centered Broto-Moreau autocorrelation - lag 2 / weighted by mass	2D
+Autocorrelation	AATSC3m	Average centered Broto-Moreau autocorrelation - lag 3 / weighted by mass	2D
+Autocorrelation	AATSC4m	Average centered Broto-Moreau autocorrelation - lag 4 / weighted by mass	2D
+Autocorrelation	AATSC5m	Average centered Broto-Moreau autocorrelation - lag 5 / weighted by mass	2D
+Autocorrelation	AATSC6m	Average centered Broto-Moreau autocorrelation - lag 6 / weighted by mass	2D
+Autocorrelation	AATSC7m	Average centered Broto-Moreau autocorrelation - lag 7 / weighted by mass	2D
+Autocorrelation	AATSC8m	Average centered Broto-Moreau autocorrelation - lag 8 / weighted by mass	2D
+Autocorrelation	AATSC0v	Average centered Broto-Moreau autocorrelation - lag 0 / weighted by van der Waals volumes	2D
+Autocorrelation	AATSC1v	Average centered Broto-Moreau autocorrelation - lag 1 / weighted by van der Waals volumes	2D
+Autocorrelation	AATSC2v	Average centered Broto-Moreau autocorrelation - lag 2 / weighted by van der Waals volumes	2D
+Autocorrelation	AATSC3v	Average centered Broto-Moreau autocorrelation - lag 3 / weighted by van der Waals volumes	2D
+Autocorrelation	AATSC4v	Average centered Broto-Moreau autocorrelation - lag 4 / weighted by van der Waals volumes	2D
+Autocorrelation	AATSC5v	Average centered Broto-Moreau autocorrelation - lag 5 / weighted by van der Waals volumes	2D
+Autocorrelation	AATSC6v	Average centered Broto-Moreau autocorrelation - lag 6 / weighted by van der Waals volumes	2D
+Autocorrelation	AATSC7v	Average centered Broto-Moreau autocorrelation - lag 7 / weighted by van der Waals volumes	2D
+Autocorrelation	AATSC8v	Average centered Broto-Moreau autocorrelation - lag 8 / weighted by van der Waals volumes	2D
+Autocorrelation	AATSC0e	Average centered Broto-Moreau autocorrelation - lag 0 / weighted by Sanderson electronegativities	2D
+Autocorrelation	AATSC1e	Average centered Broto-Moreau autocorrelation - lag 1 / weighted by Sanderson electronegativities	2D
+Autocorrelation	AATSC2e	Average centered Broto-Moreau autocorrelation - lag 2 / weighted by Sanderson electronegativities	2D
+Autocorrelation	AATSC3e	Average centered Broto-Moreau autocorrelation - lag 3 / weighted by Sanderson electronegativities	2D
+Autocorrelation	AATSC4e	Average centered Broto-Moreau autocorrelation - lag 4 / weighted by Sanderson electronegativities	2D
+Autocorrelation	AATSC5e	Average centered Broto-Moreau autocorrelation - lag 5 / weighted by Sanderson electronegativities	2D
+Autocorrelation	AATSC6e	Average centered Broto-Moreau autocorrelation - lag 6 / weighted by Sanderson electronegativities	2D
+Autocorrelation	AATSC7e	Average centered Broto-Moreau autocorrelation - lag 7 / weighted by Sanderson electronegativities	2D
+Autocorrelation	AATSC8e	Average centered Broto-Moreau autocorrelation - lag 8 / weighted by Sanderson electronegativities	2D
+Autocorrelation	AATSC0p	Average centered Broto-Moreau autocorrelation - lag 0 / weighted by polarizabilities	2D
+Autocorrelation	AATSC1p	Average centered Broto-Moreau autocorrelation - lag 1 / weighted by polarizabilities	2D
+Autocorrelation	AATSC2p	Average centered Broto-Moreau autocorrelation - lag 2 / weighted by polarizabilities	2D
+Autocorrelation	AATSC3p	Average centered Broto-Moreau autocorrelation - lag 3 / weighted by polarizabilities	2D
+Autocorrelation	AATSC4p	Average centered Broto-Moreau autocorrelation - lag 4 / weighted by polarizabilities	2D
+Autocorrelation	AATSC5p	Average centered Broto-Moreau autocorrelation - lag 5 / weighted by polarizabilities	2D
+Autocorrelation	AATSC6p	Average centered Broto-Moreau autocorrelation - lag 6 / weighted by polarizabilities	2D
+Autocorrelation	AATSC7p	Average centered Broto-Moreau autocorrelation - lag 7 / weighted by polarizabilities	2D
+Autocorrelation	AATSC8p	Average centered Broto-Moreau autocorrelation - lag 8 / weighted by polarizabilities	2D
+Autocorrelation	AATSC0i	Average centered Broto-Moreau autocorrelation - lag 0 / weighted by first ionization potential	2D
+Autocorrelation	AATSC1i	Average centered Broto-Moreau autocorrelation - lag 1 / weighted by first ionization potential	2D
+Autocorrelation	AATSC2i	Average centered Broto-Moreau autocorrelation - lag 2 / weighted by first ionization potential	2D
+Autocorrelation	AATSC3i	Average centered Broto-Moreau autocorrelation - lag 3 / weighted by first ionization potential	2D
+Autocorrelation	AATSC4i	Average centered Broto-Moreau autocorrelation - lag 4 / weighted by first ionization potential	2D
+Autocorrelation	AATSC5i	Average centered Broto-Moreau autocorrelation - lag 5 / weighted by first ionization potential	2D
+Autocorrelation	AATSC6i	Average centered Broto-Moreau autocorrelation - lag 6 / weighted by first ionization potential	2D
+Autocorrelation	AATSC7i	Average centered Broto-Moreau autocorrelation - lag 7 / weighted by first ionization potential	2D
+Autocorrelation	AATSC8i	Average centered Broto-Moreau autocorrelation - lag 8 / weighted by first ionization potential	2D
+Autocorrelation	AATSC0s	Average centered Broto-Moreau autocorrelation - lag 0 / weighted by I-state	2D
+Autocorrelation	AATSC1s	Average centered Broto-Moreau autocorrelation - lag 1 / weighted by I-state	2D
+Autocorrelation	AATSC2s	Average centered Broto-Moreau autocorrelation - lag 2 / weighted by I-state	2D
+Autocorrelation	AATSC3s	Average centered Broto-Moreau autocorrelation - lag 3 / weighted by I-state	2D
+Autocorrelation	AATSC4s	Average centered Broto-Moreau autocorrelation - lag 4 / weighted by I-state	2D
+Autocorrelation	AATSC5s	Average centered Broto-Moreau autocorrelation - lag 5 / weighted by I-state	2D
+Autocorrelation	AATSC6s	Average centered Broto-Moreau autocorrelation - lag 6 / weighted by I-state	2D
+Autocorrelation	AATSC7s	Average centered Broto-Moreau autocorrelation - lag 7 / weighted by I-state	2D
+Autocorrelation	AATSC8s	Average centered Broto-Moreau autocorrelation - lag 8 / weighted by I-state	2D
+Autocorrelation	MATS1c	Moran autocorrelation - lag 1 / weighted by charges	2D
+Autocorrelation	MATS2c	Moran autocorrelation - lag 2 / weighted by charges	2D
+Autocorrelation	MATS3c	Moran autocorrelation - lag 3 / weighted by charges	2D
+Autocorrelation	MATS4c	Moran autocorrelation - lag 4 / weighted by charges	2D
+Autocorrelation	MATS5c	Moran autocorrelation - lag 5 / weighted by charges	2D
+Autocorrelation	MATS6c	Moran autocorrelation - lag 6 / weighted by charges	2D
+Autocorrelation	MATS7c	Moran autocorrelation - lag 7 / weighted by charges	2D
+Autocorrelation	MATS8c	Moran autocorrelation - lag 8 / weighted by charges	2D
+Autocorrelation	MATS1m	Moran autocorrelation - lag 1 / weighted by mass	2D
+Autocorrelation	MATS2m	Moran autocorrelation - lag 2 / weighted by mass	2D
+Autocorrelation	MATS3m	Moran autocorrelation - lag 3 / weighted by mass	2D
+Autocorrelation	MATS4m	Moran autocorrelation - lag 4 / weighted by mass	2D
+Autocorrelation	MATS5m	Moran autocorrelation - lag 5 / weighted by mass	2D
+Autocorrelation	MATS6m	Moran autocorrelation - lag 6 / weighted by mass	2D
+Autocorrelation	MATS7m	Moran autocorrelation - lag 7 / weighted by mass	2D
+Autocorrelation	MATS8m	Moran autocorrelation - lag 8 / weighted by mass	2D
+Autocorrelation	MATS1v	Moran autocorrelation - lag 1 / weighted by van der Waals volumes	2D
+Autocorrelation	MATS2v	Moran autocorrelation - lag 2 / weighted by van der Waals volumes	2D
+Autocorrelation	MATS3v	Moran autocorrelation - lag 3 / weighted by van der Waals volumes	2D
+Autocorrelation	MATS4v	Moran autocorrelation - lag 4 / weighted by van der Waals volumes	2D
+Autocorrelation	MATS5v	Moran autocorrelation - lag 5 / weighted by van der Waals volumes	2D
+Autocorrelation	MATS6v	Moran autocorrelation - lag 6 / weighted by van der Waals volumes	2D
+Autocorrelation	MATS7v	Moran autocorrelation - lag 7 / weighted by van der Waals volumes	2D
+Autocorrelation	MATS8v	Moran autocorrelation - lag 8 / weighted by van der Waals volumes	2D
+Autocorrelation	MATS1e	Moran autocorrelation - lag 1 / weighted by Sanderson electronegativities	2D
+Autocorrelation	MATS2e	Moran autocorrelation - lag 2 / weighted by Sanderson electronegativities	2D
+Autocorrelation	MATS3e	Moran autocorrelation - lag 3 / weighted by Sanderson electronegativities	2D
+Autocorrelation	MATS4e	Moran autocorrelation - lag 4 / weighted by Sanderson electronegativities	2D
+Autocorrelation	MATS5e	Moran autocorrelation - lag 5 / weighted by Sanderson electronegativities	2D
+Autocorrelation	MATS6e	Moran autocorrelation - lag 6 / weighted by Sanderson electronegativities	2D
+Autocorrelation	MATS7e	Moran autocorrelation - lag 7 / weighted by Sanderson electronegativities	2D
+Autocorrelation	MATS8e	Moran autocorrelation - lag 8 / weighted by Sanderson electronegativities	2D
+Autocorrelation	MATS1p	Moran autocorrelation - lag 1 / weighted by polarizabilities	2D
+Autocorrelation	MATS2p	Moran autocorrelation - lag 2 / weighted by polarizabilities	2D
+Autocorrelation	MATS3p	Moran autocorrelation - lag 3 / weighted by polarizabilities	2D
+Autocorrelation	MATS4p	Moran autocorrelation - lag 4 / weighted by polarizabilities	2D
+Autocorrelation	MATS5p	Moran autocorrelation - lag 5 / weighted by polarizabilities	2D
+Autocorrelation	MATS6p	Moran autocorrelation - lag 6 / weighted by polarizabilities	2D
+Autocorrelation	MATS7p	Moran autocorrelation - lag 7 / weighted by polarizabilities	2D
+Autocorrelation	MATS8p	Moran autocorrelation - lag 8 / weighted by polarizabilities	2D
+Autocorrelation	MATS1i	Moran autocorrelation - lag 1 / weighted by first ionization potential	2D
+Autocorrelation	MATS2i	Moran autocorrelation - lag 2 / weighted by first ionization potential	2D
+Autocorrelation	MATS3i	Moran autocorrelation - lag 3 / weighted by first ionization potential	2D
+Autocorrelation	MATS4i	Moran autocorrelation - lag 4 / weighted by first ionization potential	2D
+Autocorrelation	MATS5i	Moran autocorrelation - lag 5 / weighted by first ionization potential	2D
+Autocorrelation	MATS6i	Moran autocorrelation - lag 6 / weighted by first ionization potential	2D
+Autocorrelation	MATS7i	Moran autocorrelation - lag 7 / weighted by first ionization potential	2D
+Autocorrelation	MATS8i	Moran autocorrelation - lag 8 / weighted by first ionization potential	2D
+Autocorrelation	MATS1s	Moran autocorrelation - lag 1 / weighted by I-state	2D
+Autocorrelation	MATS2s	Moran autocorrelation - lag 2 / weighted by I-state	2D
+Autocorrelation	MATS3s	Moran autocorrelation - lag 3 / weighted by I-state	2D
+Autocorrelation	MATS4s	Moran autocorrelation - lag 4 / weighted by I-state	2D
+Autocorrelation	MATS5s	Moran autocorrelation - lag 5 / weighted by I-state	2D
+Autocorrelation	MATS6s	Moran autocorrelation - lag 6 / weighted by I-state	2D
+Autocorrelation	MATS7s	Moran autocorrelation - lag 7 / weighted by I-state	2D
+Autocorrelation	MATS8s	Moran autocorrelation - lag 8 / weighted by I-state	2D
+Autocorrelation	GATS1c	Geary autocorrelation - lag 1 / weighted by charges	2D
+Autocorrelation	GATS2c	Geary autocorrelation - lag 2 / weighted by charges	2D
+Autocorrelation	GATS3c	Geary autocorrelation - lag 3 / weighted by charges	2D
+Autocorrelation	GATS4c	Geary autocorrelation - lag 4 / weighted by charges	2D
+Autocorrelation	GATS5c	Geary autocorrelation - lag 5 / weighted by charges	2D
+Autocorrelation	GATS6c	Geary autocorrelation - lag 6 / weighted by charges	2D
+Autocorrelation	GATS7c	Geary autocorrelation - lag 7 / weighted by charges	2D
+Autocorrelation	GATS8c	Geary autocorrelation - lag 8 / weighted by charges	2D
+Autocorrelation	GATS1m	Geary autocorrelation - lag 1 / weighted by mass	2D
+Autocorrelation	GATS2m	Geary autocorrelation - lag 2 / weighted by mass	2D
+Autocorrelation	GATS3m	Geary autocorrelation - lag 3 / weighted by mass	2D
+Autocorrelation	GATS4m	Geary autocorrelation - lag 4 / weighted by mass	2D
+Autocorrelation	GATS5m	Geary autocorrelation - lag 5 / weighted by mass	2D
+Autocorrelation	GATS6m	Geary autocorrelation - lag 6 / weighted by mass	2D
+Autocorrelation	GATS7m	Geary autocorrelation - lag 7 / weighted by mass	2D
+Autocorrelation	GATS8m	Geary autocorrelation - lag 8 / weighted by mass	2D
+Autocorrelation	GATS1v	Geary autocorrelation - lag 1 / weighted by van der Waals volumes	2D
+Autocorrelation	GATS2v	Geary autocorrelation - lag 2 / weighted by van der Waals volumes	2D
+Autocorrelation	GATS3v	Geary autocorrelation - lag 3 / weighted by van der Waals volumes	2D
+Autocorrelation	GATS4v	Geary autocorrelation - lag 4 / weighted by van der Waals volumes	2D
+Autocorrelation	GATS5v	Geary autocorrelation - lag 5 / weighted by van der Waals volumes	2D
+Autocorrelation	GATS6v	Geary autocorrelation - lag 6 / weighted by van der Waals volumes	2D
+Autocorrelation	GATS7v	Geary autocorrelation - lag 7 / weighted by van der Waals volumes	2D
+Autocorrelation	GATS8v	Geary autocorrelation - lag 8 / weighted by van der Waals volumes	2D
+Autocorrelation	GATS1e	Geary autocorrelation - lag 1 / weighted by Sanderson electronegativities	2D
+Autocorrelation	GATS2e	Geary autocorrelation - lag 2 / weighted by Sanderson electronegativities	2D
+Autocorrelation	GATS3e	Geary autocorrelation - lag 3 / weighted by Sanderson electronegativities	2D
+Autocorrelation	GATS4e	Geary autocorrelation - lag 4 / weighted by Sanderson electronegativities	2D
+Autocorrelation	GATS5e	Geary autocorrelation - lag 5 / weighted by Sanderson electronegativities	2D
+Autocorrelation	GATS6e	Geary autocorrelation - lag 6 / weighted by Sanderson electronegativities	2D
+Autocorrelation	GATS7e	Geary autocorrelation - lag 7 / weighted by Sanderson electronegativities	2D
+Autocorrelation	GATS8e	Geary autocorrelation - lag 8 / weighted by Sanderson electronegativities	2D
+Autocorrelation	GATS1p	Geary autocorrelation - lag 1 / weighted by polarizabilities	2D
+Autocorrelation	GATS2p	Geary autocorrelation - lag 2 / weighted by polarizabilities	2D
+Autocorrelation	GATS3p	Geary autocorrelation - lag 3 / weighted by polarizabilities	2D
+Autocorrelation	GATS4p	Geary autocorrelation - lag 4 / weighted by polarizabilities	2D
+Autocorrelation	GATS5p	Geary autocorrelation - lag 5 / weighted by polarizabilities	2D
+Autocorrelation	GATS6p	Geary autocorrelation - lag 6 / weighted by polarizabilities	2D
+Autocorrelation	GATS7p	Geary autocorrelation - lag 7 / weighted by polarizabilities	2D
+Autocorrelation	GATS8p	Geary autocorrelation - lag 8 / weighted by polarizabilities	2D
+Autocorrelation	GATS1i	Geary autocorrelation - lag 1 / weighted by first ionization potential	2D
+Autocorrelation	GATS2i	Geary autocorrelation - lag 2 / weighted by first ionization potential	2D
+Autocorrelation	GATS3i	Geary autocorrelation - lag 3 / weighted by first ionization potential	2D
+Autocorrelation	GATS4i	Geary autocorrelation - lag 4 / weighted by first ionization potential	2D
+Autocorrelation	GATS5i	Geary autocorrelation - lag 5 / weighted by first ionization potential	2D
+Autocorrelation	GATS6i	Geary autocorrelation - lag 6 / weighted by first ionization potential	2D
+Autocorrelation	GATS7i	Geary autocorrelation - lag 7 / weighted by first ionization potential	2D
+Autocorrelation	GATS8i	Geary autocorrelation - lag 8 / weighted by first ionization potential	2D
+Autocorrelation	GATS1s	Geary autocorrelation - lag 1 / weighted by I-state	2D
+Autocorrelation	GATS2s	Geary autocorrelation - lag 2 / weighted by I-state	2D
+Autocorrelation	GATS3s	Geary autocorrelation - lag 3 / weighted by I-state	2D
+Autocorrelation	GATS4s	Geary autocorrelation - lag 4 / weighted by I-state	2D
+Autocorrelation	GATS5s	Geary autocorrelation - lag 5 / weighted by I-state	2D
+Autocorrelation	GATS6s	Geary autocorrelation - lag 6 / weighted by I-state	2D
+Autocorrelation	GATS7s	Geary autocorrelation - lag 7 / weighted by I-state	2D
+Autocorrelation	GATS8s	Geary autocorrelation - lag 8 / weighted by I-state	2D
+BaryszMatrix	SpAbs_DzZ	Graph energy from Barysz matrix / weighted by atomic number	2D
+BaryszMatrix	SpMax_DzZ	Leading eigenvalue from Barysz matrix / weighted by atomic number	2D
+BaryszMatrix	SpDiam_DzZ	Spectral diameter from Barysz matrix / weighted by atomic number	2D
+BaryszMatrix	SpAD_DzZ	Spectral absolute deviation from Barysz matrix / weighted by atomic number	2D
+BaryszMatrix	SpMAD_DzZ	Spectral mean absolute deviation from Barysz matrix / weighted by atomic number	2D
+BaryszMatrix	EE_DzZ	Estrada-like index from Barysz matrix / weighted by atomic number (ln(1+x))	2D
+BaryszMatrix	SM1_DzZ	Spectral moment of order 1 from Barysz matrix / weighted by atomic number	2D
+BaryszMatrix	VE1_DzZ	Coefficient sum of the last eigenvector from Barysz matrix / weighted by atomic number	2D
+BaryszMatrix	VE2_DzZ	Average coefficient sum of the last eigenvector from Barysz matrix / weighted by atomic number	2D
+BaryszMatrix	VE3_DzZ	Logarithmic coefficient sum of the last eigenvector from Barysz matrix / weighted by atomic number	2D
+BaryszMatrix	VR1_DzZ	Randic-like eigenvector-based index from Barysz matrix / weighted by atomic number	2D
+BaryszMatrix	VR2_DzZ	Normalized Randic-like eigenvector-based index from Barysz matrix / weighted by atomic number	2D
+BaryszMatrix	VR3_DzZ	Logarithmic Randic-like eigenvector-based index from Barysz matrix / weighted by atomic number	2D
+BaryszMatrix	SpAbs_Dzm	Graph energy from Barysz matrix / weighted by mass	2D
+BaryszMatrix	SpMax_Dzm	Leading eigenvalue from Barysz matrix / weighted by mass	2D
+BaryszMatrix	SpDiam_Dzm	Spectral diameter from Barysz matrix / weighted by mass	2D
+BaryszMatrix	SpAD_Dzm	Spectral absolute deviation from Barysz matrix / weighted by mass	2D
+BaryszMatrix	SpMAD_Dzm	Spectral mean absolute deviation from Barysz matrix / weighted by mass	2D
+BaryszMatrix	EE_Dzm	Estrada-like index from Barysz matrix / weighted by mass (ln(1+x))	2D
+BaryszMatrix	SM1_Dzm	Spectral moment of order 1 from Barysz matrix / weighted by mass	2D
+BaryszMatrix	VE1_Dzm	Coefficient sum of the last eigenvector from Barysz matrix / weighted by mass	2D
+BaryszMatrix	VE2_Dzm	Average coefficient sum of the last eigenvector from Barysz matrix / weighted by mass	2D
+BaryszMatrix	VE3_Dzm	Logarithmic coefficient sum of the last eigenvector from Barysz matrix / weighted by mass	2D
+BaryszMatrix	VR1_Dzm	Randic-like eigenvector-based index from Barysz matrix / weighted by mass	2D
+BaryszMatrix	VR2_Dzm	Normalized Randic-like eigenvector-based index from Barysz matrix / weighted by mass	2D
+BaryszMatrix	VR3_Dzm	Logarithmic Randic-like eigenvector-based index from Barysz matrix / weighted by mass	2D
+BaryszMatrix	SpAbs_Dzv	Graph energy from Barysz matrix / weighted by van der Waals volumes	2D
+BaryszMatrix	SpMax_Dzv	Leading eigenvalue from Barysz matrix / weighted by van der Waals volumes	2D
+BaryszMatrix	SpDiam_Dzv	Spectral diameter from Barysz matrix / weighted by van der Waals volumes	2D
+BaryszMatrix	SpAD_Dzv	Spectral absolute deviation from Barysz matrix / weighted by van der Waals volumes	2D
+BaryszMatrix	SpMAD_Dzv	Spectral mean absolute deviation from Barysz matrix / weighted by van der Waals volumes	2D
+BaryszMatrix	EE_Dzv	Estrada-like index from Barysz matrix / weighted by van der Waals volumes (ln(1+x))	2D
+BaryszMatrix	SM1_Dzv	Spectral moment of order 1 from Barysz matrix / weighted by van der Waals volumes	2D
+BaryszMatrix	VE1_Dzv	Coefficient sum of the last eigenvector from Barysz matrix / weighted by van der Waals volumes	2D
+BaryszMatrix	VE2_Dzv	Average coefficient sum of the last eigenvector from Barysz matrix / weighted by van der Waals volumes	2D
+BaryszMatrix	VE3_Dzv	Logarithmic coefficient sum of the last eigenvector from Barysz matrix / weighted by van der Waals volumes	2D
+BaryszMatrix	VR1_Dzv	Randic-like eigenvector-based index from Barysz matrix / weighted by van der Waals volumes	2D
+BaryszMatrix	VR2_Dzv	Normalized Randic-like eigenvector-based index from Barysz matrix / weighted by van der Waals volumes	2D
+BaryszMatrix	VR3_Dzv	Logarithmic Randic-like eigenvector-based index from Barysz matrix / weighted by van der Waals volumes	2D
+BaryszMatrix	SpAbs_Dze	Graph energy from Barysz matrix / weighted by Sanderson electronegativities	2D
+BaryszMatrix	SpMax_Dze	Leading eigenvalue from Barysz matrix / weighted by Sanderson electronegativities	2D
+BaryszMatrix	SpDiam_Dze	Spectral diameter from Barysz matrix / weighted by Sanderson electronegativities	2D
+BaryszMatrix	SpAD_Dze	Spectral absolute deviation from Barysz matrix / weighted by Sanderson electronegativities	2D
+BaryszMatrix	SpMAD_Dze	Spectral mean absolute deviation from Barysz matrix / weighted by Sanderson electronegativities	2D
+BaryszMatrix	EE_Dze	Estrada-like index from Barysz matrix / weighted by Sanderson electronegativities (ln(1+x))	2D
+BaryszMatrix	SM1_Dze	Spectral moment of order 1 from Barysz matrix / weighted by Sanderson electronegativities	2D
+BaryszMatrix	VE1_Dze	Coefficient sum of the last eigenvector from Barysz matrix / weighted by Sanderson electronegativities	2D
+BaryszMatrix	VE2_Dze	Average coefficient sum of the last eigenvector from Barysz matrix / weighted by Sanderson electronegativities	2D
+BaryszMatrix	VE3_Dze	Logarithmic coefficient sum of the last eigenvector from Barysz matrix / weighted by Sanderson electronegativities	2D
+BaryszMatrix	VR1_Dze	Randic-like eigenvector-based index from Barysz matrix / weighted by Sanderson electronegativities	2D
+BaryszMatrix	VR2_Dze	Normalized Randic-like eigenvector-based index from Barysz matrix / weighted by Sanderson electronegativities	2D
+BaryszMatrix	VR3_Dze	Logarithmic Randic-like eigenvector-based index from Barysz matrix / weighted by Sanderson electronegativities	2D
+BaryszMatrix	SpAbs_Dzp	Graph energy from Barysz matrix / weighted by polarizabilities	2D
+BaryszMatrix	SpMax_Dzp	Leading eigenvalue from Barysz matrix / weighted by polarizabilities	2D
+BaryszMatrix	SpDiam_Dzp	Spectral diameter from Barysz matrix / weighted by polarizabilities	2D
+BaryszMatrix	SpAD_Dzp	Spectral absolute deviation from Barysz matrix / weighted by polarizabilities	2D
+BaryszMatrix	SpMAD_Dzp	Spectral mean absolute deviation from Barysz matrix / weighted by polarizabilities	2D
+BaryszMatrix	EE_Dzp	Estrada-like index from Barysz matrix / weighted by polarizabilities (ln(1+x))	2D
+BaryszMatrix	SM1_Dzp	Spectral moment of order 1 from Barysz matrix / weighted by polarizabilities	2D
+BaryszMatrix	VE1_Dzp	Coefficient sum of the last eigenvector from Barysz matrix / weighted by polarizabilities	2D
+BaryszMatrix	VE2_Dzp	Average coefficient sum of the last eigenvector from Barysz matrix / weighted by polarizabilities	2D
+BaryszMatrix	VE3_Dzp	Logarithmic coefficient sum of the last eigenvector from Barysz matrix / weighted by polarizabilities	2D
+BaryszMatrix	VR1_Dzp	Randic-like eigenvector-based index from Barysz matrix / weighted by polarizabilities	2D
+BaryszMatrix	VR2_Dzp	Normalized Randic-like eigenvector-based index from Barysz matrix / weighted by polarizabilities	2D
+BaryszMatrix	VR3_Dzp	Logarithmic Randic-like eigenvector-based index from Barysz matrix / weighted by polarizabilities	2D
+BaryszMatrix	SpAbs_Dzi	Graph energy from Barysz matrix / weighted by first ionization potential	2D
+BaryszMatrix	SpMax_Dzi	Leading eigenvalue from Barysz matrix / weighted by first ionization potential	2D
+BaryszMatrix	SpDiam_Dzi	Spectral diameter from Barysz matrix / weighted by first ionization potential	2D
+BaryszMatrix	SpAD_Dzi	Spectral absolute deviation from Barysz matrix / weighted by first ionization potential	2D
+BaryszMatrix	SpMAD_Dzi	Spectral mean absolute deviation from Barysz matrix / weighted by first ionization potential	2D
+BaryszMatrix	EE_Dzi	Estrada-like index from Barysz matrix / weighted by first ionization potential (ln(1+x))	2D
+BaryszMatrix	SM1_Dzi	Spectral moment of order 1 from Barysz matrix / weighted by first ionization potential	2D
+BaryszMatrix	VE1_Dzi	Coefficient sum of the last eigenvector from Barysz matrix / weighted by first ionization potential	2D
+BaryszMatrix	VE2_Dzi	Average coefficient sum of the last eigenvector from Barysz matrix / weighted by first ionization potential	2D
+BaryszMatrix	VE3_Dzi	Logarithmic coefficient sum of the last eigenvector from Barysz matrix / weighted by first ionization potential	2D
+BaryszMatrix	VR1_Dzi	Randic-like eigenvector-based index from Barysz matrix / weighted by first ionization potential	2D
+BaryszMatrix	VR2_Dzi	Normalized Randic-like eigenvector-based index from Barysz matrix / weighted by first ionization potential	2D
+BaryszMatrix	VR3_Dzi	Logarithmic Randic-like eigenvector-based index from Barysz matrix / weighted by first ionization potential	2D
+BaryszMatrix	SpAbs_Dzs	Graph energy from Barysz matrix / weighted by I-state	2D
+BaryszMatrix	SpMax_Dzs	Leading eigenvalue from Barysz matrix / weighted by I-state	2D
+BaryszMatrix	SpDiam_Dzs	Spectral diameter from Barysz matrix / weighted by I-state	2D
+BaryszMatrix	SpAD_Dzs	Spectral absolute deviation from Barysz matrix / weighted by I-state	2D
+BaryszMatrix	SpMAD_Dzs	Spectral mean absolute deviation from Barysz matrix / weighted by I-state	2D
+BaryszMatrix	EE_Dzs	Estrada-like index from Barysz matrix / weighted by I-state (ln(1+x))	2D
+BaryszMatrix	SM1_Dzs	Spectral moment of order 1 from Barysz matrix / weighted by I-state	2D
+BaryszMatrix	VE1_Dzs	Coefficient sum of the last eigenvector from Barysz matrix / weighted by I-state	2D
+BaryszMatrix	VE2_Dzs	Average coefficient sum of the last eigenvector from Barysz matrix / weighted by I-state	2D
+BaryszMatrix	VE3_Dzs	Logarithmic coefficient sum of the last eigenvector from Barysz matrix / weighted by I-state	2D
+BaryszMatrix	VR1_Dzs	Randic-like eigenvector-based index from Barysz matrix / weighted by I-state	2D
+BaryszMatrix	VR2_Dzs	Normalized Randic-like eigenvector-based index from Barysz matrix / weighted by I-state	2D
+BaryszMatrix	VR3_Dzs	Logarithmic Randic-like eigenvector-based index from Barysz matrix / weighted by I-state	2D
+BasicGroupCount	nBase	"Number of basic groups. The list of basic groups is defined by this SMARTS ""[$([NH2]-[CX4])]"", ""[$([NH](-[CX4])-[CX4])]"", ""[$(N(-[CX4])(-[CX4])-[CX4])]"", ""[$([*	+	!$(*~[*	-])])]"", ""[$(N=C-N)]"", and ""[$(N-C=N)]"" originally presented in JOELib"	2D
+BCUT	BCUTw-1l	nhigh lowest atom weighted BCUTS 	2D
+BCUT	BCUTw-1h	nlow highest atom weighted BCUTS 	2D
+BCUT	BCUTc-1l	nhigh lowest partial charge weighted BCUTS 	2D
+BCUT	BCUTc-1h	nlow highest partial charge weighted BCUTS 	2D
+BCUT	BCUTp-1l	nhigh lowest polarizability weighted BCUTS 	2D
+BCUT	BCUTp-1h	nlow highest polarizability weighted BCUTS 	2D
+BondCount	nBonds	Number of bonds (excluding bonds with hydrogen)	2D
+BondCount	nBonds2	Total number of bonds (including bonds to hydrogens)	2D
+BondCount	nBondsS	Number of single bonds (including bonds with hydrogen)	2D
+BondCount	nBondsS2	Total number of single bonds (including bonds to hydrogens, excluding aromatic bonds)	2D
+BondCount	nBondsS3	Total number of single bonds (excluding bonds to hydrogens and aromatic bonds)	2D
+BondCount	nBondsD	Number of double bonds	2D
+BondCount	nBondsD2	Total number of double bonds (excluding bonds to aromatic bonds)	2D
+BondCount	nBondsT	Number of triple bonds	2D
+BondCount	nBondsQ	Number of quadruple bonds	2D
+BondCount	nBondsM	Total number of bonds that have bond order greater than one (aromatic bonds have bond order 1.5).	2D
+BPol	bpol	Sum of the absolute value of the difference between atomic polarizabilities of all bonded atoms in the molecule (including implicit hydrogens)	2D
+BurdenModifiedEigenvalues	SpMax1_Bhm	Largest absolute eigenvalue of Burden modified matrix - n 1 / weighted by relative mass	2D
+BurdenModifiedEigenvalues	SpMax2_Bhm	Largest absolute eigenvalue of Burden modified matrix - n 2 / weighted by relative mass	2D
+BurdenModifiedEigenvalues	SpMax3_Bhm	Largest absolute eigenvalue of Burden modified matrix - n 3 / weighted by relative mass	2D
+BurdenModifiedEigenvalues	SpMax4_Bhm	Largest absolute eigenvalue of Burden modified matrix - n 4 / weighted by relative mass	2D
+BurdenModifiedEigenvalues	SpMax5_Bhm	Largest absolute eigenvalue of Burden modified matrix - n 5 / weighted by relative mass	2D
+BurdenModifiedEigenvalues	SpMax6_Bhm	Largest absolute eigenvalue of Burden modified matrix - n 6 / weighted by relative mass	2D
+BurdenModifiedEigenvalues	SpMax7_Bhm	Largest absolute eigenvalue of Burden modified matrix - n 7 / weighted by relative mass	2D
+BurdenModifiedEigenvalues	SpMax8_Bhm	Largest absolute eigenvalue of Burden modified matrix - n 8 / weighted by relative mass	2D
+BurdenModifiedEigenvalues	SpMin1_Bhm	Smallest absolute eigenvalue of Burden modified matrix - n 1 / weighted by relative mass	2D
+BurdenModifiedEigenvalues	SpMin2_Bhm	Smallest absolute eigenvalue of Burden modified matrix - n 2 / weighted by relative mass	2D
+BurdenModifiedEigenvalues	SpMin3_Bhm	Smallest absolute eigenvalue of Burden modified matrix - n 3 / weighted by relative mass	2D
+BurdenModifiedEigenvalues	SpMin4_Bhm	Smallest absolute eigenvalue of Burden modified matrix - n 4 / weighted by relative mass	2D
+BurdenModifiedEigenvalues	SpMin5_Bhm	Smallest absolute eigenvalue of Burden modified matrix - n 5 / weighted by relative mass	2D
+BurdenModifiedEigenvalues	SpMin6_Bhm	Smallest absolute eigenvalue of Burden modified matrix - n 6 / weighted by relative mass	2D
+BurdenModifiedEigenvalues	SpMin7_Bhm	Smallest absolute eigenvalue of Burden modified matrix - n 7 / weighted by relative mass	2D
+BurdenModifiedEigenvalues	SpMin8_Bhm	Smallest absolute eigenvalue of Burden modified matrix - n 8 / weighted by relative mass	2D
+BurdenModifiedEigenvalues	SpMax1_Bhv	Largest absolute eigenvalue of Burden modified matrix - n 1 / weighted by relative van der Waals volumes	2D
+BurdenModifiedEigenvalues	SpMax2_Bhv	Largest absolute eigenvalue of Burden modified matrix - n 2 / weighted by relative van der Waals volumes	2D
+BurdenModifiedEigenvalues	SpMax3_Bhv	Largest absolute eigenvalue of Burden modified matrix - n 3 / weighted by relative van der Waals volumes	2D
+BurdenModifiedEigenvalues	SpMax4_Bhv	Largest absolute eigenvalue of Burden modified matrix - n 4 / weighted by relative van der Waals volumes	2D
+BurdenModifiedEigenvalues	SpMax5_Bhv	Largest absolute eigenvalue of Burden modified matrix - n 5 / weighted by relative van der Waals volumes	2D
+BurdenModifiedEigenvalues	SpMax6_Bhv	Largest absolute eigenvalue of Burden modified matrix - n 6 / weighted by relative van der Waals volumes	2D
+BurdenModifiedEigenvalues	SpMax7_Bhv	Largest absolute eigenvalue of Burden modified matrix - n 7 / weighted by relative van der Waals volumes	2D
+BurdenModifiedEigenvalues	SpMax8_Bhv	Largest absolute eigenvalue of Burden modified matrix - n 8 / weighted by relative van der Waals volumes	2D
+BurdenModifiedEigenvalues	SpMin1_Bhv	Smallest absolute eigenvalue of Burden modified matrix - n 1 / weighted by relative van der Waals volumes	2D
+BurdenModifiedEigenvalues	SpMin2_Bhv	Smallest absolute eigenvalue of Burden modified matrix - n 2 / weighted by relative van der Waals volumes	2D
+BurdenModifiedEigenvalues	SpMin3_Bhv	Smallest absolute eigenvalue of Burden modified matrix - n 3 / weighted by relative van der Waals volumes	2D
+BurdenModifiedEigenvalues	SpMin4_Bhv	Smallest absolute eigenvalue of Burden modified matrix - n 4 / weighted by relative van der Waals volumes	2D
+BurdenModifiedEigenvalues	SpMin5_Bhv	Smallest absolute eigenvalue of Burden modified matrix - n 5 / weighted by relative van der Waals volumes	2D
+BurdenModifiedEigenvalues	SpMin6_Bhv	Smallest absolute eigenvalue of Burden modified matrix - n 6 / weighted by relative van der Waals volumes	2D
+BurdenModifiedEigenvalues	SpMin7_Bhv	Smallest absolute eigenvalue of Burden modified matrix - n 7 / weighted by relative van der Waals volumes	2D
+BurdenModifiedEigenvalues	SpMin8_Bhv	Smallest absolute eigenvalue of Burden modified matrix - n 8 / weighted by relative van der Waals volumes	2D
+BurdenModifiedEigenvalues	SpMax1_Bhe	Largest absolute eigenvalue of Burden modified matrix - n 1 / weighted by relative Sanderson electronegativities	2D
+BurdenModifiedEigenvalues	SpMax2_Bhe	Largest absolute eigenvalue of Burden modified matrix - n 2 / weighted by relative Sanderson electronegativities	2D
+BurdenModifiedEigenvalues	SpMax3_Bhe	Largest absolute eigenvalue of Burden modified matrix - n 3 / weighted by relative Sanderson electronegativities	2D
+BurdenModifiedEigenvalues	SpMax4_Bhe	Largest absolute eigenvalue of Burden modified matrix - n 4 / weighted by relative Sanderson electronegativities	2D
+BurdenModifiedEigenvalues	SpMax5_Bhe	Largest absolute eigenvalue of Burden modified matrix - n 5 / weighted by relative Sanderson electronegativities	2D
+BurdenModifiedEigenvalues	SpMax6_Bhe	Largest absolute eigenvalue of Burden modified matrix - n 6 / weighted by relative Sanderson electronegativities	2D
+BurdenModifiedEigenvalues	SpMax7_Bhe	Largest absolute eigenvalue of Burden modified matrix - n 7 / weighted by relative Sanderson electronegativities	2D
+BurdenModifiedEigenvalues	SpMax8_Bhe	Largest absolute eigenvalue of Burden modified matrix - n 8 / weighted by relative Sanderson electronegativities	2D
+BurdenModifiedEigenvalues	SpMin1_Bhe	Smallest absolute eigenvalue of Burden modified matrix - n 1 / weighted by relative Sanderson electronegativities	2D
+BurdenModifiedEigenvalues	SpMin2_Bhe	Smallest absolute eigenvalue of Burden modified matrix - n 2 / weighted by relative Sanderson electronegativities	2D
+BurdenModifiedEigenvalues	SpMin3_Bhe	Smallest absolute eigenvalue of Burden modified matrix - n 3 / weighted by relative Sanderson electronegativities	2D
+BurdenModifiedEigenvalues	SpMin4_Bhe	Smallest absolute eigenvalue of Burden modified matrix - n 4 / weighted by relative Sanderson electronegativities	2D
+BurdenModifiedEigenvalues	SpMin5_Bhe	Smallest absolute eigenvalue of Burden modified matrix - n 5 / weighted by relative Sanderson electronegativities	2D
+BurdenModifiedEigenvalues	SpMin6_Bhe	Smallest absolute eigenvalue of Burden modified matrix - n 6 / weighted by relative Sanderson electronegativities	2D
+BurdenModifiedEigenvalues	SpMin7_Bhe	Smallest absolute eigenvalue of Burden modified matrix - n 7 / weighted by relative Sanderson electronegativities	2D
+BurdenModifiedEigenvalues	SpMin8_Bhe	Smallest absolute eigenvalue of Burden modified matrix - n 8 / weighted by relative Sanderson electronegativities	2D
+BurdenModifiedEigenvalues	SpMax1_Bhp	Largest absolute eigenvalue of Burden modified matrix - n 1 / weighted by relative polarizabilities	2D
+BurdenModifiedEigenvalues	SpMax2_Bhp	Largest absolute eigenvalue of Burden modified matrix - n 2 / weighted by relative polarizabilities	2D
+BurdenModifiedEigenvalues	SpMax3_Bhp	Largest absolute eigenvalue of Burden modified matrix - n 3 / weighted by relative polarizabilities	2D
+BurdenModifiedEigenvalues	SpMax4_Bhp	Largest absolute eigenvalue of Burden modified matrix - n 4 / weighted by relative polarizabilities	2D
+BurdenModifiedEigenvalues	SpMax5_Bhp	Largest absolute eigenvalue of Burden modified matrix - n 5 / weighted by relative polarizabilities	2D
+BurdenModifiedEigenvalues	SpMax6_Bhp	Largest absolute eigenvalue of Burden modified matrix - n 6 / weighted by relative polarizabilities	2D
+BurdenModifiedEigenvalues	SpMax7_Bhp	Largest absolute eigenvalue of Burden modified matrix - n 7 / weighted by relative polarizabilities	2D
+BurdenModifiedEigenvalues	SpMax8_Bhp	Largest absolute eigenvalue of Burden modified matrix - n 8 / weighted by relative polarizabilities	2D
+BurdenModifiedEigenvalues	SpMin1_Bhp	Smallest absolute eigenvalue of Burden modified matrix - n 1 / weighted by relative polarizabilities	2D
+BurdenModifiedEigenvalues	SpMin2_Bhp	Smallest absolute eigenvalue of Burden modified matrix - n 2 / weighted by relative polarizabilities	2D
+BurdenModifiedEigenvalues	SpMin3_Bhp	Smallest absolute eigenvalue of Burden modified matrix - n 3 / weighted by relative polarizabilities	2D
+BurdenModifiedEigenvalues	SpMin4_Bhp	Smallest absolute eigenvalue of Burden modified matrix - n 4 / weighted by relative polarizabilities	2D
+BurdenModifiedEigenvalues	SpMin5_Bhp	Smallest absolute eigenvalue of Burden modified matrix - n 5 / weighted by relative polarizabilities	2D
+BurdenModifiedEigenvalues	SpMin6_Bhp	Smallest absolute eigenvalue of Burden modified matrix - n 6 / weighted by relative polarizabilities	2D
+BurdenModifiedEigenvalues	SpMin7_Bhp	Smallest absolute eigenvalue of Burden modified matrix - n 7 / weighted by relative polarizabilities	2D
+BurdenModifiedEigenvalues	SpMin8_Bhp	Smallest absolute eigenvalue of Burden modified matrix - n 8 / weighted by relative polarizabilities	2D
+BurdenModifiedEigenvalues	SpMax1_Bhi	Largest absolute eigenvalue of Burden modified matrix - n 1 / weighted by relative first ionization potential	2D
+BurdenModifiedEigenvalues	SpMax2_Bhi	Largest absolute eigenvalue of Burden modified matrix - n 2 / weighted by relative first ionization potential	2D
+BurdenModifiedEigenvalues	SpMax3_Bhi	Largest absolute eigenvalue of Burden modified matrix - n 3 / weighted by relative first ionization potential	2D
+BurdenModifiedEigenvalues	SpMax4_Bhi	Largest absolute eigenvalue of Burden modified matrix - n 4 / weighted by relative first ionization potential	2D
+BurdenModifiedEigenvalues	SpMax5_Bhi	Largest absolute eigenvalue of Burden modified matrix - n 5 / weighted by relative first ionization potential	2D
+BurdenModifiedEigenvalues	SpMax6_Bhi	Largest absolute eigenvalue of Burden modified matrix - n 6 / weighted by relative first ionization potential	2D
+BurdenModifiedEigenvalues	SpMax7_Bhi	Largest absolute eigenvalue of Burden modified matrix - n 7 / weighted by relative first ionization potential	2D
+BurdenModifiedEigenvalues	SpMax8_Bhi	Largest absolute eigenvalue of Burden modified matrix - n 8 / weighted by relative first ionization potential	2D
+BurdenModifiedEigenvalues	SpMin1_Bhi	Smallest absolute eigenvalue of Burden modified matrix - n 1 / weighted by relative first ionization potential	2D
+BurdenModifiedEigenvalues	SpMin2_Bhi	Smallest absolute eigenvalue of Burden modified matrix - n 2 / weighted by relative first ionization potential	2D
+BurdenModifiedEigenvalues	SpMin3_Bhi	Smallest absolute eigenvalue of Burden modified matrix - n 3 / weighted by relative first ionization potential	2D
+BurdenModifiedEigenvalues	SpMin4_Bhi	Smallest absolute eigenvalue of Burden modified matrix - n 4 / weighted by relative first ionization potential	2D
+BurdenModifiedEigenvalues	SpMin5_Bhi	Smallest absolute eigenvalue of Burden modified matrix - n 5 / weighted by relative first ionization potential	2D
+BurdenModifiedEigenvalues	SpMin6_Bhi	Smallest absolute eigenvalue of Burden modified matrix - n 6 / weighted by relative first ionization potential	2D
+BurdenModifiedEigenvalues	SpMin7_Bhi	Smallest absolute eigenvalue of Burden modified matrix - n 7 / weighted by relative first ionization potential	2D
+BurdenModifiedEigenvalues	SpMin8_Bhi	Smallest absolute eigenvalue of Burden modified matrix - n 8 / weighted by relative first ionization potential	2D
+BurdenModifiedEigenvalues	SpMax1_Bhs	Largest absolute eigenvalue of Burden modified matrix - n 1 / weighted by relative I-state	2D
+BurdenModifiedEigenvalues	SpMax2_Bhs	Largest absolute eigenvalue of Burden modified matrix - n 2 / weighted by relative I-state	2D
+BurdenModifiedEigenvalues	SpMax3_Bhs	Largest absolute eigenvalue of Burden modified matrix - n 3 / weighted by relative I-state	2D
+BurdenModifiedEigenvalues	SpMax4_Bhs	Largest absolute eigenvalue of Burden modified matrix - n 4 / weighted by relative I-state	2D
+BurdenModifiedEigenvalues	SpMax5_Bhs	Largest absolute eigenvalue of Burden modified matrix - n 5 / weighted by relative I-state	2D
+BurdenModifiedEigenvalues	SpMax6_Bhs	Largest absolute eigenvalue of Burden modified matrix - n 6 / weighted by relative I-state	2D
+BurdenModifiedEigenvalues	SpMax7_Bhs	Largest absolute eigenvalue of Burden modified matrix - n 7 / weighted by relative I-state	2D
+BurdenModifiedEigenvalues	SpMax8_Bhs	Largest absolute eigenvalue of Burden modified matrix - n 8 / weighted by relative I-state	2D
+BurdenModifiedEigenvalues	SpMin1_Bhs	Smallest absolute eigenvalue of Burden modified matrix - n 1 / weighted by relative I-state	2D
+BurdenModifiedEigenvalues	SpMin2_Bhs	Smallest absolute eigenvalue of Burden modified matrix - n 2 / weighted by relative I-state	2D
+BurdenModifiedEigenvalues	SpMin3_Bhs	Smallest absolute eigenvalue of Burden modified matrix - n 3 / weighted by relative I-state	2D
+BurdenModifiedEigenvalues	SpMin4_Bhs	Smallest absolute eigenvalue of Burden modified matrix - n 4 / weighted by relative I-state	2D
+BurdenModifiedEigenvalues	SpMin5_Bhs	Smallest absolute eigenvalue of Burden modified matrix - n 5 / weighted by relative I-state	2D
+BurdenModifiedEigenvalues	SpMin6_Bhs	Smallest absolute eigenvalue of Burden modified matrix - n 6 / weighted by relative I-state	2D
+BurdenModifiedEigenvalues	SpMin7_Bhs	Smallest absolute eigenvalue of Burden modified matrix - n 7 / weighted by relative I-state	2D
+BurdenModifiedEigenvalues	SpMin8_Bhs	Smallest absolute eigenvalue of Burden modified matrix - n 8 / weighted by relative I-state	2D
+CarbonTypes	C1SP1	Triply bound carbon bound to one other carbon 	2D
+CarbonTypes	C2SP1	Triply bound carbon bound to two other carbons 	2D
+CarbonTypes	C1SP2	Doubly bound carbon bound to one other carbon 	2D
+CarbonTypes	C2SP2	Doubly bound carbon bound to two other carbons 	2D
+CarbonTypes	C3SP2	Doubly bound carbon bound to three other carbons 	2D
+CarbonTypes	C1SP3	Singly bound carbon bound to one other carbon 	2D
+CarbonTypes	C2SP3	Singly bound carbon bound to two other carbons 	2D
+CarbonTypes	C3SP3	Singly bound carbon bound to three other carbons 	2D
+CarbonTypes	C4SP3	Singly bound carbon bound to four other carbons 	2D
+ChiChain	SCH-3	Simple chain, order 3	2D
+ChiChain	SCH-4	Simple chain, order 4	2D
+ChiChain	SCH-5	Simple chain, order 5	2D
+ChiChain	SCH-6	Simple chain, order 6	2D
+ChiChain	SCH-7	Simple chain, order 7	2D
+ChiChain	VCH-3	Valence chain, order 3	2D
+ChiChain	VCH-4	Valence chain, order 4	2D
+ChiChain	VCH-5	Valence chain, order 5	2D
+ChiChain	VCH-6	Valence chain, order 6	2D
+ChiChain	VCH-7	Valence chain, order 7	2D
+ChiCluster	SC-3	Simple cluster, order 3	2D
+ChiCluster	SC-4	Simple cluster, order 4	2D
+ChiCluster	SC-5	Simple cluster, order 5	2D
+ChiCluster	SC-6	Simple cluster, order 6	2D
+ChiCluster	VC-3	Valence cluster, order 3	2D
+ChiCluster	VC-4	Valence cluster, order 4	2D
+ChiCluster	VC-5	Valence cluster, order 5	2D
+ChiCluster	VC-6	Valence cluster, order 6	2D
+ChiPathCluster	SPC-4	Simple path cluster, order 4	2D
+ChiPathCluster	SPC-5	Simple path cluster, order 5	2D
+ChiPathCluster	SPC-6	Simple path cluster, order 6	2D
+ChiPathCluster	VPC-4	Valence path cluster, order 4	2D
+ChiPathCluster	VPC-5	Valence path cluster, order 5	2D
+ChiPathCluster	VPC-6	Valence path cluster, order 6	2D
+ChiPath	SP-0	Simple path, order 0	2D
+ChiPath	SP-1	Simple path, order 1	2D
+ChiPath	SP-2	Simple path, order 2	2D
+ChiPath	SP-3	Simple path, order 3	2D
+ChiPath	SP-4	Simple path, order 4	2D
+ChiPath	SP-5	Simple path, order 5	2D
+ChiPath	SP-6	Simple path, order 6	2D
+ChiPath	SP-7	Simple path, order 7	2D
+ChiPath	ASP-0	Average simple path, order 0	2D
+ChiPath	ASP-1	Average simple path, order 1	2D
+ChiPath	ASP-2	Average simple path, order 2	2D
+ChiPath	ASP-3	Average simple path, order 3	2D
+ChiPath	ASP-4	Average simple path, order 4	2D
+ChiPath	ASP-5	Average simple path, order 5	2D
+ChiPath	ASP-6	Average simple path, order 6	2D
+ChiPath	ASP-7	Average simple path, order 7	2D
+ChiPath	VP-0	Valence path, order 0	2D
+ChiPath	VP-1	Valence path, order 1	2D
+ChiPath	VP-2	Valence path, order 2	2D
+ChiPath	VP-3	Valence path, order 3	2D
+ChiPath	VP-4	Valence path, order 4	2D
+ChiPath	VP-5	Valence path, order 5	2D
+ChiPath	VP-6	Valence path, order 6	2D
+ChiPath	VP-7	Valence path, order 7	2D
+ChiPath	AVP-0	Average valence path, order 0	2D
+ChiPath	AVP-1	Average valence path, order 1	2D
+ChiPath	AVP-2	Average valence path, order 2	2D
+ChiPath	AVP-3	Average valence path, order 3	2D
+ChiPath	AVP-4	Average valence path, order 4	2D
+ChiPath	AVP-5	Average valence path, order 5	2D
+ChiPath	AVP-6	Average valence path, order 6	2D
+ChiPath	AVP-7	Average valence path, order 7	2D
+Constitutional	Sv	Sum of atomic van der Waals volumes (scaled on carbon atom)	2D
+Constitutional	Sse	Sum of atomic Sanderson electronegativities (scaled on carbon atom)	2D
+Constitutional	Spe	Sum of atomic Pauling electronegativities (scaled on carbon atom)	2D
+Constitutional	Sare	Sum of atomic Allred-Rochow electronegativities (scaled on carbon atom)	2D
+Constitutional	Sp	Sum of atomic polarizabilities (scaled on carbon atom)	2D
+Constitutional	Si	Sum of first first ionization potentials (scaled on carbon atom)	2D
+Constitutional	Mv	Mean atomic van der Waals volumes (scaled on carbon atom)	2D
+Constitutional	Mse	Mean atomic Sanderson electronegativities (scaled on carbon atom)	2D
+Constitutional	Mpe	Mean atomic Pauling electronegativities (scaled on carbon atom)	2D
+Constitutional	Mare	Mean atomic Allred-Rochow electronegativities (scaled on carbon atom)	2D
+Constitutional	Mp	Mean atomic polarizabilities (scaled on carbon atom)	2D
+Constitutional	Mi	Mean first first ionization potentials (scaled on carbon atom)	2D
+Crippen	CrippenLogP	Crippen's LogP	2D
+Crippen	CrippenMR	Crippen's molar refractivity	2D
+DetourMatrix	SpMax_Dt	Leading eigenvalue from detour matrix	2D
+DetourMatrix	SpDiam_Dt	Spectral diameter from detour matrix	2D
+DetourMatrix	SpAD_Dt	Spectral absolute deviation from detour matrix	2D
+DetourMatrix	SpMAD_Dt	Spectral mean absolute deviation from detour matrix	2D
+DetourMatrix	EE_Dt	Estrada-like index from detour matrix	2D
+DetourMatrix	VE1_Dt	Coefficient sum of the last eigenvector from detour matrix	2D
+DetourMatrix	VE2_Dt	Average coefficient sum of the last eigenvector from detour matrix	2D
+DetourMatrix	VE3_Dt	Logarithmic coefficient sum of the last eigenvector from detour matrix	2D
+DetourMatrix	VR1_Dt	Randic-like eigenvector-based index from detour matrix	2D
+DetourMatrix	VR2_Dt	Normalized Randic-like eigenvector-based index from detour matrix	2D
+DetourMatrix	VR3_Dt	Logarithmic Randic-like eigenvector-based index from detour matrix	2D
+EccentricConnectivityIndex	ECCEN	A topological descriptor combining distance and adjacency information	2D
+ElectrotopologicalStateAtomType	nHBd	Count of E-States for (strong) Hydrogen Bond donors	2D
+ElectrotopologicalStateAtomType	nwHBd	Count of E-States for weak Hydrogen Bond donors	2D
+ElectrotopologicalStateAtomType	nHBa	Count of E-States for (strong) Hydrogen Bond acceptors	2D
+ElectrotopologicalStateAtomType	nwHBa	Count of E-States for weak Hydrogen Bond acceptors	2D
+ElectrotopologicalStateAtomType	nHBint2	Count of E-State descriptors of strength for potential Hydrogen Bonds of path length 2	2D
+ElectrotopologicalStateAtomType	nHBint3	Count of E-State descriptors of strength for potential Hydrogen Bonds of path length 3	2D
+ElectrotopologicalStateAtomType	nHBint4	Count of E-State descriptors of strength for potential Hydrogen Bonds of path length 4	2D
+ElectrotopologicalStateAtomType	nHBint5	Count of E-State descriptors of strength for potential Hydrogen Bonds of path length 5	2D
+ElectrotopologicalStateAtomType	nHBint6	Count of E-State descriptors of strength for potential Hydrogen Bonds of path length 6	2D
+ElectrotopologicalStateAtomType	nHBint7	Count of E-State descriptors of strength for potential Hydrogen Bonds of path length 7	2D
+ElectrotopologicalStateAtomType	nHBint8	Count of E-State descriptors of strength for potential Hydrogen Bonds of path length 8	2D
+ElectrotopologicalStateAtomType	nHBint9	Count of E-State descriptors of strength for potential Hydrogen Bonds of path length 9	2D
+ElectrotopologicalStateAtomType	nHBint10	Count of E-State descriptors of strength for potential Hydrogen Bonds of path length 10	2D
+ElectrotopologicalStateAtomType	nHsOH	Count of atom-type H E-State: -OH	2D
+ElectrotopologicalStateAtomType	nHdNH	Count of atom-type H E-State: =NH	2D
+ElectrotopologicalStateAtomType	nHsSH	Count of atom-type H E-State: -SH	2D
+ElectrotopologicalStateAtomType	nHsNH2	Count of atom-type H E-State: -NH2	2D
+ElectrotopologicalStateAtomType	nHssNH	Count of atom-type H E-State: -NH-	2D
+ElectrotopologicalStateAtomType	nHaaNH	Count of atom-type H E-State: :NH:	2D
+ElectrotopologicalStateAtomType	nHsNH3p	Count of atom-type H E-State: -NH3+	2D
+ElectrotopologicalStateAtomType	nHssNH2p	Count of atom-type H E-State: -NH2-+	2D
+ElectrotopologicalStateAtomType	nHsssNHp	Count of atom-type H E-State: >NH-+	2D
+ElectrotopologicalStateAtomType	nHtCH	Count of atom-type H E-State: #CH	2D
+ElectrotopologicalStateAtomType	nHdCH2	Count of atom-type H E-State: =CH2	2D
+ElectrotopologicalStateAtomType	nHdsCH	Count of atom-type H E-State: =CH-	2D
+ElectrotopologicalStateAtomType	nHaaCH	Count of atom-type H E-State: :CH:	2D
+ElectrotopologicalStateAtomType	nHCHnX	Count of atom-type H E-State: CHnX	2D
+ElectrotopologicalStateAtomType	nHCsats	Count of atom-type H E-State: H bonded to B, Si, P, Ge, As, Se, Sn or Pb	2D
+ElectrotopologicalStateAtomType	nHCsatu	Count of atom-type H E-State: H on C sp3 bonded to unsaturated C	2D
+ElectrotopologicalStateAtomType	nHAvin	Count of atom-type H E-State: H on C vinyl bonded to C aromatic	2D
+ElectrotopologicalStateAtomType	nHother	Count of atom-type H E-State: H on aaCH, dCH2 or dsCH	2D
+ElectrotopologicalStateAtomType	nHmisc	Count of atom-type H E-State: H bonded to B, Si, P, Ge, As, Se, Sn or Pb	2D
+ElectrotopologicalStateAtomType	nsLi	Count of atom-type E-State: -Li	2D
+ElectrotopologicalStateAtomType	nssBe	Count of atom-type E-State: -Be-	2D
+ElectrotopologicalStateAtomType	nssssBem	Count of atom-type E-State: >Be<-2	2D
+ElectrotopologicalStateAtomType	nsBH2	Count of atom-type E-State: -BH2	2D
+ElectrotopologicalStateAtomType	nssBH	Count of atom-type E-State: -BH-	2D
+ElectrotopologicalStateAtomType	nsssB	Count of atom-type E-State: -B<	2D
+ElectrotopologicalStateAtomType	nssssBm	Count of atom-type E-State: >B<-	2D
+ElectrotopologicalStateAtomType	nsCH3	Count of atom-type E-State: -CH3	2D
+ElectrotopologicalStateAtomType	ndCH2	Count of atom-type E-State: =CH2	2D
+ElectrotopologicalStateAtomType	nssCH2	Count of atom-type E-State: -CH2-	2D
+ElectrotopologicalStateAtomType	ntCH	Count of atom-type E-State: #CH	2D
+ElectrotopologicalStateAtomType	ndsCH	Count of atom-type E-State: =CH-	2D
+ElectrotopologicalStateAtomType	naaCH	Count of atom-type E-State: :CH:	2D
+ElectrotopologicalStateAtomType	nsssCH	Count of atom-type E-State: >CH-	2D
+ElectrotopologicalStateAtomType	nddC	Count of atom-type E-State: =C=	2D
+ElectrotopologicalStateAtomType	ntsC	Count of atom-type E-State: #C-	2D
+ElectrotopologicalStateAtomType	ndssC	Count of atom-type E-State: =C<	2D
+ElectrotopologicalStateAtomType	naasC	Count of atom-type E-State: :C:-	2D
+ElectrotopologicalStateAtomType	naaaC	Count of atom-type E-State: ::C:	2D
+ElectrotopologicalStateAtomType	nssssC	Count of atom-type E-State: >C<	2D
+ElectrotopologicalStateAtomType	nsNH3p	Count of atom-type E-State: -NH3+	2D
+ElectrotopologicalStateAtomType	nsNH2	Count of atom-type E-State: -NH2	2D
+ElectrotopologicalStateAtomType	nssNH2p	Count of atom-type E-State: -NH2-+	2D
+ElectrotopologicalStateAtomType	ndNH	Count of atom-type E-State: =NH	2D
+ElectrotopologicalStateAtomType	nssNH	Count of atom-type E-State: -NH-	2D
+ElectrotopologicalStateAtomType	naaNH	Count of atom-type E-State: :NH:	2D
+ElectrotopologicalStateAtomType	ntN	Count of atom-type E-State: #N	2D
+ElectrotopologicalStateAtomType	nsssNHp	Count of atom-type E-State: >NH-+	2D
+ElectrotopologicalStateAtomType	ndsN	Count of atom-type E-State: =N-	2D
+ElectrotopologicalStateAtomType	naaN	Count of atom-type E-State: :N:	2D
+ElectrotopologicalStateAtomType	nsssN	Count of atom-type E-State: >N-	2D
+ElectrotopologicalStateAtomType	nddsN	Count of atom-type E-State: -N<<	2D
+ElectrotopologicalStateAtomType	naasN	Count of atom-type E-State: :N:-	2D
+ElectrotopologicalStateAtomType	nssssNp	Count of atom-type E-State: >N<+	2D
+ElectrotopologicalStateAtomType	nsOH	Count of atom-type E-State: -OH	2D
+ElectrotopologicalStateAtomType	ndO	Count of atom-type E-State: =O	2D
+ElectrotopologicalStateAtomType	nssO	Count of atom-type E-State: -O-	2D
+ElectrotopologicalStateAtomType	naaO	Count of atom-type E-State: :O:	2D
+ElectrotopologicalStateAtomType	naOm	Count of atom-type E-State: :O-0.5	2D
+ElectrotopologicalStateAtomType	nsOm	Count of atom-type E-State: -O-	2D
+ElectrotopologicalStateAtomType	nsF	Count of atom-type E-State: -F	2D
+ElectrotopologicalStateAtomType	nsSiH3	Count of atom-type E-State: -SiH3	2D
+ElectrotopologicalStateAtomType	nssSiH2	Count of atom-type E-State: -SiH2-	2D
+ElectrotopologicalStateAtomType	nsssSiH	Count of atom-type E-State: >SiH-	2D
+ElectrotopologicalStateAtomType	nssssSi	Count of atom-type E-State: >Si<	2D
+ElectrotopologicalStateAtomType	nsPH2	Count of atom-type E-State: -PH2	2D
+ElectrotopologicalStateAtomType	nssPH	Count of atom-type E-State: -PH-	2D
+ElectrotopologicalStateAtomType	nsssP	Count of atom-type E-State: >P-	2D
+ElectrotopologicalStateAtomType	ndsssP	Count of atom-type E-State: ->P=	2D
+ElectrotopologicalStateAtomType	nddsP	Count of atom-type E-State: -=P=	2D
+ElectrotopologicalStateAtomType	nsssssP	Count of atom-type E-State: ->P<	2D
+ElectrotopologicalStateAtomType	nsSH	Count of atom-type E-State: -SH	2D
+ElectrotopologicalStateAtomType	ndS	Count of atom-type E-State: =S	2D
+ElectrotopologicalStateAtomType	nssS	Count of atom-type E-State: -S-	2D
+ElectrotopologicalStateAtomType	naaS	Count of atom-type E-State: aSa	2D
+ElectrotopologicalStateAtomType	ndssS	Count of atom-type E-State: >S=	2D
+ElectrotopologicalStateAtomType	nddssS	Count of atom-type E-State: >S==	2D
+ElectrotopologicalStateAtomType	nssssssS	Count of atom-type E-State: >S<<	2D
+ElectrotopologicalStateAtomType	nSm	Count of atom-type E-State: -S-	2D
+ElectrotopologicalStateAtomType	nsCl	Count of atom-type E-State: -Cl	2D
+ElectrotopologicalStateAtomType	nsGeH3	Count of atom-type E-State: -GeH3	2D
+ElectrotopologicalStateAtomType	nssGeH2	Count of atom-type E-State: -GeH2-	2D
+ElectrotopologicalStateAtomType	nsssGeH	Count of atom-type E-State: >GeH-	2D
+ElectrotopologicalStateAtomType	nssssGe	Count of atom-type E-State: >Ge<	2D
+ElectrotopologicalStateAtomType	nsAsH2	Count of atom-type E-State: -AsH2	2D
+ElectrotopologicalStateAtomType	nssAsH	Count of atom-type E-State: -AsH-	2D
+ElectrotopologicalStateAtomType	nsssAs	Count of atom-type E-State: >As-	2D
+ElectrotopologicalStateAtomType	ndsssAs	Count of atom-type E-State: ->As=	2D
+ElectrotopologicalStateAtomType	nddsAs	Count of atom-type E-State: -=As=	2D
+ElectrotopologicalStateAtomType	nsssssAs	Count of atom-type E-State: ->As<	2D
+ElectrotopologicalStateAtomType	nsSeH	Count of atom-type E-State: -SeH	2D
+ElectrotopologicalStateAtomType	ndSe	Count of atom-type E-State: =Se	2D
+ElectrotopologicalStateAtomType	nssSe	Count of atom-type E-State: -Se-	2D
+ElectrotopologicalStateAtomType	naaSe	Count of atom-type E-State: aSea	2D
+ElectrotopologicalStateAtomType	ndssSe	Count of atom-type E-State: >Se=	2D
+ElectrotopologicalStateAtomType	nssssssSe	Count of atom-type E-State: >Se<<	2D
+ElectrotopologicalStateAtomType	nddssSe	Count of atom-type E-State: -=Se=-	2D
+ElectrotopologicalStateAtomType	nsBr	Count of atom-type E-State: -Br	2D
+ElectrotopologicalStateAtomType	nsSnH3	Count of atom-type E-State: -SnH3	2D
+ElectrotopologicalStateAtomType	nssSnH2	Count of atom-type E-State: -SnH2-	2D
+ElectrotopologicalStateAtomType	nsssSnH	Count of atom-type E-State: >SnH-	2D
+ElectrotopologicalStateAtomType	nssssSn	Count of atom-type E-State: >Sn<	2D
+ElectrotopologicalStateAtomType	nsI	Count of atom-type E-State: -I	2D
+ElectrotopologicalStateAtomType	nsPbH3	Count of atom-type E-State: -PbH3	2D
+ElectrotopologicalStateAtomType	nssPbH2	Count of atom-type E-State: -PbH2-	2D
+ElectrotopologicalStateAtomType	nsssPbH	Count of atom-type E-State: >PbH-	2D
+ElectrotopologicalStateAtomType	nssssPb	Count of atom-type E-State: >Pb<	2D
+ElectrotopologicalStateAtomType	SHBd	Sum of E-States for (strong) hydrogen bond donors	2D
+ElectrotopologicalStateAtomType	SwHBd	Sum of E-States for weak hydrogen bond donors	2D
+ElectrotopologicalStateAtomType	SHBa	Sum of E-States for (strong) hydrogen bond acceptors	2D
+ElectrotopologicalStateAtomType	SwHBa	Sum of E-States for weak hydrogen bond acceptors	2D
+ElectrotopologicalStateAtomType	SHBint2	Sum of E-State descriptors of strength for potential hydrogen bonds of path length 2	2D
+ElectrotopologicalStateAtomType	SHBint3	Sum of E-State descriptors of strength for potential hydrogen bonds of path length 3	2D
+ElectrotopologicalStateAtomType	SHBint4	Sum of E-State descriptors of strength for potential hydrogen bonds of path length 4	2D
+ElectrotopologicalStateAtomType	SHBint5	Sum of E-State descriptors of strength for potential hydrogen bonds of path length 5	2D
+ElectrotopologicalStateAtomType	SHBint6	Sum of E-State descriptors of strength for potential hydrogen bonds of path length 6	2D
+ElectrotopologicalStateAtomType	SHBint7	Sum of E-State descriptors of strength for potential hydrogen bonds of path length 7	2D
+ElectrotopologicalStateAtomType	SHBint8	Sum of E-State descriptors of strength for potential hydrogen bonds of path length 8	2D
+ElectrotopologicalStateAtomType	SHBint9	Sum of E-State descriptors of strength for potential hydrogen bonds of path length 9	2D
+ElectrotopologicalStateAtomType	SHBint10	Sum of E-State descriptors of strength for potential hydrogen bonds of path length 10	2D
+ElectrotopologicalStateAtomType	SHsOH	Sum of atom-type H E-State: -OH	2D
+ElectrotopologicalStateAtomType	SHdNH	Sum of atom-type H E-State: =NH	2D
+ElectrotopologicalStateAtomType	SHsSH	Sum of atom-type H E-State: -SH	2D
+ElectrotopologicalStateAtomType	SHsNH2	Sum of atom-type H E-State: -NH2	2D
+ElectrotopologicalStateAtomType	SHssNH	Sum of atom-type H E-State: -NH-	2D
+ElectrotopologicalStateAtomType	SHaaNH	Sum of atom-type H E-State: :NH:	2D
+ElectrotopologicalStateAtomType	SHsNH3p	Sum of atom-type H E-State: -NH3+	2D
+ElectrotopologicalStateAtomType	SHssNH2p	Sum of atom-type H E-State: -NH2-+	2D
+ElectrotopologicalStateAtomType	SHsssNHp	Sum of atom-type H E-State: >NH-+	2D
+ElectrotopologicalStateAtomType	SHtCH	Sum of atom-type H E-State: #CH	2D
+ElectrotopologicalStateAtomType	SHdCH2	Sum of atom-type H E-State: =CH2	2D
+ElectrotopologicalStateAtomType	SHdsCH	Sum of atom-type H E-State: =CH-	2D
+ElectrotopologicalStateAtomType	SHaaCH	Sum of atom-type H E-State: :CH:	2D
+ElectrotopologicalStateAtomType	SHCHnX	Sum of atom-type H E-State: CHnX	2D
+ElectrotopologicalStateAtomType	SHCsats	Sum of atom-type H E-State: H on C sp3 bonded to saturated C	2D
+ElectrotopologicalStateAtomType	SHCsatu	Sum of atom-type H E-State: H on C sp3 bonded to unsaturated C	2D
+ElectrotopologicalStateAtomType	SHAvin	Sum of atom-type H E-State: H on C vinyl bonded to C aromatic	2D
+ElectrotopologicalStateAtomType	SHother	Sum of atom-type H E-State: H on aaCH, dCH2 or dsCH	2D
+ElectrotopologicalStateAtomType	SHmisc	Sum of atom-type H E-State: H bonded to B, Si, P, Ge, As, Se, Sn or Pb	2D
+ElectrotopologicalStateAtomType	SsLi	Sum of atom-type E-State: -Li	2D
+ElectrotopologicalStateAtomType	SssBe	Sum of atom-type E-State: -Be-	2D
+ElectrotopologicalStateAtomType	SssssBem	Sum of atom-type E-State: >Be<-2	2D
+ElectrotopologicalStateAtomType	SsBH2	Sum of atom-type E-State: -BH2	2D
+ElectrotopologicalStateAtomType	SssBH	Sum of atom-type E-State: -BH-	2D
+ElectrotopologicalStateAtomType	SsssB	Sum of atom-type E-State: -B<	2D
+ElectrotopologicalStateAtomType	SssssBm	Sum of atom-type E-State: >B<-	2D
+ElectrotopologicalStateAtomType	SsCH3	Sum of atom-type E-State: -CH3	2D
+ElectrotopologicalStateAtomType	SdCH2	Sum of atom-type E-State: =CH2	2D
+ElectrotopologicalStateAtomType	SssCH2	Sum of atom-type E-State: -CH2-	2D
+ElectrotopologicalStateAtomType	StCH	Sum of atom-type E-State: #CH	2D
+ElectrotopologicalStateAtomType	SdsCH	Sum of atom-type E-State: =CH-	2D
+ElectrotopologicalStateAtomType	SaaCH	Sum of atom-type E-State: :CH:	2D
+ElectrotopologicalStateAtomType	SsssCH	Sum of atom-type E-State: >CH-	2D
+ElectrotopologicalStateAtomType	SddC	Sum of atom-type E-State: =C=	2D
+ElectrotopologicalStateAtomType	StsC	Sum of atom-type E-State: #C-	2D
+ElectrotopologicalStateAtomType	SdssC	Sum of atom-type E-State: =C<	2D
+ElectrotopologicalStateAtomType	SaasC	Sum of atom-type E-State: :C:-	2D
+ElectrotopologicalStateAtomType	SaaaC	Sum of atom-type E-State: ::C:	2D
+ElectrotopologicalStateAtomType	SssssC	Sum of atom-type E-State: >C<	2D
+ElectrotopologicalStateAtomType	SsNH3p	Sum of atom-type E-State: -NH3+	2D
+ElectrotopologicalStateAtomType	SsNH2	Sum of atom-type E-State: -NH2	2D
+ElectrotopologicalStateAtomType	SssNH2p	Sum of atom-type E-State: -NH2-+	2D
+ElectrotopologicalStateAtomType	SdNH	Sum of atom-type E-State: =NH	2D
+ElectrotopologicalStateAtomType	SssNH	Sum of atom-type E-State: -NH-	2D
+ElectrotopologicalStateAtomType	SaaNH	Sum of atom-type E-State: :NH:	2D
+ElectrotopologicalStateAtomType	StN	Sum of atom-type E-State: #N	2D
+ElectrotopologicalStateAtomType	SsssNHp	Sum of atom-type E-State: >NH-+	2D
+ElectrotopologicalStateAtomType	SdsN	Sum of atom-type E-State: =N-	2D
+ElectrotopologicalStateAtomType	SaaN	Sum of atom-type E-State: :N:	2D
+ElectrotopologicalStateAtomType	SsssN	Sum of atom-type E-State: >N-	2D
+ElectrotopologicalStateAtomType	SddsN	Sum of atom-type E-State: -N<<	2D
+ElectrotopologicalStateAtomType	SaasN	Sum of atom-type E-State: :N:-	2D
+ElectrotopologicalStateAtomType	SssssNp	Sum of atom-type E-State: >N<+	2D
+ElectrotopologicalStateAtomType	SsOH	Sum of atom-type E-State: -OH	2D
+ElectrotopologicalStateAtomType	SdO	Sum of atom-type E-State: =O	2D
+ElectrotopologicalStateAtomType	SssO	Sum of atom-type E-State: -O-	2D
+ElectrotopologicalStateAtomType	SaaO	Sum of atom-type E-State: :O:	2D
+ElectrotopologicalStateAtomType	SaOm	Sum of atom-type E-State: :O-0.5	2D
+ElectrotopologicalStateAtomType	SsOm	Sum of atom-type E-State: -O-	2D
+ElectrotopologicalStateAtomType	SsF	Sum of atom-type E-State: -F	2D
+ElectrotopologicalStateAtomType	SsSiH3	Sum of atom-type E-State: -SiH3	2D
+ElectrotopologicalStateAtomType	SssSiH2	Sum of atom-type E-State: -SiH2-	2D
+ElectrotopologicalStateAtomType	SsssSiH	Sum of atom-type E-State: >SiH-	2D
+ElectrotopologicalStateAtomType	SssssSi	Sum of atom-type E-State: >Si<	2D
+ElectrotopologicalStateAtomType	SsPH2	Sum of atom-type E-State: -PH2	2D
+ElectrotopologicalStateAtomType	SssPH	Sum of atom-type E-State: -PH-	2D
+ElectrotopologicalStateAtomType	SsssP	Sum of atom-type E-State: >P-	2D
+ElectrotopologicalStateAtomType	SdsssP	Sum of atom-type E-State: ->P=	2D
+ElectrotopologicalStateAtomType	SddsP	Sum of atom-type E-State: -=P=	2D
+ElectrotopologicalStateAtomType	SsssssP	Sum of atom-type E-State: ->P<	2D
+ElectrotopologicalStateAtomType	SsSH	Sum of atom-type E-State: -SH	2D
+ElectrotopologicalStateAtomType	SdS	Sum of atom-type E-State: =S	2D
+ElectrotopologicalStateAtomType	SssS	Sum of atom-type E-State: -S-	2D
+ElectrotopologicalStateAtomType	SaaS	Sum of atom-type E-State: aSa	2D
+ElectrotopologicalStateAtomType	SdssS	Sum of atom-type E-State: >S=	2D
+ElectrotopologicalStateAtomType	SddssS	Sum of atom-type E-State: >S==	2D
+ElectrotopologicalStateAtomType	SssssssS	Sum of atom-type E-State: >S<<	2D
+ElectrotopologicalStateAtomType	SSm	Sum of atom-type E-State: -S-	2D
+ElectrotopologicalStateAtomType	SsCl	Sum of atom-type E-State: -Cl	2D
+ElectrotopologicalStateAtomType	SsGeH3	Sum of atom-type E-State: -GeH3	2D
+ElectrotopologicalStateAtomType	SssGeH2	Sum of atom-type E-State: -GeH2-	2D
+ElectrotopologicalStateAtomType	SsssGeH	Sum of atom-type E-State: >GeH-	2D
+ElectrotopologicalStateAtomType	SssssGe	Sum of atom-type E-State: >Ge<	2D
+ElectrotopologicalStateAtomType	SsAsH2	Sum of atom-type E-State: -AsH2	2D
+ElectrotopologicalStateAtomType	SssAsH	Sum of atom-type E-State: -AsH-	2D
+ElectrotopologicalStateAtomType	SsssAs	Sum of atom-type E-State: >As-	2D
+ElectrotopologicalStateAtomType	SdsssAs	Sum of atom-type E-State: ->As=	2D
+ElectrotopologicalStateAtomType	SddsAs	Sum of atom-type E-State: -=As=	2D
+ElectrotopologicalStateAtomType	SsssssAs	Sum of atom-type E-State: ->As<	2D
+ElectrotopologicalStateAtomType	SsSeH	Sum of atom-type E-State: -SeH	2D
+ElectrotopologicalStateAtomType	SdSe	Sum of atom-type E-State: =Se	2D
+ElectrotopologicalStateAtomType	SssSe	Sum of atom-type E-State: -Se-	2D
+ElectrotopologicalStateAtomType	SaaSe	Sum of atom-type E-State: aSea	2D
+ElectrotopologicalStateAtomType	SdssSe	Sum of atom-type E-State: >Se=	2D
+ElectrotopologicalStateAtomType	SssssssSe	Sum of atom-type E-State: >Se<<	2D
+ElectrotopologicalStateAtomType	SddssSe	Sum of atom-type E-State: -=Se=-	2D
+ElectrotopologicalStateAtomType	SsBr	Sum of atom-type E-State: -Br	2D
+ElectrotopologicalStateAtomType	SsSnH3	Sum of atom-type E-State: -SnH3	2D
+ElectrotopologicalStateAtomType	SssSnH2	Sum of atom-type E-State: -SnH2-	2D
+ElectrotopologicalStateAtomType	SsssSnH	Sum of atom-type E-State: >SnH-	2D
+ElectrotopologicalStateAtomType	SssssSn	Sum of atom-type E-State: >Sn<	2D
+ElectrotopologicalStateAtomType	SsI	Sum of atom-type E-State: -I	2D
+ElectrotopologicalStateAtomType	SsPbH3	Sum of atom-type E-State: -PbH3	2D
+ElectrotopologicalStateAtomType	SssPbH2	Sum of atom-type E-State: -PbH2-	2D
+ElectrotopologicalStateAtomType	SsssPbH	Sum of atom-type E-State: >PbH-	2D
+ElectrotopologicalStateAtomType	SssssPb	Sum of atom-type E-State: >Pb<	2D
+ElectrotopologicalStateAtomType	minHBd	Minimum E-States for (strong) Hydrogen Bond donors	2D
+ElectrotopologicalStateAtomType	minwHBd	Minimum E-States for weak Hydrogen Bond donors	2D
+ElectrotopologicalStateAtomType	minHBa	Minimum E-States for (strong) Hydrogen Bond acceptors	2D
+ElectrotopologicalStateAtomType	minwHBa	Minimum E-States for weak Hydrogen Bond acceptors	2D
+ElectrotopologicalStateAtomType	minHBint2	Minimum E-State descriptors of strength for potential Hydrogen Bonds of path length 2	2D
+ElectrotopologicalStateAtomType	minHBint3	Minimum E-State descriptors of strength for potential Hydrogen Bonds of path length 3	2D
+ElectrotopologicalStateAtomType	minHBint4	Minimum E-State descriptors of strength for potential Hydrogen Bonds of path length 4	2D
+ElectrotopologicalStateAtomType	minHBint5	Minimum E-State descriptors of strength for potential Hydrogen Bonds of path length 5	2D
+ElectrotopologicalStateAtomType	minHBint6	Minimum E-State descriptors of strength for potential Hydrogen Bonds of path length 6	2D
+ElectrotopologicalStateAtomType	minHBint7	Minimum E-State descriptors of strength for potential Hydrogen Bonds of path length 7	2D
+ElectrotopologicalStateAtomType	minHBint8	Minimum E-State descriptors of strength for potential Hydrogen Bonds of path length 8	2D
+ElectrotopologicalStateAtomType	minHBint9	Minimum E-State descriptors of strength for potential Hydrogen Bonds of path length 9	2D
+ElectrotopologicalStateAtomType	minHBint10	Minimum E-State descriptors of strength for potential Hydrogen Bonds of path length 10	2D
+ElectrotopologicalStateAtomType	minHsOH	Minimum atom-type H E-State: -OH	2D
+ElectrotopologicalStateAtomType	minHdNH	Minimum atom-type H E-State: =NH	2D
+ElectrotopologicalStateAtomType	minHsSH	Minimum atom-type H E-State: -SH	2D
+ElectrotopologicalStateAtomType	minHsNH2	Minimum atom-type H E-State: -NH2	2D
+ElectrotopologicalStateAtomType	minHssNH	Minimum atom-type H E-State: -NH-	2D
+ElectrotopologicalStateAtomType	minHaaNH	Minimum atom-type H E-State: :NH:	2D
+ElectrotopologicalStateAtomType	minHsNH3p	Minimum atom-type H E-State: -NH3+	2D
+ElectrotopologicalStateAtomType	minHssNH2p	Minimum atom-type H E-State: -NH2-+	2D
+ElectrotopologicalStateAtomType	minHsssNHp	Minimum atom-type H E-State: >NH-+	2D
+ElectrotopologicalStateAtomType	minHtCH	Minimum atom-type H E-State: #CH	2D
+ElectrotopologicalStateAtomType	minHdCH2	Minimum atom-type H E-State: =CH2	2D
+ElectrotopologicalStateAtomType	minHdsCH	Minimum atom-type H E-State: =CH-	2D
+ElectrotopologicalStateAtomType	minHaaCH	Minimum atom-type H E-State: :CH:	2D
+ElectrotopologicalStateAtomType	minHCHnX	Minimum atom-type H E-State: CHnX	2D
+ElectrotopologicalStateAtomType	minHCsats	Minimum atom-type H E-State: H bonded to B, Si, P, Ge, As, Se, Sn or Pb	2D
+ElectrotopologicalStateAtomType	minHCsatu	Minimum atom-type H E-State: H on C sp3 bonded to unsaturated C	2D
+ElectrotopologicalStateAtomType	minHAvin	Minimum atom-type H E-State: H on C vinyl bonded to C aromatic	2D
+ElectrotopologicalStateAtomType	minHother	Minimum atom-type H E-State: H on aaCH, dCH2 or dsCH	2D
+ElectrotopologicalStateAtomType	minHmisc	Minimum atom-type H E-State: H bonded to B, Si, P, Ge, As, Se, Sn or Pb	2D
+ElectrotopologicalStateAtomType	minsLi	Minimum atom-type E-State: -Li	2D
+ElectrotopologicalStateAtomType	minssBe	Minimum atom-type E-State: -Be-	2D
+ElectrotopologicalStateAtomType	minssssBem	Minimum atom-type E-State: >Be<-2	2D
+ElectrotopologicalStateAtomType	minsBH2	Minimum atom-type E-State: -BH2	2D
+ElectrotopologicalStateAtomType	minssBH	Minimum atom-type E-State: -BH-	2D
+ElectrotopologicalStateAtomType	minsssB	Minimum atom-type E-State: -B<	2D
+ElectrotopologicalStateAtomType	minssssBm	Minimum atom-type E-State: >B<-	2D
+ElectrotopologicalStateAtomType	minsCH3	Minimum atom-type E-State: -CH3	2D
+ElectrotopologicalStateAtomType	mindCH2	Minimum atom-type E-State: =CH2	2D
+ElectrotopologicalStateAtomType	minssCH2	Minimum atom-type E-State: -CH2-	2D
+ElectrotopologicalStateAtomType	mintCH	Minimum atom-type E-State: #CH	2D
+ElectrotopologicalStateAtomType	mindsCH	Minimum atom-type E-State: =CH-	2D
+ElectrotopologicalStateAtomType	minaaCH	Minimum atom-type E-State: :CH:	2D
+ElectrotopologicalStateAtomType	minsssCH	Minimum atom-type E-State: >CH-	2D
+ElectrotopologicalStateAtomType	minddC	Minimum atom-type E-State: =C=	2D
+ElectrotopologicalStateAtomType	mintsC	Minimum atom-type E-State: #C-	2D
+ElectrotopologicalStateAtomType	mindssC	Minimum atom-type E-State: =C<	2D
+ElectrotopologicalStateAtomType	minaasC	Minimum atom-type E-State: :C:-	2D
+ElectrotopologicalStateAtomType	minaaaC	Minimum atom-type E-State: ::C:	2D
+ElectrotopologicalStateAtomType	minssssC	Minimum atom-type E-State: >C<	2D
+ElectrotopologicalStateAtomType	minsNH3p	Minimum atom-type E-State: -NH3+	2D
+ElectrotopologicalStateAtomType	minsNH2	Minimum atom-type E-State: -NH2	2D
+ElectrotopologicalStateAtomType	minssNH2p	Minimum atom-type E-State: -NH2-+	2D
+ElectrotopologicalStateAtomType	mindNH	Minimum atom-type E-State: =NH	2D
+ElectrotopologicalStateAtomType	minssNH	Minimum atom-type E-State: -NH-	2D
+ElectrotopologicalStateAtomType	minaaNH	Minimum atom-type E-State: :NH:	2D
+ElectrotopologicalStateAtomType	mintN	Minimum atom-type E-State: #N	2D
+ElectrotopologicalStateAtomType	minsssNHp	Minimum atom-type E-State: >NH-+	2D
+ElectrotopologicalStateAtomType	mindsN	Minimum atom-type E-State: =N-	2D
+ElectrotopologicalStateAtomType	minaaN	Minimum atom-type E-State: :N:	2D
+ElectrotopologicalStateAtomType	minsssN	Minimum atom-type E-State: >N-	2D
+ElectrotopologicalStateAtomType	minddsN	Minimum atom-type E-State: -N<<	2D
+ElectrotopologicalStateAtomType	minaasN	Minimum atom-type E-State: :N:-	2D
+ElectrotopologicalStateAtomType	minssssNp	Minimum atom-type E-State: >N<+	2D
+ElectrotopologicalStateAtomType	minsOH	Minimum atom-type E-State: -OH	2D
+ElectrotopologicalStateAtomType	mindO	Minimum atom-type E-State: =O	2D
+ElectrotopologicalStateAtomType	minssO	Minimum atom-type E-State: -O-	2D
+ElectrotopologicalStateAtomType	minaaO	Minimum atom-type E-State: :O:	2D
+ElectrotopologicalStateAtomType	minaOm	Minimum atom-type E-State: :O-0.5	2D
+ElectrotopologicalStateAtomType	minsOm	Minimum atom-type E-State: -O-	2D
+ElectrotopologicalStateAtomType	minsF	Minimum atom-type E-State: -F	2D
+ElectrotopologicalStateAtomType	minsSiH3	Minimum atom-type E-State: -SiH3	2D
+ElectrotopologicalStateAtomType	minssSiH2	Minimum atom-type E-State: -SiH2-	2D
+ElectrotopologicalStateAtomType	minsssSiH	Minimum atom-type E-State: >SiH-	2D
+ElectrotopologicalStateAtomType	minssssSi	Minimum atom-type E-State: >Si<	2D
+ElectrotopologicalStateAtomType	minsPH2	Minimum atom-type E-State: -PH2	2D
+ElectrotopologicalStateAtomType	minssPH	Minimum atom-type E-State: -PH-	2D
+ElectrotopologicalStateAtomType	minsssP	Minimum atom-type E-State: >P-	2D
+ElectrotopologicalStateAtomType	mindsssP	Minimum atom-type E-State: ->P=	2D
+ElectrotopologicalStateAtomType	minddsP	Minimum atom-type E-State: -=P=	2D
+ElectrotopologicalStateAtomType	minsssssP	Minimum atom-type E-State: ->P<	2D
+ElectrotopologicalStateAtomType	minsSH	Minimum atom-type E-State: -SH	2D
+ElectrotopologicalStateAtomType	mindS	Minimum atom-type E-State: =S	2D
+ElectrotopologicalStateAtomType	minssS	Minimum atom-type E-State: -S-	2D
+ElectrotopologicalStateAtomType	minaaS	Minimum atom-type E-State: aSa	2D
+ElectrotopologicalStateAtomType	mindssS	Minimum atom-type E-State: >S=	2D
+ElectrotopologicalStateAtomType	minddssS	Minimum atom-type E-State: >S==	2D
+ElectrotopologicalStateAtomType	minssssssS	Minimum atom-type E-State: >S<<	2D
+ElectrotopologicalStateAtomType	minSm	Minimum atom-type E-State: -S-	2D
+ElectrotopologicalStateAtomType	minsCl	Minimum atom-type E-State: -Cl	2D
+ElectrotopologicalStateAtomType	minsGeH3	Minimum atom-type E-State: -GeH3	2D
+ElectrotopologicalStateAtomType	minssGeH2	Minimum atom-type E-State: -GeH2-	2D
+ElectrotopologicalStateAtomType	minsssGeH	Minimum atom-type E-State: >GeH-	2D
+ElectrotopologicalStateAtomType	minssssGe	Minimum atom-type E-State: >Ge<	2D
+ElectrotopologicalStateAtomType	minsAsH2	Minimum atom-type E-State: -AsH2	2D
+ElectrotopologicalStateAtomType	minssAsH	Minimum atom-type E-State: -AsH-	2D
+ElectrotopologicalStateAtomType	minsssAs	Minimum atom-type E-State: >As-	2D
+ElectrotopologicalStateAtomType	mindsssAs	Minimum atom-type E-State: ->As=	2D
+ElectrotopologicalStateAtomType	minddsAs	Minimum atom-type E-State: -=As=	2D
+ElectrotopologicalStateAtomType	minsssssAs	Minimum atom-type E-State: ->As<	2D
+ElectrotopologicalStateAtomType	minsSeH	Minimum atom-type E-State: -SeH	2D
+ElectrotopologicalStateAtomType	mindSe	Minimum atom-type E-State: =Se	2D
+ElectrotopologicalStateAtomType	minssSe	Minimum atom-type E-State: -Se-	2D
+ElectrotopologicalStateAtomType	minaaSe	Minimum atom-type E-State: aSea	2D
+ElectrotopologicalStateAtomType	mindssSe	Minimum atom-type E-State: >Se=	2D
+ElectrotopologicalStateAtomType	minssssssSe	Minimum atom-type E-State: >Se<<	2D
+ElectrotopologicalStateAtomType	minddssSe	Minimum atom-type E-State: -=Se=-	2D
+ElectrotopologicalStateAtomType	minsBr	Minimum atom-type E-State: -Br	2D
+ElectrotopologicalStateAtomType	minsSnH3	Minimum atom-type E-State: -SnH3	2D
+ElectrotopologicalStateAtomType	minssSnH2	Minimum atom-type E-State: -SnH2-	2D
+ElectrotopologicalStateAtomType	minsssSnH	Minimum atom-type E-State: >SnH-	2D
+ElectrotopologicalStateAtomType	minssssSn	Minimum atom-type E-State: >Sn<	2D
+ElectrotopologicalStateAtomType	minsI	Minimum atom-type E-State: -I	2D
+ElectrotopologicalStateAtomType	minsPbH3	Minimum atom-type E-State: -PbH3	2D
+ElectrotopologicalStateAtomType	minssPbH2	Minimum atom-type E-State: -PbH2-	2D
+ElectrotopologicalStateAtomType	minsssPbH	Minimum atom-type E-State: >PbH-	2D
+ElectrotopologicalStateAtomType	minssssPb	Minimum atom-type E-State: >Pb<	2D
+ElectrotopologicalStateAtomType	maxHBd	Maximum E-States for (strong) Hydrogen Bond donors	2D
+ElectrotopologicalStateAtomType	maxwHBd	Maximum E-States for weak Hydrogen Bond donors	2D
+ElectrotopologicalStateAtomType	maxHBa	Maximum E-States for (strong) Hydrogen Bond acceptors	2D
+ElectrotopologicalStateAtomType	maxwHBa	Maximum E-States for weak Hydrogen Bond acceptors	2D
+ElectrotopologicalStateAtomType	maxHBint2	Maximum E-State descriptors of strength for potential Hydrogen Bonds of path length 2	2D
+ElectrotopologicalStateAtomType	maxHBint3	Maximum E-State descriptors of strength for potential Hydrogen Bonds of path length 3	2D
+ElectrotopologicalStateAtomType	maxHBint4	Maximum E-State descriptors of strength for potential Hydrogen Bonds of path length 4	2D
+ElectrotopologicalStateAtomType	maxHBint5	Maximum E-State descriptors of strength for potential Hydrogen Bonds of path length 5	2D
+ElectrotopologicalStateAtomType	maxHBint6	Maximum E-State descriptors of strength for potential Hydrogen Bonds of path length 6	2D
+ElectrotopologicalStateAtomType	maxHBint7	Maximum E-State descriptors of strength for potential Hydrogen Bonds of path length 7	2D
+ElectrotopologicalStateAtomType	maxHBint8	Maximum E-State descriptors of strength for potential Hydrogen Bonds of path length 8	2D
+ElectrotopologicalStateAtomType	maxHBint9	Maximum E-State descriptors of strength for potential Hydrogen Bonds of path length 9	2D
+ElectrotopologicalStateAtomType	maxHBint10	Maximum E-State descriptors of strength for potential Hydrogen Bonds of path length 10	2D
+ElectrotopologicalStateAtomType	maxHsOH	Maximum atom-type H E-State: -OH	2D
+ElectrotopologicalStateAtomType	maxHdNH	Maximum atom-type H E-State: =NH	2D
+ElectrotopologicalStateAtomType	maxHsSH	Maximum atom-type H E-State: -SH	2D
+ElectrotopologicalStateAtomType	maxHsNH2	Maximum atom-type H E-State: -NH2	2D
+ElectrotopologicalStateAtomType	maxHssNH	Maximum atom-type H E-State: -NH-	2D
+ElectrotopologicalStateAtomType	maxHaaNH	Maximum atom-type H E-State: :NH:	2D
+ElectrotopologicalStateAtomType	maxHsNH3p	Maximum atom-type H E-State: -NH3+	2D
+ElectrotopologicalStateAtomType	maxHssNH2p	Maximum atom-type H E-State: -NH2-+	2D
+ElectrotopologicalStateAtomType	maxHsssNHp	Maximum atom-type H E-State: >NH-+	2D
+ElectrotopologicalStateAtomType	maxHtCH	Maximum atom-type H E-State: #CH	2D
+ElectrotopologicalStateAtomType	maxHdCH2	Maximum atom-type H E-State: =CH2	2D
+ElectrotopologicalStateAtomType	maxHdsCH	Maximum atom-type H E-State: =CH-	2D
+ElectrotopologicalStateAtomType	maxHaaCH	Maximum atom-type H E-State: :CH:	2D
+ElectrotopologicalStateAtomType	maxHCHnX	Maximum atom-type H E-State: CHnX	2D
+ElectrotopologicalStateAtomType	maxHCsats	Maximum atom-type H E-State: H bonded to B, Si, P, Ge, As, Se, Sn or Pb	2D
+ElectrotopologicalStateAtomType	maxHCsatu	Maximum atom-type H E-State: H on C sp3 bonded to unsaturated C	2D
+ElectrotopologicalStateAtomType	maxHAvin	Maximum atom-type H E-State: H on C vinyl bonded to C aromatic	2D
+ElectrotopologicalStateAtomType	maxHother	Maximum atom-type H E-State: H on aaCH, dCH2 or dsCH	2D
+ElectrotopologicalStateAtomType	maxHmisc	Maximum atom-type H E-State: H bonded to B, Si, P, Ge, As, Se, Sn or Pb	2D
+ElectrotopologicalStateAtomType	maxsLi	Maximum atom-type E-State: -Li	2D
+ElectrotopologicalStateAtomType	maxssBe	Maximum atom-type E-State: -Be-	2D
+ElectrotopologicalStateAtomType	maxssssBem	Maximum atom-type E-State: >Be<-2	2D
+ElectrotopologicalStateAtomType	maxsBH2	Maximum atom-type E-State: -BH2	2D
+ElectrotopologicalStateAtomType	maxssBH	Maximum atom-type E-State: -BH-	2D
+ElectrotopologicalStateAtomType	maxsssB	Maximum atom-type E-State: -B<	2D
+ElectrotopologicalStateAtomType	maxssssBm	Maximum atom-type E-State: >B<-	2D
+ElectrotopologicalStateAtomType	maxsCH3	Maximum atom-type E-State: -CH3	2D
+ElectrotopologicalStateAtomType	maxdCH2	Maximum atom-type E-State: =CH2	2D
+ElectrotopologicalStateAtomType	maxssCH2	Maximum atom-type E-State: -CH2-	2D
+ElectrotopologicalStateAtomType	maxtCH	Maximum atom-type E-State: #CH	2D
+ElectrotopologicalStateAtomType	maxdsCH	Maximum atom-type E-State: =CH-	2D
+ElectrotopologicalStateAtomType	maxaaCH	Maximum atom-type E-State: :CH:	2D
+ElectrotopologicalStateAtomType	maxsssCH	Maximum atom-type E-State: >CH-	2D
+ElectrotopologicalStateAtomType	maxddC	Maximum atom-type E-State: =C=	2D
+ElectrotopologicalStateAtomType	maxtsC	Maximum atom-type E-State: #C-	2D
+ElectrotopologicalStateAtomType	maxdssC	Maximum atom-type E-State: =C<	2D
+ElectrotopologicalStateAtomType	maxaasC	Maximum atom-type E-State: :C:-	2D
+ElectrotopologicalStateAtomType	maxaaaC	Maximum atom-type E-State: ::C:	2D
+ElectrotopologicalStateAtomType	maxssssC	Maximum atom-type E-State: >C<	2D
+ElectrotopologicalStateAtomType	maxsNH3p	Maximum atom-type E-State: -NH3+	2D
+ElectrotopologicalStateAtomType	maxsNH2	Maximum atom-type E-State: -NH2	2D
+ElectrotopologicalStateAtomType	maxssNH2p	Maximum atom-type E-State: -NH2-+	2D
+ElectrotopologicalStateAtomType	maxdNH	Maximum atom-type E-State: =NH	2D
+ElectrotopologicalStateAtomType	maxssNH	Maximum atom-type E-State: -NH-	2D
+ElectrotopologicalStateAtomType	maxaaNH	Maximum atom-type E-State: :NH:	2D
+ElectrotopologicalStateAtomType	maxtN	Maximum atom-type E-State: #N	2D
+ElectrotopologicalStateAtomType	maxsssNHp	Maximum atom-type E-State: >NH-+	2D
+ElectrotopologicalStateAtomType	maxdsN	Maximum atom-type E-State: =N-	2D
+ElectrotopologicalStateAtomType	maxaaN	Maximum atom-type E-State: :N:	2D
+ElectrotopologicalStateAtomType	maxsssN	Maximum atom-type E-State: >N-	2D
+ElectrotopologicalStateAtomType	maxddsN	Maximum atom-type E-State: -N<<	2D
+ElectrotopologicalStateAtomType	maxaasN	Maximum atom-type E-State: :N:-	2D
+ElectrotopologicalStateAtomType	maxssssNp	Maximum atom-type E-State: >N<+	2D
+ElectrotopologicalStateAtomType	maxsOH	Maximum atom-type E-State: -OH	2D
+ElectrotopologicalStateAtomType	maxdO	Maximum atom-type E-State: =O	2D
+ElectrotopologicalStateAtomType	maxssO	Maximum atom-type E-State: -O-	2D
+ElectrotopologicalStateAtomType	maxaaO	Maximum atom-type E-State: :O:	2D
+ElectrotopologicalStateAtomType	maxaOm	Maximum atom-type E-State: :O-0.5	2D
+ElectrotopologicalStateAtomType	maxsOm	Maximum atom-type E-State: -O-	2D
+ElectrotopologicalStateAtomType	maxsF	Maximum atom-type E-State: -F	2D
+ElectrotopologicalStateAtomType	maxsSiH3	Maximum atom-type E-State: -SiH3	2D
+ElectrotopologicalStateAtomType	maxssSiH2	Maximum atom-type E-State: -SiH2-	2D
+ElectrotopologicalStateAtomType	maxsssSiH	Maximum atom-type E-State: >SiH-	2D
+ElectrotopologicalStateAtomType	maxssssSi	Maximum atom-type E-State: >Si<	2D
+ElectrotopologicalStateAtomType	maxsPH2	Maximum atom-type E-State: -PH2	2D
+ElectrotopologicalStateAtomType	maxssPH	Maximum atom-type E-State: -PH-	2D
+ElectrotopologicalStateAtomType	maxsssP	Maximum atom-type E-State: >P-	2D
+ElectrotopologicalStateAtomType	maxdsssP	Maximum atom-type E-State: ->P=	2D
+ElectrotopologicalStateAtomType	maxddsP	Maximum atom-type E-State: -=P=	2D
+ElectrotopologicalStateAtomType	maxsssssP	Maximum atom-type E-State: ->P<	2D
+ElectrotopologicalStateAtomType	maxsSH	Maximum atom-type E-State: -SH	2D
+ElectrotopologicalStateAtomType	maxdS	Maximum atom-type E-State: =S	2D
+ElectrotopologicalStateAtomType	maxssS	Maximum atom-type E-State: -S-	2D
+ElectrotopologicalStateAtomType	maxaaS	Maximum atom-type E-State: aSa	2D
+ElectrotopologicalStateAtomType	maxdssS	Maximum atom-type E-State: >S=	2D
+ElectrotopologicalStateAtomType	maxddssS	Maximum atom-type E-State: >S==	2D
+ElectrotopologicalStateAtomType	maxssssssS	Maximum atom-type E-State: >S<<	2D
+ElectrotopologicalStateAtomType	maxSm	Maximum atom-type E-State: -S-	2D
+ElectrotopologicalStateAtomType	maxsCl	Maximum atom-type E-State: -Cl	2D
+ElectrotopologicalStateAtomType	maxsGeH3	Maximum atom-type E-State: -GeH3	2D
+ElectrotopologicalStateAtomType	maxssGeH2	Maximum atom-type E-State: -GeH2-	2D
+ElectrotopologicalStateAtomType	maxsssGeH	Maximum atom-type E-State: >GeH-	2D
+ElectrotopologicalStateAtomType	maxssssGe	Maximum atom-type E-State: >Ge<	2D
+ElectrotopologicalStateAtomType	maxsAsH2	Maximum atom-type E-State: -AsH2	2D
+ElectrotopologicalStateAtomType	maxssAsH	Maximum atom-type E-State: -AsH-	2D
+ElectrotopologicalStateAtomType	maxsssAs	Maximum atom-type E-State: >As-	2D
+ElectrotopologicalStateAtomType	maxdsssAs	Maximum atom-type E-State: ->As=	2D
+ElectrotopologicalStateAtomType	maxddsAs	Maximum atom-type E-State: -=As=	2D
+ElectrotopologicalStateAtomType	maxsssssAs	Maximum atom-type E-State: ->As<	2D
+ElectrotopologicalStateAtomType	maxsSeH	Maximum atom-type E-State: -SeH	2D
+ElectrotopologicalStateAtomType	maxdSe	Maximum atom-type E-State: =Se	2D
+ElectrotopologicalStateAtomType	maxssSe	Maximum atom-type E-State: -Se-	2D
+ElectrotopologicalStateAtomType	maxaaSe	Maximum atom-type E-State: aSea	2D
+ElectrotopologicalStateAtomType	maxdssSe	Maximum atom-type E-State: >Se=	2D
+ElectrotopologicalStateAtomType	maxssssssSe	Maximum atom-type E-State: >Se<<	2D
+ElectrotopologicalStateAtomType	maxddssSe	Maximum atom-type E-State: -=Se=-	2D
+ElectrotopologicalStateAtomType	maxsBr	Maximum atom-type E-State: -Br	2D
+ElectrotopologicalStateAtomType	maxsSnH3	Maximum atom-type E-State: -SnH3	2D
+ElectrotopologicalStateAtomType	maxssSnH2	Maximum atom-type E-State: -SnH2-	2D
+ElectrotopologicalStateAtomType	maxsssSnH	Maximum atom-type E-State: >SnH-	2D
+ElectrotopologicalStateAtomType	maxssssSn	Maximum atom-type E-State: >Sn<	2D
+ElectrotopologicalStateAtomType	maxsI	Maximum atom-type E-State: -I	2D
+ElectrotopologicalStateAtomType	maxsPbH3	Maximum atom-type E-State: -PbH3	2D
+ElectrotopologicalStateAtomType	maxssPbH2	Maximum atom-type E-State: -PbH2-	2D
+ElectrotopologicalStateAtomType	maxsssPbH	Maximum atom-type E-State: >PbH-	2D
+ElectrotopologicalStateAtomType	maxssssPb	Maximum atom-type E-State: >Pb<	2D
+ElectrotopologicalStateAtomType	sumI	Sum of the intrinsic state values I	2D
+ElectrotopologicalStateAtomType	meanI	Mean intrinsic state values I	2D
+ElectrotopologicalStateAtomType	hmax	Maximum H E-State	2D
+ElectrotopologicalStateAtomType	gmax	Maximum E-State	2D
+ElectrotopologicalStateAtomType	hmin	Minimum H E-State	2D
+ElectrotopologicalStateAtomType	gmin	Minimum E-State	2D
+ElectrotopologicalStateAtomType	LipoaffinityIndex	Lipoaffinity index	2D
+ElectrotopologicalStateAtomType	MAXDN	Maximum negative intrinsic state di?fference in the molecule (related to the nucleophilicity of the molecule). Using deltaV = (Zv-maxBondedHydrogens) /(atomicNumber-Zv-1). Gramatica, P., Corradi, M., and Consonni, V. (2000). Modelling and prediction of soil sorption coefficients of non-ionic organic pesticides by molecular descriptors. Chemosphere 41, 763-777.	2D
+ElectrotopologicalStateAtomType	MAXDP	Maximum positive intrinsic state di?fference in the molecule (related to the electrophilicity of the molecule).  Using deltaV = (Zv-maxBondedHydrogens) /(atomicNumber-Zv-1). Gramatica, P., Corradi, M., and Consonni, V. (2000). Modelling and prediction of soil sorption coefficients of non-ionic organic pesticides by molecular descriptors. Chemosphere 41, 763-777.	2D
+ElectrotopologicalStateAtomType	DELS	Sum of all atoms intrinsic state differences (measure of total charge transfer in the molecule).  Using deltaV = (Zv-maxBondedHydrogens) /(atomicNumber-Zv-1). Gramatica, P., Corradi, M., and Consonni, V. (2000). Modelling and prediction of soil sorption coefficients of non-ionic organic pesticides by molecular descriptors. Chemosphere 41, 763-777.	2D
+ElectrotopologicalStateAtomType	MAXDN2	Maximum negative intrinsic state di?fference in the molecule (related to the nucleophilicity of the molecule). Using deltaV = Zv-maxBondedHydrogens. Gramatica, P., Corradi, M., and Consonni, V. (2000). Modelling and prediction of soil sorption coefficients of non-ionic organic pesticides by molecular descriptors. Chemosphere 41, 763-777.	2D
+ElectrotopologicalStateAtomType	MAXDP2	Maximum positive intrinsic state di?fference in the molecule (related to the electrophilicity of the molecule). Using deltaV = Zv-maxBondedHydrogens. Gramatica, P., Corradi, M., and Consonni, V. (2000). Modelling and prediction of soil sorption coefficients of non-ionic organic pesticides by molecular descriptors. Chemosphere 41, 763-777.	2D
+ElectrotopologicalStateAtomType	DELS2	Sum of all atoms intrinsic state differences (measure of total charge transfer in the molecule). Using deltaV = Zv-maxBondedHydrogens. Gramatica, P., Corradi, M., and Consonni, V. (2000). Modelling and prediction of soil sorption coefficients of non-ionic organic pesticides by molecular descriptors. Chemosphere 41, 763-777.	2D
+ExtendedTopochemicalAtom	ETA_Alpha	Sum of alpha values of all non-hydrogen vertices of a molecule	2D
+ExtendedTopochemicalAtom	ETA_AlphaP	Sum of alpha values of all non-hydrogen vertices of a molecule relative to molecular size	2D
+ExtendedTopochemicalAtom	ETA_dAlpha_A	A measure of count of non-hydrogen heteroatoms	2D
+ExtendedTopochemicalAtom	ETA_dAlpha_B	A measure of count of hydrogen bond acceptor atoms and/or polar surface area	2D
+ExtendedTopochemicalAtom	ETA_Epsilon_1	A measure of electronegative atom count	2D
+ExtendedTopochemicalAtom	ETA_Epsilon_2	A measure of electronegative atom count	2D
+ExtendedTopochemicalAtom	ETA_Epsilon_3	A measure of electronegative atom count	2D
+ExtendedTopochemicalAtom	ETA_Epsilon_4	A measure of electronegative atom count	2D
+ExtendedTopochemicalAtom	ETA_Epsilon_5	A measure of electronegative atom count	2D
+ExtendedTopochemicalAtom	ETA_dEpsilon_A	A measure of contribution of unsaturation and electronegative atom count	2D
+ExtendedTopochemicalAtom	ETA_dEpsilon_B	A measure of contribution of unsaturation	2D
+ExtendedTopochemicalAtom	ETA_dEpsilon_C	A measure of contribution of electronegativity	2D
+ExtendedTopochemicalAtom	ETA_dEpsilon_D	A measure of contribution of hydrogen bond donor atoms	2D
+ExtendedTopochemicalAtom	ETA_Psi_1	A measure of hydrogen bonding propensity of the molecules and/or polar surface area	2D
+ExtendedTopochemicalAtom	ETA_dPsi_A	A measure of hydrogen bonding propensity of the molecules	2D
+ExtendedTopochemicalAtom	ETA_dPsi_B	A measure of hydrogen bonding propensity of the molecules	2D
+ExtendedTopochemicalAtom	ETA_Shape_P	Shape index P	2D
+ExtendedTopochemicalAtom	ETA_Shape_Y	Shape index Y	2D
+ExtendedTopochemicalAtom	ETA_Shape_X	Shape index X	2D
+ExtendedTopochemicalAtom	ETA_Beta	A measure of electronic features of the molecule	2D
+ExtendedTopochemicalAtom	ETA_BetaP	A measure of electronic features of the molecule relative to molecular size	2D
+ExtendedTopochemicalAtom	ETA_Beta_s	A measure of electronegative atom count of the molecule	2D
+ExtendedTopochemicalAtom	ETA_BetaP_s	A measure of electronegative atom count of the molecule relative to molecular size	2D
+ExtendedTopochemicalAtom	ETA_Beta_ns	A measure of electron-richness of the molecule	2D
+ExtendedTopochemicalAtom	ETA_BetaP_ns	A measure of electron-richness of the molecule relative to molecular size	2D
+ExtendedTopochemicalAtom	ETA_dBeta	A measure of relative unsaturation content	2D
+ExtendedTopochemicalAtom	ETA_dBetaP	A measure of relative unsaturation content relative to molecular size	2D
+ExtendedTopochemicalAtom	ETA_Beta_ns_d	A measure of lone electrons entering into resonance	2D
+ExtendedTopochemicalAtom	ETA_BetaP_ns_d	A measure of lone electrons entering into resonance relative to molecular size	2D
+ExtendedTopochemicalAtom	ETA_Eta	Composite index Eta	2D
+ExtendedTopochemicalAtom	ETA_EtaP	Composite index Eta relative to molecular size	2D
+ExtendedTopochemicalAtom	ETA_Eta_R	Composite index Eta for reference alkane	2D
+ExtendedTopochemicalAtom	ETA_Eta_F	Functionality index EtaF	2D
+ExtendedTopochemicalAtom	ETA_EtaP_F	Functionality index EtaF relative to molecular size	2D
+ExtendedTopochemicalAtom	ETA_Eta_L	Local index Eta_local	2D
+ExtendedTopochemicalAtom	ETA_EtaP_L	Local index Eta_local relative to molecular size	2D
+ExtendedTopochemicalAtom	ETA_Eta_R_L	Local index Eta_local for reference alkane	2D
+ExtendedTopochemicalAtom	ETA_Eta_F_L	Local functionality contribution EtaF_local	2D
+ExtendedTopochemicalAtom	ETA_EtaP_F_L	Local functionality contribution EtaF_local relative to molecular size	2D
+ExtendedTopochemicalAtom	ETA_Eta_B	Branching index EtaB	2D
+ExtendedTopochemicalAtom	ETA_EtaP_B	Branching index EtaB relative to molecular size	2D
+ExtendedTopochemicalAtom	ETA_Eta_B_RC	Branching index EtaB (with ring correction)	2D
+ExtendedTopochemicalAtom	ETA_EtaP_B_RC	Branching index EtaB (with ring correction) relative to molecular size	2D
+FMF	FMF	Complexity of a molecule	2D
+FragmentComplexity	fragC	Complexity of a system	2D
+HBondAcceptorCount	nHBAcc	Number of hydrogen bond acceptors (using CDK HBondAcceptorCountDescriptor algorithm)	2D
+HBondAcceptorCount	nHBAcc2	"Number of hydrogen bond acceptors (any oxygen	 any nitrogen where the formal charge of the nitrogen is non-positive (i.e. formal charge <= 0) except a non-aromatic nitrogen that is adjacent to an oxygen and aromatic ring, or an aromatic nitrogen with a hydrogen atom in a ring, or an aromatic nitrogen with 3 neighouring atoms in a ring, or a nitrogen with total bond order >=4	 any fluorine)"	2D
+HBondAcceptorCount	nHBAcc3	"Number of hydrogen bond acceptors (any oxygen	 any nitrogen where the formal charge of the nitrogen is non-positive (i.e. formal charge <= 0) except a non-aromatic nitrogen that is adjacent to an oxygen and aromatic ring, or an aromatic nitrogen with a hydrogen atom in a ring, or an aromatic nitrogen with 3 neighouring atoms in a ring, or a nitrogen with total bond order >=4, or a nitrogen in an amide bond	 any fluorine)"	2D
+HBondAcceptorCount	nHBAcc_Lipinski	"Number of hydrogen bond acceptors (using Lipinski's definition: any nitrogen	 any oxygen)"	2D
+HBondDonorCount	nHBDon	Number of hydrogen bond donors (using CDK HBondDonorCountDescriptor algorithm)	2D
+HBondDonorCount	nHBDon_Lipinski	Number of hydrogen bond donors (using Lipinski's definition: Any OH or NH. Each available hydrogen atom is counted as one hydrogen bond donor)	2D
+HybridizationRatio	HybRatio	Fraction of sp3 carbons to sp2 carbons	2D
+InformationContent	IC0	Information content index (neighborhood symmetry of 0-order)	2D
+InformationContent	IC1	Information content index (neighborhood symmetry of 1-order)	2D
+InformationContent	IC2	Information content index (neighborhood symmetry of 2-order)	2D
+InformationContent	IC3	Information content index (neighborhood symmetry of 3-order)	2D
+InformationContent	IC4	Information content index (neighborhood symmetry of 4-order)	2D
+InformationContent	IC5	Information content index (neighborhood symmetry of 5-order)	2D
+InformationContent	TIC0	Total information content index (neighborhood symmetry of 0-order)	2D
+InformationContent	TIC1	Total information content index (neighborhood symmetry of 1-order)	2D
+InformationContent	TIC2	Total information content index (neighborhood symmetry of 2-order)	2D
+InformationContent	TIC3	Total information content index (neighborhood symmetry of 3-order)	2D
+InformationContent	TIC4	Total information content index (neighborhood symmetry of 4-order)	2D
+InformationContent	TIC5	Total information content index (neighborhood symmetry of 5-order)	2D
+InformationContent	SIC0	Structural information content index (neighborhood symmetry of 0-order)	2D
+InformationContent	SIC1	Structural information content index (neighborhood symmetry of 1-order)	2D
+InformationContent	SIC2	Structural information content index (neighborhood symmetry of 2-order)	2D
+InformationContent	SIC3	Structural information content index (neighborhood symmetry of 3-order)	2D
+InformationContent	SIC4	Structural information content index (neighborhood symmetry of 4-order)	2D
+InformationContent	SIC5	Structural information content index (neighborhood symmetry of 5-order)	2D
+InformationContent	CIC0	Complementary information content index (neighborhood symmetry of 0-order)	2D
+InformationContent	CIC1	Complementary information content index (neighborhood symmetry of 1-order)	2D
+InformationContent	CIC2	Complementary information content index (neighborhood symmetry of 2-order)	2D
+InformationContent	CIC3	Complementary information content index (neighborhood symmetry of 3-order)	2D
+InformationContent	CIC4	Complementary information content index (neighborhood symmetry of 4-order)	2D
+InformationContent	CIC5	Complementary information content index (neighborhood symmetry of 5-order)	2D
+InformationContent	BIC0	Bond information content index (neighborhood symmetry of 0-order)	2D
+InformationContent	BIC1	Bond information content index (neighborhood symmetry of 1-order)	2D
+InformationContent	BIC2	Bond information content index (neighborhood symmetry of 2-order)	2D
+InformationContent	BIC3	Bond information content index (neighborhood symmetry of 3-order)	2D
+InformationContent	BIC4	Bond information content index (neighborhood symmetry of 4-order)	2D
+InformationContent	BIC5	Bond information content index (neighborhood symmetry of 5-order)	2D
+InformationContent	MIC0	Modified information content index (neighborhood symmetry of 0-order)	2D
+InformationContent	MIC1	Modified information content index (neighborhood symmetry of 1-order)	2D
+InformationContent	MIC2	Modified information content index (neighborhood symmetry of 2-order)	2D
+InformationContent	MIC3	Modified information content index (neighborhood symmetry of 3-order)	2D
+InformationContent	MIC4	Modified information content index (neighborhood symmetry of 4-order)	2D
+InformationContent	MIC5	Modified information content index (neighborhood symmetry of 5-order)	2D
+InformationContent	ZMIC0	Z-modified information content index (neighborhood symmetry of 0-order)	2D
+InformationContent	ZMIC1	Z-modified information content index (neighborhood symmetry of 1-order)	2D
+InformationContent	ZMIC2	Z-modified information content index (neighborhood symmetry of 2-order)	2D
+InformationContent	ZMIC3	Z-modified information content index (neighborhood symmetry of 3-order)	2D
+InformationContent	ZMIC4	Z-modified information content index (neighborhood symmetry of 4-order)	2D
+InformationContent	ZMIC5	Z-modified information content index (neighborhood symmetry of 5-order)	2D
+KappaShapeIndices	Kier1	First kappa shape index 	2D
+KappaShapeIndices	Kier2	Second kappa shape index 	2D
+KappaShapeIndices	Kier3	Third kappa (?) shape index 	2D
+LargestChain	nAtomLC	Number of atoms in the largest chain	2D
+LargestPiSystem	nAtomP	Number of atoms in the largest pi system	2D
+LongestAliphaticChain	nAtomLAC	Number of atoms in the longest aliphatic chain	2D
+MannholdLogP	MLogP	Mannhold LogP	2D
+McGowanVolume	McGowan_Volume	McGowan characteristic volume	2D
+MDE	MDEC-11	Molecular distance edge between all primary carbons	2D
+MDE	MDEC-12	Molecular distance edge between all primary and secondary carbons	2D
+MDE	MDEC-13	Molecular distance edge between all primary and tertiary carbons	2D
+MDE	MDEC-14	Molecular distance edge between all primary and quaternary carbons 	2D
+MDE	MDEC-22	Molecular distance edge between all secondary carbons 	2D
+MDE	MDEC-23	Molecular distance edge between all secondary and tertiary carbons	2D
+MDE	MDEC-24	Molecular distance edge between all secondary and quaternary carbons 	2D
+MDE	MDEC-33	Molecular distance edge between all tertiary carbons	2D
+MDE	MDEC-34	Molecular distance edge between all tertiary and quaternary carbons 	2D
+MDE	MDEC-44	Molecular distance edge between all quaternary carbons 	2D
+MDE	MDEO-11	Molecular distance edge between all primary oxygens 	2D
+MDE	MDEO-12	Molecular distance edge between all primary and secondary oxygens 	2D
+MDE	MDEO-22	Molecular distance edge between all secondary oxygens 	2D
+MDE	MDEN-11	Molecular distance edge between all primary nitrogens	2D
+MDE	MDEN-12	Molecular distance edge between all primary and secondary nitrogens 	2D
+MDE	MDEN-13	Molecular distance edge between all primary and tertiary niroqens 	2D
+MDE	MDEN-22	Molecular distance edge between all secondary nitroqens 	2D
+MDE	MDEN-23	Molecular distance edge between all secondary and tertiary nitrogens 	2D
+MDE	MDEN-33	Molecular distance edge between all tertiary nitrogens	2D
+MLFER	MLFER_A	Overall or summation solute hydrogen bond acidity	2D
+MLFER	MLFER_BH	Overall or summation solute hydrogen bond basicity	2D
+MLFER	MLFER_BO	Overall or summation solute hydrogen bond basicity	2D
+MLFER	MLFER_S	Combined dipolarity/polarizability	2D
+MLFER	MLFER_E	Excessive molar refraction	2D
+MLFER	MLFER_L	Solute gas-hexadecane partition coefficient	2D
+PathCount	MPC2	Molecular path count of order 2	2D
+PathCount	MPC3	Molecular path count of order 3	2D
+PathCount	MPC4	Molecular path count of order 4	2D
+PathCount	MPC5	Molecular path count of order 5	2D
+PathCount	MPC6	Molecular path count of order 6	2D
+PathCount	MPC7	Molecular path count of order 7	2D
+PathCount	MPC8	Molecular path count of order 8	2D
+PathCount	MPC9	Molecular path count of order 9	2D
+PathCount	MPC10	Molecular path count of order 10	2D
+PathCount	TPC	Total path count (up to order 10)	2D
+PathCount	piPC1	Conventional bond order ID number of order 1 (ln(1+x)	2D
+PathCount	piPC2	Conventional bond order ID number of order 2 (ln(1+x)	2D
+PathCount	piPC3	Conventional bond order ID number of order 3 (ln(1+x)	2D
+PathCount	piPC4	Conventional bond order ID number of order 4 (ln(1+x)	2D
+PathCount	piPC5	Conventional bond order ID number of order 5 (ln(1+x)	2D
+PathCount	piPC6	Conventional bond order ID number of order 6 (ln(1+x)	2D
+PathCount	piPC7	Conventional bond order ID number of order 7 (ln(1+x)	2D
+PathCount	piPC8	Conventional bond order ID number of order 8 (ln(1+x)	2D
+PathCount	piPC9	Conventional bond order ID number of order 9 (ln(1+x)	2D
+PathCount	piPC10	Conventional bond order ID number of order 10 (ln(1+x)	2D
+PathCount	TpiPC	Total conventional bond order (up to order 10) (ln(1+x))	2D
+PathCount	R_TpiPCTPC	Ratio of total conventional bond order (up to order 10) with total path count (up to order 10)	2D
+PetitjeanNumber	PetitjeanNumber	Petitjean number	2D
+RingCount	nRing	Number of rings	2D
+RingCount	n3Ring	Number of 3-membered rings	2D
+RingCount	n4Ring	Number of 4-membered rings	2D
+RingCount	n5Ring	Number of 5-membered rings	2D
+RingCount	n6Ring	Number of 6-membered rings	2D
+RingCount	n7Ring	Number of 7-membered rings	2D
+RingCount	n8Ring	Number of 8-membered rings	2D
+RingCount	n9Ring	Number of 9-membered rings	2D
+RingCount	n10Ring	Number of 10-membered rings	2D
+RingCount	n11Ring	Number of 11-membered rings	2D
+RingCount	n12Ring	Number of 12-membered rings	2D
+RingCount	nG12Ring	Number of >12-membered rings	2D
+RingCount	nFRing	Number of fused rings	2D
+RingCount	nF4Ring	Number of 4-membered fused rings	2D
+RingCount	nF5Ring	Number of 5-membered fused rings	2D
+RingCount	nF6Ring	Number of 6-membered fused rings	2D
+RingCount	nF7Ring	Number of 7-membered fused rings	2D
+RingCount	nF8Ring	Number of 8-membered fused rings	2D
+RingCount	nF9Ring	Number of 9-membered fused rings	2D
+RingCount	nF10Ring	Number of 10-membered fused rings	2D
+RingCount	nF11Ring	Number of 11-membered fused rings	2D
+RingCount	nF12Ring	Number of 12-membered fused rings	2D
+RingCount	nFG12Ring	Number of >12-membered fused rings	2D
+RingCount	nTRing	Number of rings (includes counts from fused rings)	2D
+RingCount	nT4Ring	Number of 4-membered rings (includes counts from fused rings)	2D
+RingCount	nT5Ring	Number of 5-membered rings (includes counts from fused rings)	2D
+RingCount	nT6Ring	Number of 6-membered rings (includes counts from fused rings)	2D
+RingCount	nT7Ring	Number of 7-membered rings (includes counts from fused rings)	2D
+RingCount	nT8Ring	Number of 8-membered rings (includes counts from fused rings)	2D
+RingCount	nT9Ring	Number of 9-membered rings (includes counts from fused rings)	2D
+RingCount	nT10Ring	Number of 10-membered rings (includes counts from fused rings)	2D
+RingCount	nT11Ring	Number of 11-membered rings (includes counts from fused rings)	2D
+RingCount	nT12Ring	Number of 12-membered rings (includes counts from fused rings)	2D
+RingCount	nTG12Ring	Number of >12-membered rings (includes counts from fused rings)	2D
+RingCount	nHeteroRing	Number of rings containing heteroatoms (N, O, P, S, or halogens)	2D
+RingCount	n3HeteroRing	Number of 3-membered rings containing heteroatoms (N, O, P, S, or halogens)	2D
+RingCount	n4HeteroRing	Number of 4-membered rings containing heteroatoms (N, O, P, S, or halogens)	2D
+RingCount	n5HeteroRing	Number of 5-membered rings containing heteroatoms (N, O, P, S, or halogens)	2D
+RingCount	n6HeteroRing	Number of 6-membered rings containing heteroatoms (N, O, P, S, or halogens)	2D
+RingCount	n7HeteroRing	Number of 7-membered rings containing heteroatoms (N, O, P, S, or halogens)	2D
+RingCount	n8HeteroRing	Number of 8-membered rings containing heteroatoms (N, O, P, S, or halogens)	2D
+RingCount	n9HeteroRing	Number of 9-membered rings containing heteroatoms (N, O, P, S, or halogens)	2D
+RingCount	n10HeteroRing	Number of 10-membered rings containing heteroatoms (N, O, P, S, or halogens)	2D
+RingCount	n11HeteroRing	Number of 11-membered rings containing heteroatoms (N, O, P, S, or halogens)	2D
+RingCount	n12HeteroRing	Number of 12-membered rings containing heteroatoms (N, O, P, S, or halogens)	2D
+RingCount	nG12HeteroRing	Number of >12-membered rings containing heteroatoms (N, O, P, S, or halogens)	2D
+RingCount	nFHeteroRing	Number of fused rings containing heteroatoms (N, O, P, S, or halogens)	2D
+RingCount	nF4HeteroRing	Number of 4-membered fused rings containing heteroatoms (N, O, P, S, or halogens)	2D
+RingCount	nF5HeteroRing	Number of 5-membered fused rings containing heteroatoms (N, O, P, S, or halogens)	2D
+RingCount	nF6HeteroRing	Number of 6-membered fused rings containing heteroatoms (N, O, P, S, or halogens)	2D
+RingCount	nF7HeteroRing	Number of 7-membered fused rings containing heteroatoms (N, O, P, S, or halogens)	2D
+RingCount	nF8HeteroRing	Number of 8-membered fused rings containing heteroatoms (N, O, P, S, or halogens)	2D
+RingCount	nF9HeteroRing	Number of 9-membered fused rings containing heteroatoms (N, O, P, S, or halogens)	2D
+RingCount	nF10HeteroRing	Number of 10-membered fused rings containing heteroatoms (N, O, P, S, or halogens)	2D
+RingCount	nF11HeteroRing	Number of 11-membered fused rings containing heteroatoms (N, O, P, S, or halogens)	2D
+RingCount	nF12HeteroRing	Number of 12-membered fused rings containing heteroatoms (N, O, P, S, or halogens)	2D
+RingCount	nFG12HeteroRing	Number of >12-membered fused rings containing heteroatoms (N, O, P, S, or halogens)	2D
+RingCount	nTHeteroRing	Number of rings (includes counts from fused rings) containing heteroatoms (N, O, P, S, or halogens)	2D
+RingCount	nT4HeteroRing	Number of 4-membered rings (includes counts from fused rings) containing heteroatoms (N, O, P, S, or halogens)	2D
+RingCount	nT5HeteroRing	Number of 5-membered rings (includes counts from fused rings) containing heteroatoms (N, O, P, S, or halogens)	2D
+RingCount	nT6HeteroRing	Number of 6-membered rings (includes counts from fused rings) containing heteroatoms (N, O, P, S, or halogens)	2D
+RingCount	nT7HeteroRing	Number of 7-membered rings (includes counts from fused rings) containing heteroatoms (N, O, P, S, or halogens)	2D
+RingCount	nT8HeteroRing	Number of 8-membered rings (includes counts from fused rings) containing heteroatoms (N, O, P, S, or halogens)	2D
+RingCount	nT9HeteroRing	Number of 9-membered rings (includes counts from fused rings) containing heteroatoms (N, O, P, S, or halogens)	2D
+RingCount	nT10HeteroRing	Number of 10-membered rings (includes counts from fused rings) containing heteroatoms (N, O, P, S, or halogens)	2D
+RingCount	nT11HeteroRing	Number of 11-membered rings (includes counts from fused rings) containing heteroatoms (N, O, P, S, or halogens)	2D
+RingCount	nT12HeteroRing	Number of 12-membered rings (includes counts from fused rings) containing heteroatoms (N, O, P, S, or halogens)	2D
+RingCount	nTG12HeteroRing	Number of >12-membered rings (includes counts from fused rings) containing heteroatoms (N, O, P, S, or halogens)	2D
+RotatableBondsCount	nRotB	Number of rotatable bonds, excluding terminal bonds	2D
+RotatableBondsCount	RotBFrac	Fraction of rotatable bonds, excluding terminal bonds	2D
+RotatableBondsCount	nRotBt	Number of rotatable bonds, including terminal bonds	2D
+RotatableBondsCount	RotBtFrac	Fraction of rotatable bonds, including terminal bonds	2D
+RuleOfFive	LipinskiFailures	Number failures of the Lipinski's Rule Of 5	2D
+Topological	topoRadius	Topological radius (minimum atom eccentricity)	2D
+Topological	topoDiameter	Topological diameter (maximum atom eccentricity)	2D
+Topological	topoShape	Petitjean topological shape index 	2D
+TopologicalCharge	GGI1	Topological charge index of order 1	2D
+TopologicalCharge	GGI2	Topological charge index of order 2	2D
+TopologicalCharge	GGI3	Topological charge index of order 3	2D
+TopologicalCharge	GGI4	Topological charge index of order 4	2D
+TopologicalCharge	GGI5	Topological charge index of order 5	2D
+TopologicalCharge	GGI6	Topological charge index of order 6	2D
+TopologicalCharge	GGI7	Topological charge index of order 7	2D
+TopologicalCharge	GGI8	Topological charge index of order 8	2D
+TopologicalCharge	GGI9	Topological charge index of order 9	2D
+TopologicalCharge	GGI10	Topological charge index of order 10	2D
+TopologicalCharge	JGI1	Mean topological charge index of order 1	2D
+TopologicalCharge	JGI2	Mean topological charge index of order 2	2D
+TopologicalCharge	JGI3	Mean topological charge index of order 3	2D
+TopologicalCharge	JGI4	Mean topological charge index of order 4	2D
+TopologicalCharge	JGI5	Mean topological charge index of order 5	2D
+TopologicalCharge	JGI6	Mean topological charge index of order 6	2D
+TopologicalCharge	JGI7	Mean topological charge index of order 7	2D
+TopologicalCharge	JGI8	Mean topological charge index of order 8	2D
+TopologicalCharge	JGI9	Mean topological charge index of order 9	2D
+TopologicalCharge	JGI10	Mean topological charge index of order 10	2D
+TopologicalCharge	JGT	Global topological charge index	2D
+TopologicalDistanceMatrix	SpMax_D	Leading eigenvalue from topological distance matrix	2D
+TopologicalDistanceMatrix	SpDiam_D	Spectral diameter from topological distance matrix	2D
+TopologicalDistanceMatrix	SpAD_D	Spectral absolute deviation from topological distance matrix	2D
+TopologicalDistanceMatrix	SpMAD_D	Spectral mean absolute deviation from topological distance matrix	2D
+TopologicalDistanceMatrix	EE_D	Estrada-like index from topological distance matrix	2D
+TopologicalDistanceMatrix	VE1_D	Coefficient sum of the last eigenvector from topological distance matrix	2D
+TopologicalDistanceMatrix	VE2_D	Average coefficient sum of the last eigenvector from topological distance matrix	2D
+TopologicalDistanceMatrix	VE3_D	Logarithmic coefficient sum of the last eigenvector from topological distance matrix	2D
+TopologicalDistanceMatrix	VR1_D	Randic-like eigenvector-based index from topological distance matrix	2D
+TopologicalDistanceMatrix	VR2_D	Normalized Randic-like eigenvector-based index from topological distance matrix	2D
+TopologicalDistanceMatrix	VR3_D	Logarithmic Randic-like eigenvector-based index from topological distance matrix	2D
+TPSA	TopoPSA	Topological polar surface area	2D
+VABC	VABC	Van der Waals volume calculated using the method proposed in [Zhao, Yuan H. and Abraham, Michael H. and Zissimos, Andreas M., Fast Calculation of van der Waals Volume as a Sum of Atomic and Bond Contributions and Its Application to Drug Compounds, The Journal of Organic Chemistry, 2003, 68:7368-7373]	2D
+VAdjMa	VAdjMat	Vertex adjacency information (magnitude)	2D
+WalkCount	MWC2	Molecular walk count of order 2 (ln(1+x)	2D
+WalkCount	MWC3	Molecular walk count of order 3 (ln(1+x)	2D
+WalkCount	MWC4	Molecular walk count of order 4 (ln(1+x)	2D
+WalkCount	MWC5	Molecular walk count of order 5 (ln(1+x)	2D
+WalkCount	MWC6	Molecular walk count of order 6 (ln(1+x)	2D
+WalkCount	MWC7	Molecular walk count of order 7 (ln(1+x)	2D
+WalkCount	MWC8	Molecular walk count of order 8 (ln(1+x)	2D
+WalkCount	MWC9	Molecular walk count of order 9 (ln(1+x)	2D
+WalkCount	MWC10	Molecular walk count of order 10 (ln(1+x)	2D
+WalkCount	TWC	Total walk count (up to order 10)	2D
+WalkCount	SRW2	Self-returning walk count of order 2 (ln(1+x)	2D
+WalkCount	SRW3	Self-returning walk count of order 3 (ln(1+x)	2D
+WalkCount	SRW4	Self-returning walk count of order 4 (ln(1+x)	2D
+WalkCount	SRW5	Self-returning walk count of order 5 (ln(1+x)	2D
+WalkCount	SRW6	Self-returning walk count of order 6 (ln(1+x)	2D
+WalkCount	SRW7	Self-returning walk count of order 7 (ln(1+x)	2D
+WalkCount	SRW8	Self-returning walk count of order 8 (ln(1+x)	2D
+WalkCount	SRW9	Self-returning walk count of order 9 (ln(1+x)	2D
+WalkCount	SRW10	Self-returning walk count of order 10 (ln(1+x)	2D
+WalkCount	TSRW	Total self-return walk count (up to order 10) (ln(1+x))	2D
+Weight	MW	Molecular weight	2D
+Weight	AMW	Average molecular weight (Molecular weight / Total number of atoms)	2D
+WeightedPath	WTPT-1	Molecular ID	2D
+WeightedPath	WTPT-2	Molecular ID / number of atoms	2D
+WeightedPath	WTPT-3	Sum of path lengths starting from heteroatoms	2D
+WeightedPath	WTPT-4	Sum of path lengths starting from oxygens	2D
+WeightedPath	WTPT-5	Sum of path lengths starting from nitrogens	2D
+WienerNumbers	WPATH	Weiner path number 	2D
+WienerNumbers	WPOL	Weiner polarity number 	2D
+XLogP	XLogP	XLogP	2D
+ZagrebIndex	Zagreb	Sum of the squares of atom degree over all heavy atoms i	2D
+Autocorrelation3D	TDB1u	3D topological distance based autocorrelation - lag 1 / unweighted	3D
+Autocorrelation3D	TDB2u	3D topological distance based autocorrelation - lag 2 / unweighted	3D
+Autocorrelation3D	TDB3u	3D topological distance based autocorrelation - lag 3 / unweighted	3D
+Autocorrelation3D	TDB4u	3D topological distance based autocorrelation - lag 4 / unweighted	3D
+Autocorrelation3D	TDB5u	3D topological distance based autocorrelation - lag 5 / unweighted	3D
+Autocorrelation3D	TDB6u	3D topological distance based autocorrelation - lag 6 / unweighted	3D
+Autocorrelation3D	TDB7u	3D topological distance based autocorrelation - lag 7 / unweighted	3D
+Autocorrelation3D	TDB8u	3D topological distance based autocorrelation - lag 8 / unweighted	3D
+Autocorrelation3D	TDB9u	3D topological distance based autocorrelation - lag 9 / unweighted	3D
+Autocorrelation3D	TDB10u	3D topological distance based autocorrelation - lag 10 / unweighted	3D
+Autocorrelation3D	TDB1m	3D topological distance based autocorrelation - lag 1 / weighted by mass	3D
+Autocorrelation3D	TDB2m	3D topological distance based autocorrelation - lag 2 / weighted by mass	3D
+Autocorrelation3D	TDB3m	3D topological distance based autocorrelation - lag 3 / weighted by mass	3D
+Autocorrelation3D	TDB4m	3D topological distance based autocorrelation - lag 4 / weighted by mass	3D
+Autocorrelation3D	TDB5m	3D topological distance based autocorrelation - lag 5 / weighted by mass	3D
+Autocorrelation3D	TDB6m	3D topological distance based autocorrelation - lag 6 / weighted by mass	3D
+Autocorrelation3D	TDB7m	3D topological distance based autocorrelation - lag 7 / weighted by mass	3D
+Autocorrelation3D	TDB8m	3D topological distance based autocorrelation - lag 8 / weighted by mass	3D
+Autocorrelation3D	TDB9m	3D topological distance based autocorrelation - lag 9 / weighted by mass	3D
+Autocorrelation3D	TDB10m	3D topological distance based autocorrelation - lag 10 / weighted by mass	3D
+Autocorrelation3D	TDB1v	3D topological distance based autocorrelation - lag 1 / weighted by van der Waals volumes	3D
+Autocorrelation3D	TDB2v	3D topological distance based autocorrelation - lag 2 / weighted by van der Waals volumes	3D
+Autocorrelation3D	TDB3v	3D topological distance based autocorrelation - lag 3 / weighted by van der Waals volumes	3D
+Autocorrelation3D	TDB4v	3D topological distance based autocorrelation - lag 4 / weighted by van der Waals volumes	3D
+Autocorrelation3D	TDB5v	3D topological distance based autocorrelation - lag 5 / weighted by van der Waals volumes	3D
+Autocorrelation3D	TDB6v	3D topological distance based autocorrelation - lag 6 / weighted by van der Waals volumes	3D
+Autocorrelation3D	TDB7v	3D topological distance based autocorrelation - lag 7 / weighted by van der Waals volumes	3D
+Autocorrelation3D	TDB8v	3D topological distance based autocorrelation - lag 8 / weighted by van der Waals volumes	3D
+Autocorrelation3D	TDB9v	3D topological distance based autocorrelation - lag 9 / weighted by van der Waals volumes	3D
+Autocorrelation3D	TDB10v	3D topological distance based autocorrelation - lag 10 / weighted by van der Waals volumes	3D
+Autocorrelation3D	TDB1e	3D topological distance based autocorrelation - lag 1 / weighted by Sanderson electronegativities	3D
+Autocorrelation3D	TDB2e	3D topological distance based autocorrelation - lag 2 / weighted by Sanderson electronegativities	3D
+Autocorrelation3D	TDB3e	3D topological distance based autocorrelation - lag 3 / weighted by Sanderson electronegativities	3D
+Autocorrelation3D	TDB4e	3D topological distance based autocorrelation - lag 4 / weighted by Sanderson electronegativities	3D
+Autocorrelation3D	TDB5e	3D topological distance based autocorrelation - lag 5 / weighted by Sanderson electronegativities	3D
+Autocorrelation3D	TDB6e	3D topological distance based autocorrelation - lag 6 / weighted by Sanderson electronegativities	3D
+Autocorrelation3D	TDB7e	3D topological distance based autocorrelation - lag 7 / weighted by Sanderson electronegativities	3D
+Autocorrelation3D	TDB8e	3D topological distance based autocorrelation - lag 8 / weighted by Sanderson electronegativities	3D
+Autocorrelation3D	TDB9e	3D topological distance based autocorrelation - lag 9 / weighted by Sanderson electronegativities	3D
+Autocorrelation3D	TDB10e	3D topological distance based autocorrelation - lag 10 / weighted by Sanderson electronegativities	3D
+Autocorrelation3D	TDB1p	3D topological distance based autocorrelation - lag 1 / weighted by polarizabilities	3D
+Autocorrelation3D	TDB2p	3D topological distance based autocorrelation - lag 2 / weighted by polarizabilities	3D
+Autocorrelation3D	TDB3p	3D topological distance based autocorrelation - lag 3 / weighted by polarizabilities	3D
+Autocorrelation3D	TDB4p	3D topological distance based autocorrelation - lag 4 / weighted by polarizabilities	3D
+Autocorrelation3D	TDB5p	3D topological distance based autocorrelation - lag 5 / weighted by polarizabilities	3D
+Autocorrelation3D	TDB6p	3D topological distance based autocorrelation - lag 6 / weighted by polarizabilities	3D
+Autocorrelation3D	TDB7p	3D topological distance based autocorrelation - lag 7 / weighted by polarizabilities	3D
+Autocorrelation3D	TDB8p	3D topological distance based autocorrelation - lag 8 / weighted by polarizabilities	3D
+Autocorrelation3D	TDB9p	3D topological distance based autocorrelation - lag 9 / weighted by polarizabilities	3D
+Autocorrelation3D	TDB10p	3D topological distance based autocorrelation - lag 10 / weighted by polarizabilities	3D
+Autocorrelation3D	TDB1i	3D topological distance based autocorrelation - lag 1 / weighted by first ionization potential	3D
+Autocorrelation3D	TDB2i	3D topological distance based autocorrelation - lag 2 / weighted by first ionization potential	3D
+Autocorrelation3D	TDB3i	3D topological distance based autocorrelation - lag 3 / weighted by first ionization potential	3D
+Autocorrelation3D	TDB4i	3D topological distance based autocorrelation - lag 4 / weighted by first ionization potential	3D
+Autocorrelation3D	TDB5i	3D topological distance based autocorrelation - lag 5 / weighted by first ionization potential	3D
+Autocorrelation3D	TDB6i	3D topological distance based autocorrelation - lag 6 / weighted by first ionization potential	3D
+Autocorrelation3D	TDB7i	3D topological distance based autocorrelation - lag 7 / weighted by first ionization potential	3D
+Autocorrelation3D	TDB8i	3D topological distance based autocorrelation - lag 8 / weighted by first ionization potential	3D
+Autocorrelation3D	TDB9i	3D topological distance based autocorrelation - lag 9 / weighted by first ionization potential	3D
+Autocorrelation3D	TDB10i	3D topological distance based autocorrelation - lag 10 / weighted by first ionization potential	3D
+Autocorrelation3D	TDB1s	3D topological distance based autocorrelation - lag 1 / weighted by I-state	3D
+Autocorrelation3D	TDB2s	3D topological distance based autocorrelation - lag 2 / weighted by I-state	3D
+Autocorrelation3D	TDB3s	3D topological distance based autocorrelation - lag 3 / weighted by I-state	3D
+Autocorrelation3D	TDB4s	3D topological distance based autocorrelation - lag 4 / weighted by I-state	3D
+Autocorrelation3D	TDB5s	3D topological distance based autocorrelation - lag 5 / weighted by I-state	3D
+Autocorrelation3D	TDB6s	3D topological distance based autocorrelation - lag 6 / weighted by I-state	3D
+Autocorrelation3D	TDB7s	3D topological distance based autocorrelation - lag 7 / weighted by I-state	3D
+Autocorrelation3D	TDB8s	3D topological distance based autocorrelation - lag 8 / weighted by I-state	3D
+Autocorrelation3D	TDB9s	3D topological distance based autocorrelation - lag 9 / weighted by I-state	3D
+Autocorrelation3D	TDB10s	3D topological distance based autocorrelation - lag 10 / weighted by I-state	3D
+Autocorrelation3D	TDB1r	3D topological distance based autocorrelation - lag 1 / weighted by covalent radius	3D
+Autocorrelation3D	TDB2r	3D topological distance based autocorrelation - lag 2 / weighted by covalent radius	3D
+Autocorrelation3D	TDB3r	3D topological distance based autocorrelation - lag 3 / weighted by covalent radius	3D
+Autocorrelation3D	TDB4r	3D topological distance based autocorrelation - lag 4 / weighted by covalent radius	3D
+Autocorrelation3D	TDB5r	3D topological distance based autocorrelation - lag 5 / weighted by covalent radius	3D
+Autocorrelation3D	TDB6r	3D topological distance based autocorrelation - lag 6 / weighted by covalent radius	3D
+Autocorrelation3D	TDB7r	3D topological distance based autocorrelation - lag 7 / weighted by covalent radius	3D
+Autocorrelation3D	TDB8r	3D topological distance based autocorrelation - lag 8 / weighted by covalent radius	3D
+Autocorrelation3D	TDB9r	3D topological distance based autocorrelation - lag 9 / weighted by covalent radius	3D
+Autocorrelation3D	TDB10r	3D topological distance based autocorrelation - lag 10 / weighted by covalent radius	3D
+CPSA	PPSA-1	Partial positive surface area -- sum of surface area on positive parts of molecule	3D
+CPSA	PPSA-2	Partial positive surface area * total positive charge on the molecule 	3D
+CPSA	PPSA-3	Charge weighted partial positive surface area	3D
+CPSA	PNSA-1	Partial negative surface area -- sum of surface area on negative parts of molecule	3D
+CPSA	PNSA-2	Partial negative surface area * total negative charge on the molecule	3D
+CPSA	PNSA-3	Charge weighted partial negative surface area	3D
+CPSA	DPSA-1	Difference of PPSA-1 and PNSA-1	3D
+CPSA	DPSA-2	Difference of FPSA-2 and PNSA-2	3D
+CPSA	DPSA-3	Difference of PPSA-3 and PNSA-3	3D
+CPSA	FPSA-1	PPSA-1 / total molecular surface area	3D
+CPSA	FPSA-2	PPSA-2 / total molecular surface area	3D
+CPSA	FPSA-3	PPSA-3 / total molecular surface area	3D
+CPSA	FNSA-1	PNSA-1 / total molecular surface area	3D
+CPSA	FNSA-2	PNSA-2 / total molecular surface area	3D
+CPSA	FNSA-3	PNSA-3 / total molecular surface area	3D
+CPSA	WPSA-1	PPSA-1 * total molecular surface area / 1000	3D
+CPSA	WPSA-2	PPSA-2 * total molecular surface area /1000	3D
+CPSA	WPSA-3	PPSA-3 * total molecular surface area / 1000	3D
+CPSA	WNSA-1	PNSA-1 * total molecular surface area /1000	3D
+CPSA	WNSA-2	PNSA-2 * total molecular surface area / 1000	3D
+CPSA	WNSA-3	PNSA-3 * total molecular surface area / 1000	3D
+CPSA	RPCG	Relative positive charge -- most positive charge / total positive charge	3D
+CPSA	RNCG	Relative negative charge -- most negative charge / total negative charge	3D
+CPSA	RPCS	Relative positive charge surface area -- most positive surface area * RPCG	3D
+CPSA	RNCS	Relative negative charge surface area -- most negative surface area * RNCG	3D
+CPSA	THSA	Sum of solvent accessible surface areas of atoms with absolute value of partial charges less than 0.2 	3D
+CPSA	TPSA	Sum of solvent accessible surface areas of atoms with absolute value of partial charges greater than or equal 0.2 	3D
+CPSA	RHSA	THSA / total molecular surface area 	3D
+CPSA	RPSA	TPSA / total molecular surface area 	3D
+GravitationalIndex	GRAV-1	Gravitational index of heavy atoms 	3D
+GravitationalIndex	GRAV-2	Square root of gravitational index of heavy atoms 	3D
+GravitationalIndex	GRAV-3	Cube root of gravitational index of heavy atoms 	3D
+GravitationalIndex	GRAVH-1	Gravitational index - hydrogens included 	3D
+GravitationalIndex	GRAVH-2	Square root of hydrogen-included gravitational index 	3D
+GravitationalIndex	GRAVH-3	Cube root of hydrogen-included gravitational index 	3D
+GravitationalIndex	GRAV-4	Gravitational index of all pairs of atoms (not just bonded pairs) 	3D
+GravitationalIndex	GRAV-5	Square root of gravitational index of all pairs of atoms (not just bonded pairs) 	3D
+GravitationalIndex	GRAV-6	Cube root of gravitational index of all pairs of atoms (not just bonded pairs) 	3D
+LengthOverBreadth	LOBMAX	The maximum L/B ratio 	3D
+LengthOverBreadth	LOBMIN	The L/B ratio for the rotation that results in the minimum area	3D
+MomentOfInertia	MOMI-X	Moment of inertia along X axis 	3D
+MomentOfInertia	MOMI-Y	Moment of inertia along Y axis 	3D
+MomentOfInertia	MOMI-Z	Moment of inertia along Z axis 	3D
+MomentOfInertia	MOMI-XY	X/Y 	3D
+MomentOfInertia	MOMI-XZ	X/Z 	3D
+MomentOfInertia	MOMI-YZ	Y/Z 	3D
+MomentOfInertia	MOMI-R	Radius of gyration 	3D
+PetitjeanShapeIndex	geomRadius	Geometrical radius (minimum geometric eccentricity)	3D
+PetitjeanShapeIndex	geomDiameter	Geometrical diameter (maximum geometric eccentricity)	3D
+PetitjeanShapeIndex	geomShape	Petitjean geometric shape index 	3D
+RDF	RDF10u	Radial distribution function - 010 / unweighted	3D
+RDF	RDF15u	Radial distribution function - 015 / unweighted	3D
+RDF	RDF20u	Radial distribution function - 020 / unweighted	3D
+RDF	RDF25u	Radial distribution function - 025 / unweighted	3D
+RDF	RDF30u	Radial distribution function - 030 / unweighted	3D
+RDF	RDF35u	Radial distribution function - 035 / unweighted	3D
+RDF	RDF40u	Radial distribution function - 040 / unweighted	3D
+RDF	RDF45u	Radial distribution function - 045 / unweighted	3D
+RDF	RDF50u	Radial distribution function - 050 / unweighted	3D
+RDF	RDF55u	Radial distribution function - 055 / unweighted	3D
+RDF	RDF60u	Radial distribution function - 060 / unweighted	3D
+RDF	RDF65u	Radial distribution function - 065 / unweighted	3D
+RDF	RDF70u	Radial distribution function - 070 / unweighted	3D
+RDF	RDF75u	Radial distribution function - 075 / unweighted	3D
+RDF	RDF80u	Radial distribution function - 080 / unweighted	3D
+RDF	RDF85u	Radial distribution function - 085 / unweighted	3D
+RDF	RDF90u	Radial distribution function - 090 / unweighted	3D
+RDF	RDF95u	Radial distribution function - 095 / unweighted	3D
+RDF	RDF100u	Radial distribution function - 100 / unweighted	3D
+RDF	RDF105u	Radial distribution function - 105 / unweighted	3D
+RDF	RDF110u	Radial distribution function - 110 / unweighted	3D
+RDF	RDF115u	Radial distribution function - 115 / unweighted	3D
+RDF	RDF120u	Radial distribution function - 120 / unweighted	3D
+RDF	RDF125u	Radial distribution function - 125 / unweighted	3D
+RDF	RDF130u	Radial distribution function - 130 / unweighted	3D
+RDF	RDF135u	Radial distribution function - 135 / unweighted	3D
+RDF	RDF140u	Radial distribution function - 140 / unweighted	3D
+RDF	RDF145u	Radial distribution function - 145 / unweighted	3D
+RDF	RDF150u	Radial distribution function - 150 / unweighted	3D
+RDF	RDF155u	Radial distribution function - 155 / unweighted	3D
+RDF	RDF10m	Radial distribution function - 010 / weighted by relative mass	3D
+RDF	RDF15m	Radial distribution function - 015 / weighted by relative mass	3D
+RDF	RDF20m	Radial distribution function - 020 / weighted by relative mass	3D
+RDF	RDF25m	Radial distribution function - 025 / weighted by relative mass	3D
+RDF	RDF30m	Radial distribution function - 030 / weighted by relative mass	3D
+RDF	RDF35m	Radial distribution function - 035 / weighted by relative mass	3D
+RDF	RDF40m	Radial distribution function - 040 / weighted by relative mass	3D
+RDF	RDF45m	Radial distribution function - 045 / weighted by relative mass	3D
+RDF	RDF50m	Radial distribution function - 050 / weighted by relative mass	3D
+RDF	RDF55m	Radial distribution function - 055 / weighted by relative mass	3D
+RDF	RDF60m	Radial distribution function - 060 / weighted by relative mass	3D
+RDF	RDF65m	Radial distribution function - 065 / weighted by relative mass	3D
+RDF	RDF70m	Radial distribution function - 070 / weighted by relative mass	3D
+RDF	RDF75m	Radial distribution function - 075 / weighted by relative mass	3D
+RDF	RDF80m	Radial distribution function - 080 / weighted by relative mass	3D
+RDF	RDF85m	Radial distribution function - 085 / weighted by relative mass	3D
+RDF	RDF90m	Radial distribution function - 090 / weighted by relative mass	3D
+RDF	RDF95m	Radial distribution function - 095 / weighted by relative mass	3D
+RDF	RDF100m	Radial distribution function - 100 / weighted by relative mass	3D
+RDF	RDF105m	Radial distribution function - 105 / weighted by relative mass	3D
+RDF	RDF110m	Radial distribution function - 110 / weighted by relative mass	3D
+RDF	RDF115m	Radial distribution function - 115 / weighted by relative mass	3D
+RDF	RDF120m	Radial distribution function - 120 / weighted by relative mass	3D
+RDF	RDF125m	Radial distribution function - 125 / weighted by relative mass	3D
+RDF	RDF130m	Radial distribution function - 130 / weighted by relative mass	3D
+RDF	RDF135m	Radial distribution function - 135 / weighted by relative mass	3D
+RDF	RDF140m	Radial distribution function - 140 / weighted by relative mass	3D
+RDF	RDF145m	Radial distribution function - 145 / weighted by relative mass	3D
+RDF	RDF150m	Radial distribution function - 150 / weighted by relative mass	3D
+RDF	RDF155m	Radial distribution function - 155 / weighted by relative mass	3D
+RDF	RDF10v	Radial distribution function - 010 / weighted by relative van der Waals volumes	3D
+RDF	RDF15v	Radial distribution function - 015 / weighted by relative van der Waals volumes	3D
+RDF	RDF20v	Radial distribution function - 020 / weighted by relative van der Waals volumes	3D
+RDF	RDF25v	Radial distribution function - 025 / weighted by relative van der Waals volumes	3D
+RDF	RDF30v	Radial distribution function - 030 / weighted by relative van der Waals volumes	3D
+RDF	RDF35v	Radial distribution function - 035 / weighted by relative van der Waals volumes	3D
+RDF	RDF40v	Radial distribution function - 040 / weighted by relative van der Waals volumes	3D
+RDF	RDF45v	Radial distribution function - 045 / weighted by relative van der Waals volumes	3D
+RDF	RDF50v	Radial distribution function - 050 / weighted by relative van der Waals volumes	3D
+RDF	RDF55v	Radial distribution function - 055 / weighted by relative van der Waals volumes	3D
+RDF	RDF60v	Radial distribution function - 060 / weighted by relative van der Waals volumes	3D
+RDF	RDF65v	Radial distribution function - 065 / weighted by relative van der Waals volumes	3D
+RDF	RDF70v	Radial distribution function - 070 / weighted by relative van der Waals volumes	3D
+RDF	RDF75v	Radial distribution function - 075 / weighted by relative van der Waals volumes	3D
+RDF	RDF80v	Radial distribution function - 080 / weighted by relative van der Waals volumes	3D
+RDF	RDF85v	Radial distribution function - 085 / weighted by relative van der Waals volumes	3D
+RDF	RDF90v	Radial distribution function - 090 / weighted by relative van der Waals volumes	3D
+RDF	RDF95v	Radial distribution function - 095 / weighted by relative van der Waals volumes	3D
+RDF	RDF100v	Radial distribution function - 100 / weighted by relative van der Waals volumes	3D
+RDF	RDF105v	Radial distribution function - 105 / weighted by relative van der Waals volumes	3D
+RDF	RDF110v	Radial distribution function - 110 / weighted by relative van der Waals volumes	3D
+RDF	RDF115v	Radial distribution function - 115 / weighted by relative van der Waals volumes	3D
+RDF	RDF120v	Radial distribution function - 120 / weighted by relative van der Waals volumes	3D
+RDF	RDF125v	Radial distribution function - 125 / weighted by relative van der Waals volumes	3D
+RDF	RDF130v	Radial distribution function - 130 / weighted by relative van der Waals volumes	3D
+RDF	RDF135v	Radial distribution function - 135 / weighted by relative van der Waals volumes	3D
+RDF	RDF140v	Radial distribution function - 140 / weighted by relative van der Waals volumes	3D
+RDF	RDF145v	Radial distribution function - 145 / weighted by relative van der Waals volumes	3D
+RDF	RDF150v	Radial distribution function - 150 / weighted by relative van der Waals volumes	3D
+RDF	RDF155v	Radial distribution function - 155 / weighted by relative van der Waals volumes	3D
+RDF	RDF10e	Radial distribution function - 010 / weighted by relative Sanderson electronegativities	3D
+RDF	RDF15e	Radial distribution function - 015 / weighted by relative Sanderson electronegativities	3D
+RDF	RDF20e	Radial distribution function - 020 / weighted by relative Sanderson electronegativities	3D
+RDF	RDF25e	Radial distribution function - 025 / weighted by relative Sanderson electronegativities	3D
+RDF	RDF30e	Radial distribution function - 030 / weighted by relative Sanderson electronegativities	3D
+RDF	RDF35e	Radial distribution function - 035 / weighted by relative Sanderson electronegativities	3D
+RDF	RDF40e	Radial distribution function - 040 / weighted by relative Sanderson electronegativities	3D
+RDF	RDF45e	Radial distribution function - 045 / weighted by relative Sanderson electronegativities	3D
+RDF	RDF50e	Radial distribution function - 050 / weighted by relative Sanderson electronegativities	3D
+RDF	RDF55e	Radial distribution function - 055 / weighted by relative Sanderson electronegativities	3D
+RDF	RDF60e	Radial distribution function - 060 / weighted by relative Sanderson electronegativities	3D
+RDF	RDF65e	Radial distribution function - 065 / weighted by relative Sanderson electronegativities	3D
+RDF	RDF70e	Radial distribution function - 070 / weighted by relative Sanderson electronegativities	3D
+RDF	RDF75e	Radial distribution function - 075 / weighted by relative Sanderson electronegativities	3D
+RDF	RDF80e	Radial distribution function - 080 / weighted by relative Sanderson electronegativities	3D
+RDF	RDF85e	Radial distribution function - 085 / weighted by relative Sanderson electronegativities	3D
+RDF	RDF90e	Radial distribution function - 090 / weighted by relative Sanderson electronegativities	3D
+RDF	RDF95e	Radial distribution function - 095 / weighted by relative Sanderson electronegativities	3D
+RDF	RDF100e	Radial distribution function - 100 / weighted by relative Sanderson electronegativities	3D
+RDF	RDF105e	Radial distribution function - 105 / weighted by relative Sanderson electronegativities	3D
+RDF	RDF110e	Radial distribution function - 110 / weighted by relative Sanderson electronegativities	3D
+RDF	RDF115e	Radial distribution function - 115 / weighted by relative Sanderson electronegativities	3D
+RDF	RDF120e	Radial distribution function - 120 / weighted by relative Sanderson electronegativities	3D
+RDF	RDF125e	Radial distribution function - 125 / weighted by relative Sanderson electronegativities	3D
+RDF	RDF130e	Radial distribution function - 130 / weighted by relative Sanderson electronegativities	3D
+RDF	RDF135e	Radial distribution function - 135 / weighted by relative Sanderson electronegativities	3D
+RDF	RDF140e	Radial distribution function - 140 / weighted by relative Sanderson electronegativities	3D
+RDF	RDF145e	Radial distribution function - 145 / weighted by relative Sanderson electronegativities	3D
+RDF	RDF150e	Radial distribution function - 150 / weighted by relative Sanderson electronegativities	3D
+RDF	RDF155e	Radial distribution function - 155 / weighted by relative Sanderson electronegativities	3D
+RDF	RDF10p	Radial distribution function - 010 / weighted by relative polarizabilities	3D
+RDF	RDF15p	Radial distribution function - 015 / weighted by relative polarizabilities	3D
+RDF	RDF20p	Radial distribution function - 020 / weighted by relative polarizabilities	3D
+RDF	RDF25p	Radial distribution function - 025 / weighted by relative polarizabilities	3D
+RDF	RDF30p	Radial distribution function - 030 / weighted by relative polarizabilities	3D
+RDF	RDF35p	Radial distribution function - 035 / weighted by relative polarizabilities	3D
+RDF	RDF40p	Radial distribution function - 040 / weighted by relative polarizabilities	3D
+RDF	RDF45p	Radial distribution function - 045 / weighted by relative polarizabilities	3D
+RDF	RDF50p	Radial distribution function - 050 / weighted by relative polarizabilities	3D
+RDF	RDF55p	Radial distribution function - 055 / weighted by relative polarizabilities	3D
+RDF	RDF60p	Radial distribution function - 060 / weighted by relative polarizabilities	3D
+RDF	RDF65p	Radial distribution function - 065 / weighted by relative polarizabilities	3D
+RDF	RDF70p	Radial distribution function - 070 / weighted by relative polarizabilities	3D
+RDF	RDF75p	Radial distribution function - 075 / weighted by relative polarizabilities	3D
+RDF	RDF80p	Radial distribution function - 080 / weighted by relative polarizabilities	3D
+RDF	RDF85p	Radial distribution function - 085 / weighted by relative polarizabilities	3D
+RDF	RDF90p	Radial distribution function - 090 / weighted by relative polarizabilities	3D
+RDF	RDF95p	Radial distribution function - 095 / weighted by relative polarizabilities	3D
+RDF	RDF100p	Radial distribution function - 100 / weighted by relative polarizabilities	3D
+RDF	RDF105p	Radial distribution function - 105 / weighted by relative polarizabilities	3D
+RDF	RDF110p	Radial distribution function - 110 / weighted by relative polarizabilities	3D
+RDF	RDF115p	Radial distribution function - 115 / weighted by relative polarizabilities	3D
+RDF	RDF120p	Radial distribution function - 120 / weighted by relative polarizabilities	3D
+RDF	RDF125p	Radial distribution function - 125 / weighted by relative polarizabilities	3D
+RDF	RDF130p	Radial distribution function - 130 / weighted by relative polarizabilities	3D
+RDF	RDF135p	Radial distribution function - 135 / weighted by relative polarizabilities	3D
+RDF	RDF140p	Radial distribution function - 140 / weighted by relative polarizabilities	3D
+RDF	RDF145p	Radial distribution function - 145 / weighted by relative polarizabilities	3D
+RDF	RDF150p	Radial distribution function - 150 / weighted by relative polarizabilities	3D
+RDF	RDF155p	Radial distribution function - 155 / weighted by relative polarizabilities	3D
+RDF	RDF10i	Radial distribution function - 010 / weighted by relative first ionization potential	3D
+RDF	RDF15i	Radial distribution function - 015 / weighted by relative first ionization potential	3D
+RDF	RDF20i	Radial distribution function - 020 / weighted by relative first ionization potential	3D
+RDF	RDF25i	Radial distribution function - 025 / weighted by relative first ionization potential	3D
+RDF	RDF30i	Radial distribution function - 030 / weighted by relative first ionization potential	3D
+RDF	RDF35i	Radial distribution function - 035 / weighted by relative first ionization potential	3D
+RDF	RDF40i	Radial distribution function - 040 / weighted by relative first ionization potential	3D
+RDF	RDF45i	Radial distribution function - 045 / weighted by relative first ionization potential	3D
+RDF	RDF50i	Radial distribution function - 050 / weighted by relative first ionization potential	3D
+RDF	RDF55i	Radial distribution function - 055 / weighted by relative first ionization potential	3D
+RDF	RDF60i	Radial distribution function - 060 / weighted by relative first ionization potential	3D
+RDF	RDF65i	Radial distribution function - 065 / weighted by relative first ionization potential	3D
+RDF	RDF70i	Radial distribution function - 070 / weighted by relative first ionization potential	3D
+RDF	RDF75i	Radial distribution function - 075 / weighted by relative first ionization potential	3D
+RDF	RDF80i	Radial distribution function - 080 / weighted by relative first ionization potential	3D
+RDF	RDF85i	Radial distribution function - 085 / weighted by relative first ionization potential	3D
+RDF	RDF90i	Radial distribution function - 090 / weighted by relative first ionization potential	3D
+RDF	RDF95i	Radial distribution function - 095 / weighted by relative first ionization potential	3D
+RDF	RDF100i	Radial distribution function - 100 / weighted by relative first ionization potential	3D
+RDF	RDF105i	Radial distribution function - 105 / weighted by relative first ionization potential	3D
+RDF	RDF110i	Radial distribution function - 110 / weighted by relative first ionization potential	3D
+RDF	RDF115i	Radial distribution function - 115 / weighted by relative first ionization potential	3D
+RDF	RDF120i	Radial distribution function - 120 / weighted by relative first ionization potential	3D
+RDF	RDF125i	Radial distribution function - 125 / weighted by relative first ionization potential	3D
+RDF	RDF130i	Radial distribution function - 130 / weighted by relative first ionization potential	3D
+RDF	RDF135i	Radial distribution function - 135 / weighted by relative first ionization potential	3D
+RDF	RDF140i	Radial distribution function - 140 / weighted by relative first ionization potential	3D
+RDF	RDF145i	Radial distribution function - 145 / weighted by relative first ionization potential	3D
+RDF	RDF150i	Radial distribution function - 150 / weighted by relative first ionization potential	3D
+RDF	RDF155i	Radial distribution function - 155 / weighted by relative first ionization potential	3D
+RDF	RDF10s	Radial distribution function - 010 / weighted by relative I-state	3D
+RDF	RDF15s	Radial distribution function - 015 / weighted by relative I-state	3D
+RDF	RDF20s	Radial distribution function - 020 / weighted by relative I-state	3D
+RDF	RDF25s	Radial distribution function - 025 / weighted by relative I-state	3D
+RDF	RDF30s	Radial distribution function - 030 / weighted by relative I-state	3D
+RDF	RDF35s	Radial distribution function - 035 / weighted by relative I-state	3D
+RDF	RDF40s	Radial distribution function - 040 / weighted by relative I-state	3D
+RDF	RDF45s	Radial distribution function - 045 / weighted by relative I-state	3D
+RDF	RDF50s	Radial distribution function - 050 / weighted by relative I-state	3D
+RDF	RDF55s	Radial distribution function - 055 / weighted by relative I-state	3D
+RDF	RDF60s	Radial distribution function - 060 / weighted by relative I-state	3D
+RDF	RDF65s	Radial distribution function - 065 / weighted by relative I-state	3D
+RDF	RDF70s	Radial distribution function - 070 / weighted by relative I-state	3D
+RDF	RDF75s	Radial distribution function - 075 / weighted by relative I-state	3D
+RDF	RDF80s	Radial distribution function - 080 / weighted by relative I-state	3D
+RDF	RDF85s	Radial distribution function - 085 / weighted by relative I-state	3D
+RDF	RDF90s	Radial distribution function - 090 / weighted by relative I-state	3D
+RDF	RDF95s	Radial distribution function - 095 / weighted by relative I-state	3D
+RDF	RDF100s	Radial distribution function - 100 / weighted by relative I-state	3D
+RDF	RDF105s	Radial distribution function - 105 / weighted by relative I-state	3D
+RDF	RDF110s	Radial distribution function - 110 / weighted by relative I-state	3D
+RDF	RDF115s	Radial distribution function - 115 / weighted by relative I-state	3D
+RDF	RDF120s	Radial distribution function - 120 / weighted by relative I-state	3D
+RDF	RDF125s	Radial distribution function - 125 / weighted by relative I-state	3D
+RDF	RDF130s	Radial distribution function - 130 / weighted by relative I-state	3D
+RDF	RDF135s	Radial distribution function - 135 / weighted by relative I-state	3D
+RDF	RDF140s	Radial distribution function - 140 / weighted by relative I-state	3D
+RDF	RDF145s	Radial distribution function - 145 / weighted by relative I-state	3D
+RDF	RDF150s	Radial distribution function - 150 / weighted by relative I-state	3D
+RDF	RDF155s	Radial distribution function - 155 / weighted by relative I-state	3D
+WHIM	L1u	1st component size directional WHIM index / unweighted	3D
+WHIM	L2u	2nd component size directional WHIM index / unweighted	3D
+WHIM	L3u	3rd component size directional WHIM index / unweighted	3D
+WHIM	P1u	1st component shape directional WHIM index / unweighted	3D
+WHIM	P2u	2nd component shape directional WHIM index / unweighted	3D
+WHIM	E1u	1st component accessibility directional WHIM index / unweighted	3D
+WHIM	E2u	2nd component accessibility directional WHIM index / unweighted	3D
+WHIM	E3u	3rd component accessibility directional WHIM index / unweighted	3D
+WHIM	Tu	T total size index / unweighted	3D
+WHIM	Au	A total size index / unweighted	3D
+WHIM	Vu	V total size index / unweighted	3D
+WHIM	Ku	K global shape index / unweighted	3D
+WHIM	Du	D total accessibility index / unweighted	3D
+WHIM	L1m	1st component size directional WHIM index / weighted by relative mass	3D
+WHIM	L2m	2nd component size directional WHIM index / weighted by relative mass	3D
+WHIM	L3m	3rd component size directional WHIM index / weighted by relative mass	3D
+WHIM	P1m	1st component shape directional WHIM index / weighted by relative mass	3D
+WHIM	P2m	2nd component shape directional WHIM index / weighted by relative mass	3D
+WHIM	E1m	1st component accessibility directional WHIM index / weighted by relative mass	3D
+WHIM	E2m	2nd component accessibility directional WHIM index / weighted by relative mass	3D
+WHIM	E3m	3rd component accessibility directional WHIM index / weighted by relative mass	3D
+WHIM	Tm	T total size index / weighted by relative mass	3D
+WHIM	Am	A total size index / weighted by relative mass	3D
+WHIM	Vm	V total size index / weighted by relative mass	3D
+WHIM	Km	K global shape index / weighted by relative mass	3D
+WHIM	Dm	D total accessibility index / weighted by relative mass	3D
+WHIM	L1v	1st component size directional WHIM index / weighted by relative van der Waals volumes	3D
+WHIM	L2v	2nd component size directional WHIM index / weighted by relative van der Waals volumes	3D
+WHIM	L3v	3rd component size directional WHIM index / weighted by relative van der Waals volumes	3D
+WHIM	P1v	1st component shape directional WHIM index / weighted by relative van der Waals volumes	3D
+WHIM	P2v	2nd component shape directional WHIM index / weighted by relative van der Waals volumes	3D
+WHIM	E1v	1st component accessibility directional WHIM index / weighted by relative van der Waals volumes	3D
+WHIM	E2v	2nd component accessibility directional WHIM index / weighted by relative van der Waals volumes	3D
+WHIM	E3v	3rd component accessibility directional WHIM index / weighted by relative van der Waals volumes	3D
+WHIM	Tv	T total size index / weighted by relative van der Waals volumes	3D
+WHIM	Av	A total size index / weighted by relative van der Waals volumes	3D
+WHIM	Vv	V total size index / weighted by relative van der Waals volumes	3D
+WHIM	Kv	K global shape index / weighted by relative van der Waals volumes	3D
+WHIM	Dv	D total accessibility index / weighted by relative van der Waals volumes	3D
+WHIM	L1e	1st component size directional WHIM index / weighted by relative Sanderson electronegativities	3D
+WHIM	L2e	2nd component size directional WHIM index / weighted by relative Sanderson electronegativities	3D
+WHIM	L3e	3rd component size directional WHIM index / weighted by relative Sanderson electronegativities	3D
+WHIM	P1e	1st component shape directional WHIM index / weighted by relative Sanderson electronegativities	3D
+WHIM	P2e	2nd component shape directional WHIM index / weighted by relative Sanderson electronegativities	3D
+WHIM	E1e	1st component accessibility directional WHIM index / weighted by relative Sanderson electronegativities	3D
+WHIM	E2e	2nd component accessibility directional WHIM index / weighted by relative Sanderson electronegativities	3D
+WHIM	E3e	3rd component accessibility directional WHIM index / weighted by relative Sanderson electronegativities	3D
+WHIM	Te	T total size index / weighted by relative Sanderson electronegativities	3D
+WHIM	Ae	A total size index / weighted by relative Sanderson electronegativities	3D
+WHIM	Ve	V total size index / weighted by relative Sanderson electronegativities	3D
+WHIM	Ke	K global shape index / weighted by relative Sanderson electronegativities	3D
+WHIM	De	D total accessibility index / weighted by relative Sanderson electronegativities	3D
+WHIM	L1p	1st component size directional WHIM index / weighted by relative polarizabilities	3D
+WHIM	L2p	2nd component size directional WHIM index / weighted by relative polarizabilities	3D
+WHIM	L3p	3rd component size directional WHIM index / weighted by relative polarizabilities	3D
+WHIM	P1p	1st component shape directional WHIM index / weighted by relative polarizabilities	3D
+WHIM	P2p	2nd component shape directional WHIM index / weighted by relative polarizabilities	3D
+WHIM	E1p	1st component accessibility directional WHIM index / weighted by relative polarizabilities	3D
+WHIM	E2p	2nd component accessibility directional WHIM index / weighted by relative polarizabilities	3D
+WHIM	E3p	3rd component accessibility directional WHIM index / weighted by relative polarizabilities	3D
+WHIM	Tp	T total size index / weighted by relative polarizabilities	3D
+WHIM	Ap	A total size index / weighted by relative polarizabilities	3D
+WHIM	Vp	V total size index / weighted by relative polarizabilities	3D
+WHIM	Kp	K global shape index / weighted by relative polarizabilities	3D
+WHIM	Dp	D total accessibility index / weighted by relative polarizabilities	3D
+WHIM	L1i	1st component size directional WHIM index / weighted by relative first ionization potential	3D
+WHIM	L2i	2nd component size directional WHIM index / weighted by relative first ionization potential	3D
+WHIM	L3i	3rd component size directional WHIM index / weighted by relative first ionization potential	3D
+WHIM	P1i	1st component shape directional WHIM index / weighted by relative first ionization potential	3D
+WHIM	P2i	2nd component shape directional WHIM index / weighted by relative first ionization potential	3D
+WHIM	E1i	1st component accessibility directional WHIM index / weighted by relative first ionization potential	3D
+WHIM	E2i	2nd component accessibility directional WHIM index / weighted by relative first ionization potential	3D
+WHIM	E3i	3rd component accessibility directional WHIM index / weighted by relative first ionization potential	3D
+WHIM	Ti	T total size index / weighted by relative first ionization potential	3D
+WHIM	Ai	A total size index / weighted by relative first ionization potential	3D
+WHIM	Vi	V total size index / weighted by relative first ionization potential	3D
+WHIM	Ki	K global shape index / weighted by relative first ionization potential	3D
+WHIM	Di	D total accessibility index / weighted by relative first ionization potential	3D
+WHIM	L1s	1st component size directional WHIM index / weighted by relative I-state	3D
+WHIM	L2s	2nd component size directional WHIM index / weighted by relative I-state	3D
+WHIM	L3s	3rd component size directional WHIM index / weighted by relative I-state	3D
+WHIM	P1s	1st component shape directional WHIM index / weighted by relative I-state	3D
+WHIM	P2s	2nd component shape directional WHIM index / weighted by relative I-state	3D
+WHIM	E1s	1st component accessibility directional WHIM index / weighted by relative I-state	3D
+WHIM	E2s	2nd component accessibility directional WHIM index / weighted by relative I-state	3D
+WHIM	E3s	3rd component accessibility directional WHIM index / weighted by relative I-state	3D
+WHIM	Ts	T total size index / weighted by relative I-state	3D
+WHIM	As	A total size index / weighted by relative I-state	3D
+WHIM	Vs	V total size index / weighted by relative I-state	3D
+WHIM	Ks	K global shape index / weighted by relative I-state	3D
+WHIM	Ds	D total accessibility index / weighted by relative I-state	3D

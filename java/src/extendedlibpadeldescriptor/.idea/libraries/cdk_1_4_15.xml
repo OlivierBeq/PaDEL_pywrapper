@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="cdk-1.4.15">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../src/PaDEL_pywrapper/PaDEL-Descriptor/lib/cdk-1.4.15.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
