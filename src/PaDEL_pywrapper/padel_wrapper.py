@@ -111,27 +111,33 @@ J. Comput. Chem., 32: 1466-1474. https://doi.org/10.1002/jcc.21707
         # 2) Create temp SD v2k file
         self._tmp_sd = mktempfile('molecules_v2k.sd')
         self._skipped = []
-        writer = Chem.SDWriter(self._tmp_sd)
-        # Ensure V2000 as CDK cannot properly process v3000
-        writer.SetForceV3000(False)
-        for i, mol in enumerate(mols):
-            if mol is not None and isinstance(mol, Chem.Mol):
-                if mol.GetNumAtoms() > 999:
-                    raise ValueError('Cannot calculate descriptors for molecules with more than 999 atoms.')
-                # Does molecule lack hydrogen atoms?
-                if needsHs(mol):
-                    warnings.warn('Molecule lacks hydrogen atoms: this will affect the value of calculated descriptors')
-                # If molecule has no conformer
-                confs = list(mol.GetConformers())
-                if not (len(confs) > 0 and confs[-1].Is3D()):
-                    if self.has_3D_descriptors:
-                        raise ValueError('Cannot calculate descriptors for a conformer-less molecule')
-                    # If no 3D descriptor, compute 2D coords
-                    AllChem.Compute2DCoords(mol)
-                writer.write(mol)
-            else:
-                self._skipped.append(i)
-        writer.close()
+        try:
+            writer = Chem.SDWriter(self._tmp_sd)
+            # Ensure V2000 as CDK cannot properly process v3000
+            writer.SetForceV3000(False)
+            for i, mol in enumerate(mols):
+                if mol is not None and isinstance(mol, Chem.Mol):
+                    if mol.GetNumAtoms() > 999:
+                        raise ValueError('Cannot calculate descriptors for molecules with more than 999 atoms.')
+                    # Does molecule lack hydrogen atoms?
+                    if needsHs(mol):
+                        warnings.warn('Molecule lacks hydrogen atoms: this will affect the value of calculated descriptors')
+                    # If molecule has no conformer
+                    confs = list(mol.GetConformers())
+                    if not (len(confs) > 0 and confs[-1].Is3D()):
+                        if self.has_3D_descriptors:
+                            raise ValueError('Cannot calculate descriptors for a conformer-less molecule')
+                        # If no 3D descriptor, compute 2D coords
+                        AllChem.Compute2DCoords(mol)
+                    writer.write(mol)
+                else:
+                    self._skipped.append(i)
+            writer.close()
+        except ValueError as e:
+            # Free resources and raise error
+            writer.close()
+            os.remove(self._tmp_sd)
+            raise e from None
         # 3) Create commands
         desc_commands = []
         fp_commands = []
