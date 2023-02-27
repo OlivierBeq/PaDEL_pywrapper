@@ -62,10 +62,11 @@ class Fingerprint:
         :param size: Number of bits in the CDK or Graph only fingerprints (ignored for others)
         :param searchDepth: Search depth for the CDK or Graph only fingerprints (ignored for others)
         """
+        fp = Fingerprint(self.name)
         if self.name in ['CDK fingerprint', 'CDK graph only fingerprint']:
-            self.size = self.nBits = size
-            self.searchDepth = searchDepth
-        return self
+            fp.size = fp.nBits = size
+            fp.searchDepth = searchDepth
+        return fp
 
 
 AcidicGroupCount = Descriptor('AcidicGroupCount', False)
