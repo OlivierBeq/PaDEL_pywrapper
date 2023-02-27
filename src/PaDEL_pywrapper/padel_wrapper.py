@@ -2,12 +2,13 @@
 
 """Python wrapper for PaDEL descriptors"""
 
-import os
 import io
+import multiprocessing
+import os
 import warnings
 from copy import deepcopy
-from typing import Iterable, List, Tuple, Union
 from subprocess import PIPE, Popen
+from typing import Iterable, List, Tuple, Union
 
 import more_itertools
 import numpy as np
@@ -23,6 +24,8 @@ from .utils import install_java, mktempfile, needsHs
 
 class PaDEL:
     """PaDEL wrapper to obtain molecular descriptors."""
+
+    lock = multiprocessing.RLock() # Ensure installation of JRE is thread safe
 
     def __init__(self, descriptors: List[Union[Descriptor, Fingerprint]], ignore_3D: bool = True) -> None:
         """Instantiate a wrapper to calculate PaDEL molecular descriptors.
@@ -107,7 +110,8 @@ J. Comput. Chem., 32: 1466-1474. https://doi.org/10.1002/jcc.21707
         :return: The command to run.
         """
         # 1) Ensure JRE is accessible
-        self._java_path = install_java()
+        with self.lock:
+            self._java_path = install_java()
         # 2) Create temp SD v2k file
         self._tmp_sd = mktempfile('molecules_v2k.sd')
         self._skipped = []
@@ -158,7 +162,7 @@ J. Comput. Chem., 32: 1466-1474. https://doi.org/10.1002/jcc.21707
                 command_names = f"{command_prefix} -f {fp.bit_prefix} --names"
                 command_values = f"{command_prefix} -f {fp.bit_prefix} -i {self._tmp_sd}"
                 # Add additional parameters
-                if hasattr(fp, 'searchDepth'):
+                if hasattr(fp, 'size'):
                     command_names += f" -nBits {fp.nBits} -searchDepth {fp.searchDepth}"
                     command_values += f" -nBits {fp.nBits} -searchDepth {fp.searchDepth}"
                 fp_commands.append((command_names, command_values))
@@ -172,7 +176,7 @@ J. Comput. Chem., 32: 1466-1474. https://doi.org/10.1002/jcc.21707
     def _run_command(self, commands: Tuple[str, str]) -> pd.DataFrame:
         """Run the ePaDEL command couple.
 
-        :param commands: couple of command to be run (names and values).
+        :param commands: A couple of commands to be run (names and values).
         """
         with Popen(commands[0].split(), stdout=PIPE) as process:
             names = process.stdout.read().decode().split()
