@@ -34,9 +34,10 @@ class PaDEL:
         :param ignore_3D: remove descriptors requiring 3D molecular coordinates from the provided list
         """
         # Ensure descriptors are actual PaDEL descriptors
+        names = ([descriptor.name for descriptor in descriptor_types.descriptors] +
+                 [fingerprint.name for fingerprint in descriptor_types._fingerprints])
         for descriptor in descriptors:
-            if descriptor not in (descriptor_types.descriptors + descriptor_types._fingerprints) and \
-                    descriptor.__class__ not in (descriptor_types.descriptors + descriptor_types._fingerprints):
+            if descriptor.name not in names and not isinstance(descriptor, (Descriptor, Fingerprint)):
                 raise ValueError(f'descriptor {descriptor} is not a valid PaDEL descriptor.')
 
         self.descriptors = []

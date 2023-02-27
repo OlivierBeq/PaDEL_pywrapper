@@ -5,4 +5,4 @@
 from .padel_wrapper import PaDEL
 from .descriptor import descriptors
 
-__version__ = "1.0.2"
+__version__ = "1.0.2-post1"
