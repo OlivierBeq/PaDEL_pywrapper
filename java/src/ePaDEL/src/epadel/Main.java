@@ -193,7 +193,7 @@ public class Main {
                                 try {
                                     desc.run();
                                     desc_values.addAll(Arrays.asList(desc.getDescriptorValues()));
-                                } catch (ArrayIndexOutOfBoundsException e) {
+                                } catch (ArrayIndexOutOfBoundsException | NullPointerException e) {
                                     // Handle exceptions
                                     String[] empty = new String[desc.getDescriptorNames().length];
                                     Arrays.fill(empty, "NaN");
