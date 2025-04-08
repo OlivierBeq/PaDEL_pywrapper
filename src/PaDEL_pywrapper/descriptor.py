@@ -53,7 +53,7 @@ class Fingerprint:
         fps = pd.read_csv(path, sep='\t')
         self.bit_prefix = fps[fps.fingerprint == self.name].name.values[0]
         nbits = fps[fps.fingerprint == self.name]['fixed size'].values[0]
-        self.nBits = nbits if nbits != '-' else np.NaN
+        self.nBits = nbits if nbits != '-' else np.nan
         self.short_name = fps[fps.fingerprint == self.name]['name'].item()
         self.description = fps[fps.fingerprint == self.name]['description']
 
