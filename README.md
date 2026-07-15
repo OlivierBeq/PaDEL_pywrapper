@@ -127,7 +127,7 @@ print(padel.calculate(mols))
 ```python
 class PaDEL:
     ...
-    def calculate(self, mols: Iterable[Chem.Mol], show_banner: bool = True, njobs: int = 1, chunksize: int = 100):
+    def calculate(self, mols: Iterable[Chem.Mol], show_banner: bool = True, njobs: int = 1, chunksize: int | None = None):
 ```
 
 #### Parameters
@@ -137,9 +137,13 @@ class PaDEL:
 - ***show_banner  : bool***  
   Displays default notice about PaDEL descriptors.
 - ***njobs  : int***  
-  Maximum number of simultaneous processes. Ignored if `self.descriptors` are instances and not class names.
-- ***chunksize  : int***  
-  Maximum number of molecules each process is charged of. Ignored if `self.descriptors` are instances and not class names.
+  Number of concurrent processes used to calculate descriptors in parallel; must not exceed the
+  number of available CPU cores. Each spawned Java process is pinned to a single core
+  (`-XX:ActiveProcessorCount=1`), since parallelism comes from spawning `njobs` OS processes
+  rather than from letting each JVM oversubscribe the host's full core count.
+- ***chunksize  : int | None***  
+  Number of molecules processed per worker process. If `None` (default), molecules are
+  auto-balanced across all `njobs` workers so every worker gets work. Ignored if `njobs` is 1.
 
 ### Details about descriptors
 
