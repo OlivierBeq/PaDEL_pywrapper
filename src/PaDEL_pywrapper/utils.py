@@ -5,18 +5,29 @@ import os
 import sys
 import tempfile
 
+from filelock import FileLock
 from jdk import _JRE_DIR
 from jdk import install as _jre_install
 from rdkit import Chem
 
 
 def install_java(version: int = 11) -> str | None:
-    """Install a Java Runtime Environment."""
-    path = get_java_in_dir(_JRE_DIR, version)
-    if path is None:
-        # Could not find JRE, install it
-        _jre_install(version, jre=True)
-        path = get_java_in_dir(_JRE_DIR, version=version)
+    """Install a Java Runtime Environment.
+
+    Guarded by a cross-process file lock: ``jdk.install`` downloads to a fixed,
+    version-derived temp file path and removes it once done, so concurrent callers
+    (e.g. separate ``pytest-xdist`` workers, each an independent OS process not sharing
+    the in-memory ``PaDEL.lock``) racing on a cold cache can collide -- one process's
+    download/extraction stepping on another's, or removing the shared temp file out
+    from under it.
+    """
+    os.makedirs(_JRE_DIR, exist_ok=True)
+    with FileLock(os.path.join(_JRE_DIR, f'.install-{version}.lock')):
+        path = get_java_in_dir(_JRE_DIR, version)
+        if path is None:
+            # Could not find JRE, install it
+            _jre_install(version, jre=True)
+            path = get_java_in_dir(_JRE_DIR, version=version)
     return path
 
 
