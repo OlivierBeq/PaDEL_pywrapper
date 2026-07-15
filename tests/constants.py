@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Constants for unit tests."""
 
 from rdkit import Chem
