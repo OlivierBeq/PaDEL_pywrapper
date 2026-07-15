@@ -193,8 +193,12 @@ public class Main {
                                 try {
                                     desc.run();
                                     desc_values.addAll(Arrays.asList(desc.getDescriptorValues()));
-                                } catch (ArrayIndexOutOfBoundsException | NullPointerException e) {
-                                    // Handle exceptions
+                                } catch (Exception e) {
+                                    // Handle any per-descriptor calculation failure (e.g.
+                                    // ArrayIndexOutOfBoundsException, NullPointerException,
+                                    // ClassCastException from EStateAtomTypeDescriptor on unusual
+                                    // atoms/elements such as Pt in cisplatin) without aborting
+                                    // the whole batch.
                                     String[] empty = new String[desc.getDescriptorNames().length];
                                     Arrays.fill(empty, "NaN");
                                     desc_values.addAll(Arrays.asList(empty));
@@ -286,8 +290,8 @@ public class Main {
                             try {
                                 fp.run();
                                 fp_values.addAll(Arrays.asList(fp.getDescriptorValues()));
-                            } catch (ArrayIndexOutOfBoundsException e) {
-                                // Handle exceptions
+                            } catch (Exception e) {
+                                // Broaden to match the descriptor loop's handling above.
                                 String[] empty = new String[fp.getDescriptorNames().length];
                                 Arrays.fill(empty, "NaN");
                                 fp_values.addAll(Arrays.asList(empty));
@@ -295,7 +299,9 @@ public class Main {
                             // Print values to sdtout
                             System.out.println(String.join(" ", fp_values));
                         }
-                    } catch (Exception e) {}
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         }
