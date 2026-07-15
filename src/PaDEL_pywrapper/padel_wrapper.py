@@ -101,12 +101,18 @@ class PaDEL:
         :param chunksize: number of molecules processed per worker process; if None (default)
             molecules are auto-balanced across njobs workers so every worker gets work; ignored
             if njobs is 1
-        :param timeout: maximum number of seconds to wait for each underlying ePaDEL process
-            before raising a RuntimeError. None (default) waits indefinitely. Some PaDEL 3D
+        :param timeout: maximum number of seconds allowed for each descriptor/fingerprint
+            calculation for a single molecule. None (default) waits indefinitely. This is
+            enforced on the Java side (see ``-timeout``): a descriptor exceeding it for one
+            molecule returns NaN for that molecule instead of hanging the whole batch. The
+            underlying ePaDEL subprocess call itself is also bounded, by a multiple of this
+            value large enough to cover every (molecule, descriptor/fingerprint) pair it could
+            legitimately need to wait out, so that outer safety net cannot fire before Java's
+            own per-item timeout has had a chance to resolve all of them. Some PaDEL 3D
             descriptors (e.g. WHIM) rely on an eigenvalue decomposition that can fail to
             converge and hang indefinitely for molecules with degenerate 3D geometry (very few
-            heavy atoms, near-linear/near-planar arrangements); setting a timeout guards against
-            this instead of hanging forever.
+            heavy atoms, near-linear/near-planar arrangements); setting a timeout guards
+            against this instead of hanging forever.
         :return: a pandas DataFrame containing all PaDEL descriptor values
         """
         if njobs < 1:
@@ -155,11 +161,17 @@ J. Comput. Chem., 32: 1466-1474. https://doi.org/10.1002/jcc.21707
 ###################################
 """)
 
-    def _prepare_command(self, mols: list[Chem.Mol]) -> tuple[list[tuple[list[str], list[str]]],
-                                                               list[tuple[list[str], list[str]]]]:
+    def _prepare_command(self, mols: list[Chem.Mol], timeout: float | None = None
+                          ) -> tuple[list[tuple[list[str], list[str]]],
+                                     list[tuple[list[str], list[str]]]]:
         """Create the ePaDEL command to be run to obtain molecular descriptors.
 
         :param mols: molecules to obtained molecular descriptors of
+        :param timeout: maximum number of seconds ePaDEL is allowed to spend calculating a
+            single descriptor or fingerprint for a single molecule; forwarded to the Java
+            process as ``-timeout``, so that e.g. WHIM's eigenvalue decomposition failing to
+            converge on one molecule returns NaN for it instead of hanging the whole batch.
+            None (default) does not pass ``-timeout``, so Java waits indefinitely.
         :return: The commands (as argument lists) to run.
         """
         # 1) Ensure JRE is accessible
@@ -212,6 +224,8 @@ J. Comput. Chem., 32: 1466-1474. https://doi.org/10.1002/jcc.21707
             if not self._ignore_3D:
                 command_names = [*command_names, '-3D']
                 command_values = [*command_values, '-3D']
+            if timeout is not None:
+                command_values = [*command_values, '-timeout', str(timeout)]
             desc_commands.append((command_names, command_values))
         # Create commands for fingerprints
         if len(self.fingerprints):
@@ -223,6 +237,8 @@ J. Comput. Chem., 32: 1466-1474. https://doi.org/10.1002/jcc.21707
                     extra = ['-nBits', str(fp.nBits), '-searchDepth', str(fp.searchDepth)]
                     command_names = [*command_names, *extra]
                     command_values = [*command_values, *extra]
+                if timeout is not None:
+                    command_values = [*command_values, '-timeout', str(timeout)]
                 fp_commands.append((command_names, command_values))
         return desc_commands, fp_commands
 
@@ -282,29 +298,60 @@ J. Comput. Chem., 32: 1466-1474. https://doi.org/10.1002/jcc.21707
             )
         return values
 
+    @staticmethod
+    def _subprocess_timeout(per_item_timeout: float | None, n_mols: int, n_items: int) -> float | None:
+        """Derive the outer ePaDEL subprocess timeout from the per-descriptor/fingerprint
+        Java-side timeout.
+
+        Java bounds each individual (molecule, descriptor/fingerprint) calculation to
+        ``per_item_timeout`` seconds (see ``-timeout`` in :meth:`_prepare_command`), so the
+        whole subprocess call may legitimately take up to ``n_mols * n_items`` times that long
+        (e.g. one molecule with degenerate 3D geometry making a single 3D descriptor time out).
+        The outer subprocess-level timeout must therefore be scaled accordingly -- passing
+        ``per_item_timeout`` straight through would let the outer timeout fire before Java's own
+        per-item timeout had a chance to resolve every pair, defeating the point of the
+        per-item mechanism.
+
+        :param per_item_timeout: seconds allotted to each (molecule, descriptor/fingerprint)
+            pair on the Java side; None means no timeout at all.
+        :param n_mols: number of molecules in this call.
+        :param n_items: number of descriptors or fingerprint types computed by this call.
+        :return: the outer subprocess-level timeout in seconds, or None.
+        """
+        if per_item_timeout is None:
+            return None
+        return per_item_timeout * max(n_mols, 1) * max(n_items, 1)
+
     def _calculate(self, mols: list[Chem.Mol], timeout: float | None = None) -> pd.DataFrame:
         """Calculate PaDEL descriptors on one process.
 
         :param mols: RDkit molecules for which PaDEL descriptors should be calculated.
          Only the last conformer of molecules is considered.
-        :param timeout: maximum number of seconds to wait for each underlying ePaDEL process;
-            None waits indefinitely. See :meth:`calculate`.
+        :param timeout: maximum number of seconds allowed for each descriptor/fingerprint
+            calculation for a single molecule, on the Java side; None waits indefinitely.
+            See :meth:`calculate`.
         :return: a pandas DataFrame containing all PaDEL desciptor values and the path to the temp dir to be removed
         """
         results = []
         # Prepare inputs
-        desc_commands, fp_commands = self._prepare_command(mols)
+        desc_commands, fp_commands = self._prepare_command(mols, timeout)
         expected_rows = len(mols) - len(self._skipped)
         # If descriptors to be calculated
         if len(desc_commands):
-            desc_values = self._run_command(desc_commands[0], expected_rows, timeout)
+            # Java always computes the full descriptor catalog (Python only subsets the
+            # columns afterward), so the outer timeout must account for every one of them.
+            n_desc_items = sum(1 for d in descriptor_types.descriptors if not self._ignore_3D or not d.is_3D)
+            desc_values = self._run_command(desc_commands[0], expected_rows,
+                                             self._subprocess_timeout(timeout, len(mols), n_desc_items))
             # Keep only specified descriptors
             selected_features = desc_values.columns[~desc_values.columns.isin(self.desc_kept)]
             desc_values.drop(columns=selected_features, inplace=True)
             results.append(desc_values)
         # If FPs to be calculated
         for fp_command in fp_commands:
-            fp_values = self._run_command(fp_command, expected_rows, timeout)
+            # Each command computes a single fingerprint type across all molecules.
+            fp_values = self._run_command(fp_command, expected_rows,
+                                           self._subprocess_timeout(timeout, len(mols), 1))
             results.append(fp_values)
         # Cleanup
         self._cleanup()
