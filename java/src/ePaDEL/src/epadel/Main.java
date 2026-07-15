@@ -7,6 +7,7 @@ import java.lang.String;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;
+import java.util.concurrent.TimeoutException;
 import java.lang.ArrayIndexOutOfBoundsException;
 
 import org.apache.commons.cli.CommandLine;
@@ -102,6 +103,131 @@ import extendedlibpadeldescriptor.eCDK_KlekotaRothFingerprintCount;
 import extendedlibpadeldescriptor.eCDK_AtomPairs2DFingerprintCount;
 
 public class Main {
+
+    /**
+     * Builds a fresh list of 1D/2D (and, if requested, 3D) descriptor calculators.
+     * Called once per molecule when computing values, so that a molecule whose
+     * calculation is abandoned after timing out (see runWithTimeout) never leaves a
+     * descriptor instance shared with -- and racing against -- a later molecule.
+     */
+    private static List<CDK_Descriptor> createDescriptors(boolean include3D) {
+        List<CDK_Descriptor> descriptors = new ArrayList<>(Arrays.asList(new CDK_AcidicGroupCountDescriptor(),
+                new CDK_ALOGPDescriptor(), new CDK_APolDescriptor(), new CDK_AromaticAtomsCountDescriptor(),
+                new CDK_AromaticBondsCountDescriptor(), new CDK_AtomCountDescriptor(new String[] { "*" }),
+                new CDK_HeavyAtomCountDescriptor(), new CDK_AtomCountDescriptor(new String[] { "H" }),
+                new CDK_AtomCountDescriptor(new String[] { "B" }), new CDK_AtomCountDescriptor(new String[] { "C" }),
+                new CDK_AtomCountDescriptor(new String[] { "N" }), new CDK_AtomCountDescriptor(new String[] { "O" }),
+                new CDK_AtomCountDescriptor(new String[] { "S" }), new CDK_AtomCountDescriptor(new String[] { "P" }),
+                new CDK_HalogenCountDescriptor(), new CDK_AutocorrelationDescriptor(), new CDK_BaryszMatrixDescriptor(),
+                new CDK_BasicGroupCountDescriptor(), new CDK_BCUTDescriptor(), new CDK_BondCountDescriptor(),
+                new CDK_BPolDescriptor(), new CDK_BurdenModifiedEigenvaluesDescriptor(),
+                new CDK_CarbonTypesDescriptor(), new CDK_ChiChainDescriptor(), new CDK_ChiClusterDescriptor(),
+                new CDK_ChiPathClusterDescriptor(), new CDK_ChiPathDescriptor(), new CDK_ConstitutionalDescriptor(),
+                new CDK_CrippenDescriptor(), new CDK_DetourMatrixDescriptor(),
+                new CDK_EccentricConnectivityIndexDescriptor(), new CDK_EStateAtomTypeDescriptor(),
+                new CDK_ExtendedTopochemicalAtomDescriptor(), new CDK_FMFDescriptor(),
+                new CDK_FragmentComplexityDescriptor(), new CDK_HBondAcceptorCountDescriptor(),
+                new CDK_HBondDonorCountDescriptor(), new CDK_HybridizationRatioDescriptor(),
+                new CDK_InformationContentDescriptor(), new CDK_KappaShapeIndicesDescriptor(),
+                new CDK_LargestChainDescriptor(), new CDK_LargestPiSystemDescriptor(),
+                new CDK_LongestAliphaticChainDescriptor(), new CDK_MannholdLogPDescriptor(),
+                new CDK_McGowanVolumeDescriptor(), new CDK_MDEDescriptor(), new CDK_MLFERDescriptor(),
+                new CDK_PathCountDescriptor(), new CDK_PetitjeanNumberDescriptor(), new CDK_RingCountDescriptor(),
+                new CDK_RotatableBondsCountDescriptor(), new CDK_RuleOfFiveDescriptor(),new CDK_TopologicalDescriptor(),
+                new CDK_TopologicalChargeDescriptor(), new CDK_TopologicalDistanceMatrixDescriptor(),
+                new CDK_TPSADescriptor(), new CDK_VABCDescriptor(), new CDK_VAdjMaDescriptor(),
+                new CDK_WalkCountDescriptor(), new CDK_WeightDescriptor(), new CDK_WeightedPathDescriptor(),
+                new CDK_WienerNumbersDescriptor(), new CDK_XLogPDescriptor(), new CDK_ZagrebIndexDescriptor()));
+        if (include3D) {
+            descriptors.addAll(Arrays.asList(new CDK_Autocorrelation3DDescriptor(),
+                    new CDK_CPSADescriptor(), new CDK_GravitationalIndexDescriptor(),
+                    new CDK_LengthOverBreadthDescriptor(), new CDK_MomentOfInertiaDescriptor(),
+                    new CDK_PetitjeanShapeIndexDescriptor(), new CDK_RDFDescriptor(), new CDK_WHIMDescriptor()));
+        }
+        return descriptors;
+    }
+
+    /**
+     * Instantiates the fingerprint calculator matching fp_value. Called once per
+     * molecule when computing values, for the same reason as createDescriptors above.
+     */
+    private static eCDK_IFingerprint createFingerprint(String fp_value, int size, int searchDepth) {
+        if (fp_value.equals("FP")) {
+            return new eCDK_Fingerprinter(size, searchDepth);
+        } else if (fp_value.equals("ExtFP")) {
+            // Size and searchDepth not supported with CDK < 2.5
+            return new eCDK_ExtendedFingerprinter(); //size, searchDepth);
+        } else if (fp_value.equals("EStateFP")) {
+            return new eCDK_EStateFingerprinter();
+        } else if (fp_value.equals("GraphFP")) {
+            return new eCDK_GraphOnlyFingerprinter(size, searchDepth);
+        } else if (fp_value.equals("MACCSFP")) {
+            return new eCDK_MACCSFingerprinter();
+        } else if (fp_value.equals("PubchemFP")) {
+            return new eCDK_PubchemFingerprinter();
+        } else if (fp_value.equals("SubFP")) {
+            return new eCDK_SubstructureFingerprinter();
+        } else if (fp_value.equals("KRFP")) {
+            return new eCDK_KlekotaRothFingerprinter();
+        } else if (fp_value.equals("AP2DFP")) {
+            return new eCDK_AtomPairs2DFingerprinter();
+        } else if (fp_value.equals("SubFPC")) {
+            return new eCDK_SubstructureFingerprintCount();
+        } else if (fp_value.equals("KRFPC")) {
+            return new eCDK_KlekotaRothFingerprintCount();
+        } else if (fp_value.equals("AP2DFPC")) {
+            return new eCDK_AtomPairs2DFingerprintCount();
+        } else {
+            // Default to eCDKFingerprinter
+            return new eCDK_Fingerprinter(size, searchDepth);
+        }
+    }
+
+    /**
+     * Runs a single descriptor/fingerprint calculation with a hard wall-clock timeout.
+     *
+     * Some PaDEL/CDK 3D descriptors (e.g. WHIM's Jama-based eigenvalue decomposition)
+     * can fail to converge and loop forever on degenerate 3D geometry (very few heavy
+     * atoms, near-linear/near-planar arrangements) instead of raising -- and since that
+     * native numerical code never checks for interruption, it cannot be cooperatively
+     * cancelled. calculation is therefore run on a throwaway daemon thread: if it has
+     * not finished within timeoutMillis, a TimeoutException is thrown and the thread is
+     * abandoned (it cannot be recovered, but being a daemon thread it does not stop the
+     * JVM from exiting once the rest of the batch is done). Any exception the
+     * calculation itself throws is re-thrown here so callers can handle it exactly as
+     * if it had been run in place.
+     *
+     * If timeoutMillis is null, runs synchronously in the calling thread with no
+     * timeout at all, matching the historical (pre-timeout) behavior.
+     */
+    private static void runWithTimeout(final Runnable calculation, final Long timeoutMillis) throws Exception {
+        if (timeoutMillis == null) {
+            calculation.run();
+            return;
+        }
+        final Throwable[] error = new Throwable[1];
+        Thread worker = new Thread(() -> {
+            try {
+                calculation.run();
+            } catch (Throwable t) {
+                error[0] = t;
+            }
+        });
+        worker.setDaemon(true);
+        worker.start();
+        worker.join(timeoutMillis);
+        if (worker.isAlive()) {
+            throw new TimeoutException(
+                    "Calculation did not complete within " + (timeoutMillis / 1000.0) + "s");
+        }
+        if (error[0] != null) {
+            if (error[0] instanceof Exception) {
+                throw (Exception) error[0];
+            }
+            throw new RuntimeException(error[0]);
+        }
+    }
+
     public static void main(String[] args) throws Exception {
         // Set switches to be used
         CommandLineParser parser = new DefaultParser();
@@ -117,46 +243,23 @@ public class Main {
         options.addOption("n", "names", false, "Obtain only names of descriptors/fingerprint bits");
         options.addOption("i", "input", true, "Input v2000 SD file (ignored if --names)");
         //options.addOption("o", "output", false, "Output tab-separated file (ignored if --names)");
+        options.addOption("timeout", true, "Maximum number of seconds allowed for each descriptor's or " +
+                "fingerprint's calculation for a single molecule; if exceeded, NaN is returned for it instead " +
+                "of aborting the whole batch (default: no timeout)");
         options.addOption("h", "help", false, "Shows this Help");
 
         try {
             // Parse switches
             CommandLine commandLine = parser.parse(options, args);
-            // Define descriptors
-            List<CDK_Descriptor> descriptors = new ArrayList<>(Arrays.asList(new CDK_AcidicGroupCountDescriptor(),
-                    new CDK_ALOGPDescriptor(), new CDK_APolDescriptor(), new CDK_AromaticAtomsCountDescriptor(),
-                    new CDK_AromaticBondsCountDescriptor(), new CDK_AtomCountDescriptor(new String[] { "*" }),
-                    new CDK_HeavyAtomCountDescriptor(), new CDK_AtomCountDescriptor(new String[] { "H" }),
-                    new CDK_AtomCountDescriptor(new String[] { "B" }), new CDK_AtomCountDescriptor(new String[] { "C" }),
-                    new CDK_AtomCountDescriptor(new String[] { "N" }), new CDK_AtomCountDescriptor(new String[] { "O" }),
-                    new CDK_AtomCountDescriptor(new String[] { "S" }), new CDK_AtomCountDescriptor(new String[] { "P" }),
-                    new CDK_HalogenCountDescriptor(), new CDK_AutocorrelationDescriptor(), new CDK_BaryszMatrixDescriptor(),
-                    new CDK_BasicGroupCountDescriptor(), new CDK_BCUTDescriptor(), new CDK_BondCountDescriptor(),
-                    new CDK_BPolDescriptor(), new CDK_BurdenModifiedEigenvaluesDescriptor(),
-                    new CDK_CarbonTypesDescriptor(), new CDK_ChiChainDescriptor(), new CDK_ChiClusterDescriptor(),
-                    new CDK_ChiPathClusterDescriptor(), new CDK_ChiPathDescriptor(), new CDK_ConstitutionalDescriptor(),
-                    new CDK_CrippenDescriptor(), new CDK_DetourMatrixDescriptor(),
-                    new CDK_EccentricConnectivityIndexDescriptor(), new CDK_EStateAtomTypeDescriptor(),
-                    new CDK_ExtendedTopochemicalAtomDescriptor(), new CDK_FMFDescriptor(),
-                    new CDK_FragmentComplexityDescriptor(), new CDK_HBondAcceptorCountDescriptor(),
-                    new CDK_HBondDonorCountDescriptor(), new CDK_HybridizationRatioDescriptor(),
-                    new CDK_InformationContentDescriptor(), new CDK_KappaShapeIndicesDescriptor(),
-                    new CDK_LargestChainDescriptor(), new CDK_LargestPiSystemDescriptor(),
-                    new CDK_LongestAliphaticChainDescriptor(), new CDK_MannholdLogPDescriptor(),
-                    new CDK_McGowanVolumeDescriptor(), new CDK_MDEDescriptor(), new CDK_MLFERDescriptor(),
-                    new CDK_PathCountDescriptor(), new CDK_PetitjeanNumberDescriptor(), new CDK_RingCountDescriptor(),
-                    new CDK_RotatableBondsCountDescriptor(), new CDK_RuleOfFiveDescriptor(),new CDK_TopologicalDescriptor(),
-                    new CDK_TopologicalChargeDescriptor(), new CDK_TopologicalDistanceMatrixDescriptor(),
-                    new CDK_TPSADescriptor(), new CDK_VABCDescriptor(), new CDK_VAdjMaDescriptor(),
-                    new CDK_WalkCountDescriptor(), new CDK_WeightDescriptor(), new CDK_WeightedPathDescriptor(),
-                    new CDK_WienerNumbersDescriptor(), new CDK_XLogPDescriptor(), new CDK_ZagrebIndexDescriptor()));
-            // Add 3D descriptors
-            if (commandLine.hasOption("3D")) {
-                descriptors.addAll(Arrays.asList(new CDK_Autocorrelation3DDescriptor(),
-                        new CDK_CPSADescriptor(), new CDK_GravitationalIndexDescriptor(),
-                        new CDK_LengthOverBreadthDescriptor(), new CDK_MomentOfInertiaDescriptor(),
-                        new CDK_PetitjeanShapeIndexDescriptor(), new CDK_RDFDescriptor(), new CDK_WHIMDescriptor()));
+            // Per-descriptor/fingerprint timeout, shared by both the descriptor and
+            // fingerprint calculation loops below.
+            Long timeoutMillis = null;
+            if (commandLine.hasOption("timeout")) {
+                double timeoutSeconds = Double.parseDouble(commandLine.getOptionValue("timeout"));
+                timeoutMillis = Math.round(timeoutSeconds * 1000.0);
             }
+            // Define descriptors
+            List<CDK_Descriptor> descriptors = createDescriptors(commandLine.hasOption("3D"));
             // Fingerprint names, to be chosen from
             // Cannot instantiate as size and search depth may vary
             List<String> fingerprints = new ArrayList<>(Arrays.asList("FP", "ExtFP", "EStateFP", "GraphFP", "MACCSFP",
@@ -182,23 +285,24 @@ public class Main {
                     // Read content of file
                     try (FileInputStream fis = new FileInputStream(commandLine.getOptionValue("input"))) {
                         IteratingMDLReader supplier = new IteratingMDLReader(fis, DefaultChemObjectBuilder.getInstance());
+                        boolean include3D = commandLine.hasOption("3D");
                         // Iterate over molecules
                         while (supplier.hasNext()) {
                             IAtomContainer molecule = supplier.next();
                             List<String> desc_values = new ArrayList<>();
-                            // Iterate over descriptors
-                            for (CDK_Descriptor desc : descriptors) {
+                            // Fresh descriptor instances per molecule: see createDescriptors.
+                            for (CDK_Descriptor desc : createDescriptors(include3D)) {
                                 // Set molecule in descriptor calculator and run
                                 desc.setMolecule(molecule);
                                 try {
-                                    desc.run();
+                                    runWithTimeout(desc::run, timeoutMillis);
                                     desc_values.addAll(Arrays.asList(desc.getDescriptorValues()));
                                 } catch (Exception e) {
                                     // Handle any per-descriptor calculation failure (e.g.
                                     // ArrayIndexOutOfBoundsException, NullPointerException,
-                                    // ClassCastException from EStateAtomTypeDescriptor on unusual
-                                    // atoms/elements such as Pt in cisplatin) without aborting
-                                    // the whole batch.
+                                    // ClassCastException from EStateAtomType on unusual atoms/elements
+                                    // such as Pt in cisplatin, or a TimeoutException from
+                                    // runWithTimeout) without aborting the whole batch.
                                     String[] empty = new String[desc.getDescriptorNames().length];
                                     Arrays.fill(empty, "NaN");
                                     desc_values.addAll(Arrays.asList(empty));
@@ -234,40 +338,10 @@ public class Main {
                 else {
                     searchDepth = 7;
                 }
-                // Instantiate fingerprint calculator
-                eCDK_IFingerprint fp;
-                if (fp_value.equals("FP")) {
-                    fp = new eCDK_Fingerprinter(size, searchDepth);
-                } else if (fp_value.equals("ExtFP")) {
-                    // Size and searchDepth not supported with CDK < 2.5
-                    fp = new eCDK_ExtendedFingerprinter(); //size, searchDepth);
-                } else if (fp_value.equals("EStateFP")) {
-                    fp = new eCDK_EStateFingerprinter();
-                } else if (fp_value.equals("GraphFP")) {
-                    fp = new eCDK_GraphOnlyFingerprinter(size, searchDepth);
-                } else if (fp_value.equals("MACCSFP")) {
-                    fp = new eCDK_MACCSFingerprinter();
-                } else if (fp_value.equals("PubchemFP")) {
-                    fp = new eCDK_PubchemFingerprinter();
-                } else if (fp_value.equals("SubFP")) {
-                    fp = new eCDK_SubstructureFingerprinter();
-                } else if (fp_value.equals("KRFP")) {
-                    fp = new eCDK_KlekotaRothFingerprinter();
-                } else if (fp_value.equals("AP2DFP")) {
-                    fp = new eCDK_AtomPairs2DFingerprinter();
-                } else if (fp_value.equals("SubFPC")) {
-                    fp = new eCDK_SubstructureFingerprintCount();
-                } else if (fp_value.equals("KRFPC")) {
-                    fp = new eCDK_KlekotaRothFingerprintCount();
-                } else if (fp_value.equals("AP2DFPC")) {
-                    fp = new eCDK_AtomPairs2DFingerprintCount();
-                } else {
-                    // Default to eCDKFingerprinter
-                    fp = new eCDK_Fingerprinter(size, searchDepth);
-                }
                 // Obtain FP names
                 if (commandLine.hasOption("names")) {
                     // Use ethane as default molecule
+                    eCDK_IFingerprint fp = createFingerprint(fp_value, size, searchDepth);
                     fp.setMolecule(new SmilesParser(DefaultChemObjectBuilder.getInstance()).parseSmiles("CC"));
                     List<String> names = new ArrayList<>(Arrays.asList(fp.getDescriptorNames()));
                     String out = String.join(" ", names);
@@ -285,10 +359,12 @@ public class Main {
                         while (supplier.hasNext()) {
                             IAtomContainer molecule = supplier.next();
                             List<String> fp_values = new ArrayList<>();
+                            // Fresh fingerprint instance per molecule: see createFingerprint.
+                            eCDK_IFingerprint fp = createFingerprint(fp_value, size, searchDepth);
                             // Set molecule in descriptor calculator and run
                             fp.setMolecule(molecule);
                             try {
-                                fp.run();
+                                runWithTimeout(fp::run, timeoutMillis);
                                 fp_values.addAll(Arrays.asList(fp.getDescriptorValues()));
                             } catch (Exception e) {
                                 // Broaden to match the descriptor loop's handling above.
