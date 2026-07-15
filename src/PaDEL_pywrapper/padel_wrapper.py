@@ -87,6 +87,11 @@ class PaDEL:
         for desc in self.descriptors:
             # Add all subdescs names
             self.desc_kept.extend(desc.subcomponents)
+        # Descriptor/fingerprint names never depend on the molecules being processed
+        # (only on the fixed -d/-3D or -f/-nBits/-searchDepth flags), so they are cached
+        # here instead of being re-fetched -- an ~1s JVM invocation on its own -- on every
+        # call to calculate(), and every worker process under njobs > 1. See _get_names.
+        self._names_cache: dict[tuple[str, ...], list[str]] = {}
 
     def calculate(self, mols: Iterable[Chem.Mol], show_banner: bool = True, njobs: int = 1,
                   chunksize: int | None = None, timeout: float | None = None) -> pd.DataFrame:
@@ -100,7 +105,14 @@ class PaDEL:
             the host by each auto-sizing GC/JIT thread pools to the full core count.
         :param chunksize: number of molecules processed per worker process; if None (default)
             molecules are auto-balanced across njobs workers so every worker gets work; ignored
-            if njobs is 1
+            if njobs is 1. Each chunk costs one ePaDEL JVM startup (or more, one per requested
+            fingerprint type) on top of its share of the actual descriptor computation, so
+            splitting into more, smaller chunks than njobs multiplies that fixed startup cost
+            without adding parallelism -- benchmarked at roughly 2x slower with 8x as many
+            chunks as njobs, worsening further with even smaller chunks. Leaving this at None
+            (or passing exactly ``ceil(len(mols) / njobs)``) minimizes JVM startups while still
+            using every worker, and was consistently the fastest setting measured for njobs=8
+            across chunk counts from njobs//2 to 4x njobs.
         :param timeout: maximum number of seconds allowed for each descriptor/fingerprint
             calculation for a single molecule. None (default) waits indefinitely. This is
             enforced on the Java side (see ``-timeout``): a descriptor exceeding it for one
@@ -132,6 +144,11 @@ class PaDEL:
             chunks = _make_chunks(mols, njobs, chunksize)
             if not chunks:
                 return pd.DataFrame()
+            # Pre-fetch descriptor/fingerprint names once, here, before dispatching: each
+            # worker receives a pickled copy of self, so a cache already populated here
+            # travels with it, instead of every one of the njobs workers redundantly
+            # repeating this ~1s-per-name-set JVM invocation on its own.
+            self._warm_names_cache(timeout)
             with ProcessPoolExecutor(max_workers=njobs) as worker:
                 futures = [worker.submit(self._multiproc_calculate, chunk, timeout) for chunk in chunks]
                 results = [future.result() for future in futures]
@@ -161,6 +178,76 @@ J. Comput. Chem., 32: 1466-1474. https://doi.org/10.1002/jcc.21707
 ###################################
 """)
 
+    def _command_prefix(self) -> list[str]:
+        """Build the fixed ``java ... -jar ePaDEL.jar`` prefix shared by every command."""
+        with self.lock:
+            self._java_path = install_java()
+        epadel_path = os.path.abspath(os.path.join(__file__, os.pardir, 'PaDEL-Descriptor', 'lib', 'ePaDEL.jar'))
+        # Pin each JVM to a single core: parallelism comes from spawning njobs OS
+        # processes, not from letting each JVM auto-size GC/JIT threads to the host's
+        # full core count (which would oversubscribe cores beyond what njobs requested).
+        return [self._java_path, '-Djava.awt.headless=true', '-XX:ActiveProcessorCount=1', '-jar', epadel_path]
+
+    def _names_commands(self) -> list[list[str]]:
+        """Build the ``--names`` command for descriptors (if requested) and for each
+        requested fingerprint type.
+
+        These commands never depend on the molecules being processed (unlike the
+        matching ``-i <sdfile>`` values command), only on the fixed -d/-3D or
+        -f/-nBits/-searchDepth flags, so they can be built and run independently of any
+        molecule batch -- see _warm_names_cache.
+        """
+        command_prefix = self._command_prefix()
+        commands = []
+        if len(self.descriptors):
+            command_names = [*command_prefix, '-d', '--names']
+            if not self._ignore_3D:
+                command_names = [*command_names, '-3D']
+            commands.append(command_names)
+        for fp in self.fingerprints:
+            command_names = [*command_prefix, '-f', fp.bit_prefix, '--names']
+            if fp.size is not None:
+                command_names = [*command_names, '-nBits', str(fp.nBits), '-searchDepth', str(fp.searchDepth)]
+            commands.append(command_names)
+        return commands
+
+    def _warm_names_cache(self, timeout: float | None) -> None:
+        """Pre-fetch and cache descriptor/fingerprint names once.
+
+        Called from calculate() before dispatching njobs > 1 workers, so the cache
+        populated here travels with the pickled copy of self each worker receives,
+        instead of every worker redundantly repeating this ~1s JVM invocation itself.
+        """
+        for command_names in self._names_commands():
+            self._get_names(command_names, timeout)
+
+    def _get_names(self, command_names: list[str], timeout: float | None = None) -> list[str]:
+        """Return descriptor/fingerprint names for command_names, memoized on self.
+
+        :param command_names: a ``--names`` command as built by _names_commands.
+        :param timeout: maximum number of seconds to wait for the subprocess; None waits
+            indefinitely.
+        :raises RuntimeError: if the subprocess exits non-zero or times out.
+        """
+        key = tuple(command_names)
+        names = self._names_cache.get(key)
+        if names is not None:
+            return names
+        try:
+            names_proc = subprocess.run(command_names, capture_output=True, timeout=timeout)
+        except subprocess.TimeoutExpired as e:
+            raise RuntimeError(
+                f"ePaDEL timed out after {timeout}s while fetching descriptor/fingerprint names."
+            ) from e
+        if names_proc.returncode != 0:
+            raise RuntimeError(
+                f"ePaDEL failed while fetching descriptor/fingerprint names "
+                f"(exit code {names_proc.returncode}):\n{names_proc.stderr.decode(errors='replace')}"
+            )
+        names = names_proc.stdout.decode().split()
+        self._names_cache[key] = names
+        return names
+
     def _prepare_command(self, mols: list[Chem.Mol], timeout: float | None = None
                           ) -> tuple[list[tuple[list[str], list[str]]],
                                      list[tuple[list[str], list[str]]]]:
@@ -174,10 +261,7 @@ J. Comput. Chem., 32: 1466-1474. https://doi.org/10.1002/jcc.21707
             None (default) does not pass ``-timeout``, so Java waits indefinitely.
         :return: The commands (as argument lists) to run.
         """
-        # 1) Ensure JRE is accessible
-        with self.lock:
-            self._java_path = install_java()
-        # 2) Create temp SD v2k file
+        # 1) Create temp SD v2k file
         self._tmp_sd = mktempfile('molecules_v2k.sd')
         self._skipped = []
         try:
@@ -208,15 +292,10 @@ J. Comput. Chem., 32: 1466-1474. https://doi.org/10.1002/jcc.21707
             writer.close()
             os.remove(self._tmp_sd)
             raise e from None
-        # 3) Create commands
+        # 2) Create commands
         desc_commands = []
         fp_commands = []
-        epadel_path = os.path.abspath(os.path.join(__file__, os.pardir, 'PaDEL-Descriptor', 'lib', 'ePaDEL.jar'))
-        # Pin each JVM to a single core: parallelism comes from spawning njobs OS
-        # processes, not from letting each JVM auto-size GC/JIT threads to the host's
-        # full core count (which would oversubscribe cores beyond what njobs requested).
-        command_prefix = [self._java_path, '-Djava.awt.headless=true',
-                          '-XX:ActiveProcessorCount=1', '-jar', epadel_path]
+        command_prefix = self._command_prefix()
         # Create commands for descriptors
         if len(self.descriptors):
             command_names = [*command_prefix, '-d', '--names']
@@ -261,18 +340,7 @@ J. Comput. Chem., 32: 1466-1474. https://doi.org/10.1002/jcc.21707
         :raises RuntimeError: if either subprocess exits non-zero, times out, or if the
             number of value rows returned does not match expected_rows.
         """
-        try:
-            names_proc = subprocess.run(commands[0], capture_output=True, timeout=timeout)
-        except subprocess.TimeoutExpired as e:
-            raise RuntimeError(
-                f"ePaDEL timed out after {timeout}s while fetching descriptor/fingerprint names."
-            ) from e
-        if names_proc.returncode != 0:
-            raise RuntimeError(
-                f"ePaDEL failed while fetching descriptor/fingerprint names "
-                f"(exit code {names_proc.returncode}):\n{names_proc.stderr.decode(errors='replace')}"
-            )
-        names = names_proc.stdout.decode().split()
+        names = self._get_names(commands[0], timeout)
 
         try:
             values_proc = subprocess.run(commands[1], capture_output=True, timeout=timeout)
