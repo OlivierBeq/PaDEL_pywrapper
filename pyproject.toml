@@ -1,0 +1,82 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "PaDEL_pywrapper"
+dynamic = ["version"]
+description = "Python wrapper for the PaDEL descriptors"
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Olivier J. M. Béquignon", email = "olivier.bequignon.maintainer@gmail.com" },
+]
+maintainers = [
+    { name = "Olivier J. M. Béquignon", email = "olivier.bequignon.maintainer@gmail.com" },
+]
+keywords = [
+    "PaDEL",
+    "molecular descriptors",
+    "cheminformatics",
+    "QSAR",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+    "more-itertools",
+    "numpy>=2.0.0",
+    "pandas",
+    "rdkit",
+    "install-jdk>=1.1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/OlivierBeq/PaDEL_pywrapper"
+
+[project.optional-dependencies]
+docs = [
+    "sphinx",
+    "sphinx-rtd-theme",
+    "sphinx-autodoc-typehints",
+]
+testing = [
+    "pytest",
+    "pytest-cov",
+    "pytest-xdist",
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"*" = ["PaDEL-Descriptor/*", "PaDEL-Descriptor/**/*", "*.tsv", "py.typed"]
+
+[tool.setuptools.dynamic]
+version = { attr = "PaDEL_pywrapper.__version__" }
+
+[tool.ruff]
+line-length = 120
+src = ["src"]
+exclude = ["build", "dist", "*.egg-info"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "C4"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["PaDEL_pywrapper"]
+
+[tool.coverage.report]
+fail_under = 80
+show_missing = true
