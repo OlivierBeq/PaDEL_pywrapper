@@ -2,7 +2,7 @@
 
 import unittest
 
-from PaDEL_pywrapper import PaDEL, descriptors
+from PaDEL_pywrapper import PaDEL
 from PaDEL_pywrapper.descriptor import _fingerprints
 from tests.constants import MOLECULES
 
@@ -32,12 +32,12 @@ class TestFingerprints(unittest.TestCase):
             self.assertEqual(len(values.columns.unique().tolist()), self.fp_lens.get(fp_type.short_name, 1024))
             self.assertFalse(values.isna().any().any())
 
-    def test_fingerprint_multithread(self):
+    def test_fingerprint_multiprocess(self):
         """Test the dimensions of the output fingerprint dataframes calculated by different processes."""
         for fp_type in _fingerprints:
             padel = PaDEL([fp_type])
             values = padel.calculate(self.molecules, show_banner=False,
-                                     njobs=1, chunksize=1)
+                                     njobs=2, chunksize=2)
             self.assertEqual(values.shape, (len(MOLECULES), self.fp_lens.get(fp_type.short_name, 1024)))
             self.assertEqual(len(values.columns.unique().tolist()), self.fp_lens.get(fp_type.short_name, 1024))
             self.assertFalse(values.isna().any().any())
