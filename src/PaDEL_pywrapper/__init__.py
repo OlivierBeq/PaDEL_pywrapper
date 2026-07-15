@@ -1,8 +1,8 @@
-# -*- coding: utf-8
-
 """Wrapper for PaDEL descriptors"""
 
-from .padel_wrapper import PaDEL
 from .descriptor import descriptors
+from .padel_wrapper import PaDEL
 
-__version__ = "1.0.6"
+__all__ = ["PaDEL", "descriptors"]
+
+__version__ = "1.1.0"

@@ -1,6 +1,3 @@
-
-# -*- coding: utf-8
-
 """Python wrapper for PaDEL descriptors"""
 
 import os
@@ -12,20 +9,18 @@ import pandas as pd
 class Descriptor:
     """Primitive PaDEL descriptor."""
 
-    def __init__(self, name: str, is_3D: bool):
+    def __init__(self, name: str, is_3D: bool) -> None:
         """Instantiate a descriptor.
 
         :param name: Name of the descriptor
         :param is_3D: Is the descriptor requiring 3D molecular coordinates
-        :param type: Type of descriptor
-        :param description: Description of the descriptor
         """
         self.name = name
         self.is_3D = is_3D
         # Get names of bits (e.g. for AtomPairs2DFP: AP2DFP)
         self._get_sub_descriptor_names('padel_descs.tsv')
 
-    def _get_sub_descriptor_names(self, path: str):
+    def _get_sub_descriptor_names(self, path: str) -> None:
         """Load names of the subcomponents making this descriptor."""
         path = os.path.abspath(os.path.join(os.path.dirname(__file__), path))
         descs = pd.read_csv(path, sep='\t')
@@ -36,18 +31,28 @@ class Descriptor:
 class Fingerprint:
     """Primitive PaDEL fingerprint."""
 
-    def __init__(self, name: str):
+    #: Fingerprint types for which nBits/searchDepth are configurable.
+    _CONFIGURABLE = frozenset({'CDK fingerprint', 'CDK graph only fingerprint'})
+
+    def __init__(self, name: str) -> None:
         """Instantiate a fingerprint.
 
         :param name: Name of the fingerprint
-        :param type: Name ePaDEL uses to compute the fingerprint
         """
         self.name = name
         self.is_3D = False
         # Get names of bits (e.g. for Atom: CrippenLogP & CrippenMR)
         self._get_sub_descriptor_names('padel_fps.tsv')
+        # Always present: None for fingerprints without configurable nBits/searchDepth.
+        self.size: int | None = None
+        self.searchDepth: int | None = None
+        if self.name in self._CONFIGURABLE and pd.isna(self.nBits):
+            # nBits was '-' in padel_fps.tsv (i.e. variable/configurable size);
+            # default matches PaDEL's own CLI default of 1024 bits / depth 7.
+            self.size = self.nBits = 1024
+            self.searchDepth = 7
 
-    def _get_sub_descriptor_names(self, path: str):
+    def _get_sub_descriptor_names(self, path: str) -> None:
         """Load names of the subcomponents making this descriptor."""
         path = os.path.abspath(os.path.join(os.path.dirname(__file__), path))
         fps = pd.read_csv(path, sep='\t')
@@ -57,14 +62,14 @@ class Fingerprint:
         self.short_name = fps[fps.fingerprint == self.name]['name'].item()
         self.description = fps[fps.fingerprint == self.name]['description']
 
-    def __call__(self, size: int = 1024, searchDepth: int = 7):
+    def __call__(self, size: int = 1024, searchDepth: int = 7) -> 'Fingerprint':
         """Define size and search depth for CDK and Graph only fingerprints.
 
         :param size: Number of bits in the CDK or Graph only fingerprints (ignored for others)
         :param searchDepth: Search depth for the CDK or Graph only fingerprints (ignored for others)
         """
         fp = Fingerprint(self.name)
-        if self.name in ['CDK fingerprint', 'CDK graph only fingerprint']:
+        if self.name in self._CONFIGURABLE:
             fp.size = fp.nBits = size
             fp.searchDepth = searchDepth
         return fp
